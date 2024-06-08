@@ -1,0 +1,5 @@
+{
+  "locales": ["en", "ro"],
+  "defaultLocale": "ro",
+  "prefixDefault": false
+}
