@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
+// translation
 import i18nConfig from '@/i18n-config.json';
 
 export default function LanguageChanger() {
@@ -14,7 +15,9 @@ export default function LanguageChanger() {
   const handleChange = (e: any) => {
     const newLocale = e.target.value;
 
-    // redirect to the new locale path
+    i18n.changeLanguage(newLocale);
+
+    //  redirect to the new locale path
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
@@ -31,7 +34,7 @@ export default function LanguageChanger() {
 
   return (
     <>
-      <div>{t('common:learn_more')}</div>
+      <div>{t('learn_more')}</div>
       <select onChange={handleChange} value={currentLocale}>
         <option value="en">English</option>
         <option value="ro">romana</option>

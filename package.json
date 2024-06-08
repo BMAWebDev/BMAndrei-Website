@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.2.2",
     "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",
+    "lodash": "^4.17.21",
     "next": "14.2.3",
     "next-i18n-router": "^5.5.0",
     "react": "^18",
@@ -19,6 +21,7 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
