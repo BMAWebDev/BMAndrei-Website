@@ -10,11 +10,17 @@ const Text = styled.p<{
   color: ${config.colors.White};
   text-decoration: ${({ isUnderline }) => isUnderline && 'underline'};
   font-size: ${({ size }) => (size ? `${size}px` : '25px')};
-  cursor: ${({ isPointer }) => (isPointer ? 'pointer' : 'normal')};
+  cursor: ${({ isPointer }) => (isPointer ? 'pointer' : 'initial')};
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  color: ${config.colors.White};
+  font-size: 40px;
+`;
 
-const SubTitle = styled.h2``;
+const SubTitle = styled.h2`
+  color: ${config.colors.White};
+  font-size: 26px;
+`;
 
 export { Text, Title, SubTitle };

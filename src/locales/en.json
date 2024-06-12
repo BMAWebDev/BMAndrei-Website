@@ -1,8 +1,11 @@
 {
+  "home_page": "Home",
+  "about_page": "About",
+  "contact_page": "Contact",
   "homepage": {
     "hero": {
       "title": "Hello, welcome!",
-      "description": "Eu sunt Andrei și am o experiență de peste 4 ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
+      "description": "I am Andrei and i've been a Software Developer for the past {{ yearsOfExperience }} years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
     }
   },
   "learn_more": "Learn more",

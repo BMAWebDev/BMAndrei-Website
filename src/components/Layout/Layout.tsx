@@ -20,7 +20,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
     >
       <Header />
 
-      <main className="content">{children}</main>
+      {children}
 
       <Style.Footer>footer</Style.Footer>
     </StyleSheetManager>

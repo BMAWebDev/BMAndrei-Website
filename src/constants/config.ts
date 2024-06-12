@@ -8,11 +8,33 @@ enum Colors {
   DarkBtn = '#1E2556',
 }
 
+enum Routes {
+  Homepage = '/',
+  About = '/about',
+  Contact = '/contact',
+}
+
+enum Breakpoints {
+  XSmall = 400,
+  Small = 575,
+  Medium = 768,
+  Large = 992,
+  XLarge = 1200,
+  XXLarge = 1400,
+}
+
+const dateOfExperienceStart = new Date('25 Aug 2020');
+
 export default {
   colors: Colors,
   padding: {
     page: '30px 85px',
     section: '85px',
   },
+  fontFamily: 'K2D',
   languages: i18nConfig.locales,
+  routes: Routes,
+  maxWidth: 1920,
+  breakpoints: Breakpoints,
+  dateOfExperienceStart,
 };

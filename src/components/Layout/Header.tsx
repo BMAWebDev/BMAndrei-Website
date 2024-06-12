@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 // constants
-import routes from '@constants/routes';
+import config from '@constants/config';
 // translations
 import { LanguageChanger } from '../translations';
 // hooks
@@ -12,32 +13,35 @@ import Style from './Header.style';
 
 const Header = () => {
   const pathname = useGetPathname();
+  const { t } = useTranslation();
 
   return (
-    <Style.Wrapper justify="space-between">
-      <Text>BMAndrei</Text>
+    <Style.Wrapper>
+      <Style.Container justify="space-between">
+        <Text>BMAndrei</Text>
 
-      <Flex gap={50}>
-        <Style.Link href={routes.Homepage}>
-          <Text isUnderline={pathname === routes.Homepage} isPointer>
-            Home
-          </Text>
-        </Style.Link>
+        <Flex gap={50}>
+          <Style.Link href={config.routes.Homepage}>
+            <Text isUnderline={pathname === config.routes.Homepage} isPointer>
+              {t('home_page')}
+            </Text>
+          </Style.Link>
 
-        <Style.Link href={routes.About}>
-          <Text isUnderline={pathname === routes.About} isPointer>
-            About
-          </Text>
-        </Style.Link>
+          <Style.Link href={config.routes.About}>
+            <Text isUnderline={pathname === config.routes.About} isPointer>
+              {t('about_page')}
+            </Text>
+          </Style.Link>
 
-        <Style.Link href={routes.Contact}>
-          <Text isUnderline={pathname === routes.Contact} isPointer>
-            Contact
-          </Text>
-        </Style.Link>
+          <Style.Link href={config.routes.Contact}>
+            <Text isUnderline={pathname === config.routes.Contact} isPointer>
+              {t('contact_page')}
+            </Text>
+          </Style.Link>
 
-        <LanguageChanger />
-      </Flex>
+          <LanguageChanger />
+        </Flex>
+      </Style.Container>
     </Style.Wrapper>
   );
 };
