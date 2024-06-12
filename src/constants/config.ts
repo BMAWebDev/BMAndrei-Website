@@ -5,7 +5,7 @@ enum Colors {
   Black = '#000000',
   DarkPrimary = '#111530',
   DarkSecondary = '#0F122B',
-  DarkBtn = '#1E2556',
+  DarkThird = '#1E2556',
 }
 
 enum Routes {
@@ -31,6 +31,7 @@ export default {
     page: '30px 85px',
     section: '85px',
   },
+  borderRadius: '25px',
   fontFamily: 'K2D',
   languages: i18nConfig.locales,
   routes: Routes,

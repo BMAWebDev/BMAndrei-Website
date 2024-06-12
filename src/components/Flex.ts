@@ -8,6 +8,7 @@ const Flex = styled.div<FlexProps>`
   justify-content: ${({ justify }) => justify};
   gap: ${({ gap }) => `${gap}px`};
   align-items: ${({ align }) => align || 'center'};
+  flex: ${({ flex }) => flex};
 `;
 
 export const Col = styled(Flex).attrs({

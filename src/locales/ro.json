@@ -5,7 +5,12 @@
   "homepage": {
     "hero": {
       "title": "Salutare, bine ai venit!",
-      "description": "Eu sunt Andrei și am o experiență de peste 4 ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
+      "description": "Eu sunt Andrei și am o experiență de peste {{ yearsOfExperience }} ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
+    },
+    "services": {
+      "title": "Servicii oferite",
+      "subtitle": "Ofer servicii backend + frontend, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
+      "modern_technologies": "Folosesc tehnologii moderne, precum:"
     }
   },
   "learn_more": "Află mai multe",

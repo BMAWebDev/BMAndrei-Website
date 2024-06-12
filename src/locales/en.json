@@ -5,7 +5,12 @@
   "homepage": {
     "hero": {
       "title": "Hello, welcome!",
-      "description": "I am Andrei and i've been a Software Developer for the past {{ yearsOfExperience }} years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
+      "description": "I am Andrei and i've been a Software Developer for more than {{ yearsOfExperience }} years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
+    },
+    "services": {
+      "title": "Offered services",
+      "subtitle": "I offer backend + frontend services, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
+      "modern_technologies": "Building apps with modern technologies, like:"
     }
   },
   "learn_more": "Learn more",
