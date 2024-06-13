@@ -12,6 +12,7 @@ enum Routes {
   Homepage = '/',
   About = '/about',
   Contact = '/contact',
+  GDPR = '/gdpr',
 }
 
 enum Breakpoints {
@@ -41,5 +42,8 @@ export default {
   socialMedia: {
     github: 'https://github.com/BMAWebDev',
     linkedin: 'https://www.linkedin.com/in/andreibardita3112/',
+  },
+  externalWebsites: {
+    anpc: 'https://anpc.ro/',
   },
 };

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { K2D } from 'next/font/google';
 // translations
 import i18nConfig from '@/i18n-config.json';
+// constants
+import config from '@constants/config';
 // utils
 import initTranslations from '@utils/translations/initTranslations';
 // components
@@ -27,7 +29,11 @@ const RootLayout = async ({ params: { lang }, children }: any) => {
 
   return (
     <TranslationsProvider resources={resources} lang={lang}>
-      <html lang={lang} dir="ltr">
+      <html
+        lang={lang}
+        dir="ltr"
+        style={{ backgroundColor: config.colors.DarkPrimary }}
+      >
         <body className={inter.className}>
           <Layout>{children}</Layout>
         </body>

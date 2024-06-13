@@ -5,8 +5,7 @@ import { StyleSheetManager } from 'styled-components';
 import emotionIsPropValid from '@emotion/is-prop-valid';
 // components
 import Header from './Header';
-// style
-import Style from './Layout.style';
+import Footer from './Footer';
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
@@ -22,7 +21,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
 
       {children}
 
-      <Style.Footer>footer</Style.Footer>
+      <Footer />
     </StyleSheetManager>
   );
 };

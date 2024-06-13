@@ -9,6 +9,8 @@ const Flex = styled.div<FlexProps>`
   gap: ${({ gap }) => `${gap}px`};
   align-items: ${({ align }) => align || 'center'};
   flex: ${({ flex }) => flex};
+  align-self: ${({ alignSelf }) => alignSelf};
+  width: ${({ isFullWidth }) => isFullWidth && '100%'};
 `;
 
 export const Col = styled(Flex).attrs({
