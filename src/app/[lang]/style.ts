@@ -4,6 +4,7 @@ import Image from 'next/image';
 import config from '@constants/config';
 // components
 import Flex from '@components/Flex';
+import { Text } from '@components/Texts';
 
 const ProfileImage = styled(Image)`
   width: 100%;
@@ -14,15 +15,36 @@ const CardsContainer = styled(Flex)`
   width: 100%;
 `;
 
-const Card = styled(Flex).attrs({
-  direction: 'column',
-  gap: 30,
-  flex: 0.5,
-  align: 'flex-start',
-})`
+const Card = styled(Flex)`
   background: ${config.colors.DarkThird};
   border-radius: ${config.borderRadius};
   padding: 30px;
 `;
 
-export default { ProfileImage, Card, CardsContainer };
+const SocialMediaCard = styled(Card).attrs({
+  flex: 1,
+  justify: 'space-between',
+})`
+  width: 100%;
+`;
+
+const SocialMediaIcon = styled(Image)`
+  width: 100%;
+  flex: 1;
+  max-width: 185px;
+`;
+
+const SocialMediaCardDescription = styled(Text).attrs({ align: 'center' })`
+  display: flex;
+  justify-content: right;
+  flex: 0.75;
+`;
+
+export default {
+  ProfileImage,
+  Card,
+  CardsContainer,
+  SocialMediaCard,
+  SocialMediaIcon,
+  SocialMediaCardDescription,
+};

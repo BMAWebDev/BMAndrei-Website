@@ -11,6 +11,12 @@
       "title": "Servicii oferite",
       "subtitle": "Ofer servicii backend + frontend, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
       "modern_technologies": "Folosesc tehnologii moderne, precum:"
+    },
+    "social_media": {
+      "title": "Rețele sociale",
+      "subtitle": "Mă poți găsi și pe rețelele sociale",
+      "linkedin_description": "Pagină personală de contact, conținând o scurtă descriere a carierei mele profesionale.",
+      "github_description": "Pagină de Github cu proiecte și idei ocazionale, open-source."
     }
   },
   "learn_more": "Află mai multe",

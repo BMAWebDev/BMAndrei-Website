@@ -27,7 +27,7 @@ const Services: React.FC<SectionProps> = ({ index }) => {
       </Flex>
 
       <Style.CardsContainer justify="space-between" gap={30}>
-        <Style.Card>
+        <Style.Card direction="column" gap={30} flex={0.5} align="flex-start">
           <SubTitle align="center" isFullWidth>
             Front-end
           </SubTitle>
@@ -40,7 +40,7 @@ const Services: React.FC<SectionProps> = ({ index }) => {
           </OList>
         </Style.Card>
 
-        <Style.Card>
+        <Style.Card direction="column" gap={30} flex={0.5} align="flex-start">
           <SubTitle align="center" isFullWidth>
             Back-end
           </SubTitle>

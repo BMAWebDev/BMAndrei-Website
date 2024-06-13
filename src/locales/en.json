@@ -11,6 +11,12 @@
       "title": "Offered services",
       "subtitle": "I offer backend + frontend services, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
       "modern_technologies": "Building apps with modern technologies, like:"
+    },
+    "social_media": {
+      "title": "Social Media",
+      "subtitle": "You can also find me on social media",
+      "linkedin_description": "Personal contact page, containing a short description of my professional career.",
+      "github_description": "Github personal page, containing projects and ocasional ideas, open-source."
     }
   },
   "learn_more": "Learn more",

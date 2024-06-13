@@ -38,4 +38,8 @@ export default {
   maxWidth: 1920,
   breakpoints: Breakpoints,
   dateOfExperienceStart,
+  socialMedia: {
+    github: 'https://github.com/BMAWebDev',
+    linkedin: 'https://www.linkedin.com/in/andreibardita3112/',
+  },
 };
