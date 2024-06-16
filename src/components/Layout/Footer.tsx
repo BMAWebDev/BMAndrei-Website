@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 // components
 import { Text } from '../Texts';
 import Flex from '../Flex';
@@ -10,6 +11,8 @@ import Style from './Footer.style';
 import config from '@constants/config';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <Style.Wrapper>
       <Style.Container direction="column" align="flex-start" gap={50}>
@@ -19,30 +22,30 @@ const Footer = () => {
           </Style.Col>
 
           <Style.Col>
-            <Style.ColTitle>Pagini</Style.ColTitle>
+            <Style.ColTitle>{t('pages')}</Style.ColTitle>
 
             <Link href={config.routes.Homepage}>
-              <Style.ColText>Acasă</Style.ColText>
+              <Style.ColText>{t('home_page')}</Style.ColText>
             </Link>
 
             <Link href={config.routes.About}>
-              <Style.ColText>Despre mine</Style.ColText>
+              <Style.ColText>{t('about_page')}</Style.ColText>
             </Link>
 
             <Link href={config.routes.Contact}>
-              <Style.ColText>Contact</Style.ColText>
+              <Style.ColText>{t('contact_page')}</Style.ColText>
             </Link>
           </Style.Col>
 
           <Style.Col>
-            <Style.ColTitle>Link-uri utile</Style.ColTitle>
+            <Style.ColTitle>{t('useful_links')}</Style.ColTitle>
 
             <Link href={config.externalWebsites.anpc} target="_blank">
-              <Style.ColText>ANPC</Style.ColText>
+              <Style.ColText>{t('anpc')}</Style.ColText>
             </Link>
 
             <Link href={config.routes.GDPR}>
-              <Style.ColText>GDPR</Style.ColText>
+              <Style.ColText>{t('gdpr')}</Style.ColText>
             </Link>
 
             <Style.IconsContainer justify="space-between" isFullWidth>
@@ -67,7 +70,7 @@ const Footer = () => {
           </Style.Col>
         </Flex>
 
-        <Text>© Bărdiță Andrei 2024. Toate drepturile rezervate.</Text>
+        <Text>{t('credits')}</Text>
       </Style.Container>
     </Style.Wrapper>
   );

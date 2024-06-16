@@ -3,7 +3,7 @@
 // components
 import Hero from './Hero';
 
-const About = async () => {
+const About = () => {
   return (
     <>
       <Hero index={0} />

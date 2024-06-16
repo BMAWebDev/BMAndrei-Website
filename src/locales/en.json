@@ -19,6 +19,18 @@
       "github_description": "Github personal page, containing projects and ocasional ideas, open-source."
     }
   },
+  "aboutpage": {
+    "hero": {
+      "position_title": "Software Developer",
+      "title": "About me",
+      "description": "I am Andrei, I'm {{ age }} years old and i've been a software developer for over {{ yearsOfExperience }} years. In my free time i play the guitar and video games."
+    }
+  },
   "learn_more": "Learn more",
-  "contact_me": "Contact me"
+  "contact_me": "Contact me",
+  "pages": "Pages",
+  "useful_links": "Useful Links",
+  "anpc": "ANPC",
+  "gdpr": "GDPR",
+  "credits": "© Bărdiță Andrei 2024. All rights reserved."
 }

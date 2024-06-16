@@ -1,26 +1,36 @@
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 // models
 import { SectionProps } from '@models/layout';
+// utils
+import { getCurrentAge, getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
 import Flex, { Col } from '@components/Flex';
 import { SubTitle, Text, Title } from '@components/Texts';
 import AvatarIcon from '@assets/avatar.png';
 
+const age = getCurrentAge();
+const yearsOfExperience = getYearsOfExperience();
+
 const Hero: React.FC<SectionProps> = ({ index }) => {
+  const { t } = useTranslation();
+
   return (
     <Section index={index} direction="column" gap={50}>
       <Flex direction="column" align="center">
         <Title>Andrei Bărdiță</Title>
-        <SubTitle>Software Developer</SubTitle>
+        <SubTitle>{t('aboutpage.hero.position_title')}</SubTitle>
       </Flex>
 
       <Flex justify="space-between" isFullWidth>
         <Col gap={40}>
-          <SubTitle>Despre mine</SubTitle>
+          <SubTitle>{t('aboutpage.hero.title')}</SubTitle>
           <Text>
-            Eu sunt Andrei, am 23 de ani și sunt programator de 4 ani. În timpul
-            liber cânt la chitară și mă joc jocuri video.
+            {t('aboutpage.hero.description', {
+              age,
+              yearsOfExperience,
+            })}
           </Text>
         </Col>
 

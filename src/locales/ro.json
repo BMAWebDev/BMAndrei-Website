@@ -19,6 +19,18 @@
       "github_description": "Pagină de Github cu proiecte și idei ocazionale, open-source."
     }
   },
+  "aboutpage": {
+    "hero": {
+      "position_title": "Software Developer",
+      "title": "Despre mine",
+      "description": "Eu sunt Andrei, am {{ age }} de ani și sunt programator de {{ yearsOfExperience }} ani. În timpul liber cânt la chitară și mă joc jocuri video."
+    }
+  },
   "learn_more": "Află mai multe",
-  "contact_me": "Contactează-mă"
+  "contact_me": "Contactează-mă",
+  "pages": "Pagini",
+  "useful_links": "Link-uri utile",
+  "anpc": "ANPC",
+  "gdpr": "GDPR",
+  "credits": "© Bărdiță Andrei 2024. Toate drepturile rezervate."
 }
