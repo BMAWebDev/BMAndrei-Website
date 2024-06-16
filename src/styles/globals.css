@@ -7,3 +7,8 @@ a, a[href] {
   text-decoration: none;
   color: inherit;
 }
+
+img.full-size {
+  width: 100%;
+  height: 100%; 
+}
