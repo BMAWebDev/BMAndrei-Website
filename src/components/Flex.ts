@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// constants
+import config from '@constants/config';
 // models
 import { FlexProps } from '@models/layout';
 
@@ -20,6 +22,12 @@ export const Col = styled(Flex).attrs({
 }>`
   flex: ${({ flex }) => flex || 0.5};
   align-items: ${({ align }) => align || 'flex-start'};
+`;
+
+export const Card = styled(Flex)`
+  background: ${config.colors.DarkThird};
+  border-radius: ${config.borderRadius};
+  padding: 30px;
 `;
 
 export default Flex;

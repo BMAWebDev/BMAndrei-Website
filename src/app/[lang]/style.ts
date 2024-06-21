@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-// constants
-import config from '@constants/config';
 // components
-import Flex from '@components/Flex';
+import Flex, { Card } from '@components/Flex';
 import { Text } from '@components/Texts';
 
 const ProfileImage = styled(Image)`
@@ -13,12 +11,6 @@ const ProfileImage = styled(Image)`
 
 const CardsContainer = styled(Flex)`
   width: 100%;
-`;
-
-const Card = styled(Flex)`
-  background: ${config.colors.DarkThird};
-  border-radius: ${config.borderRadius};
-  padding: 30px;
 `;
 
 const SocialMediaCard = styled(Card).attrs({

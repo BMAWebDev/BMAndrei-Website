@@ -6,6 +6,7 @@ enum Colors {
   DarkPrimary = '#111530',
   DarkSecondary = '#0F122B',
   DarkThird = '#1E2556',
+  LightBlue = '#00F0FF',
 }
 
 enum Routes {
@@ -31,6 +32,7 @@ export default {
   padding: {
     page: '30px 85px',
     section: '85px',
+    sectionValue: 85,
   },
   borderRadius: '25px',
   fontFamily: 'K2D',
