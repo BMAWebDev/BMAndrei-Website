@@ -15,11 +15,11 @@ const Flex = styled.div<FlexProps>`
 
 export const Col = styled(Flex).attrs({
   direction: 'column',
-  align: 'flex-start',
 })<{
   flex?: number;
 }>`
   flex: ${({ flex }) => flex || 0.5};
+  align-items: ${({ align }) => align || 'flex-start'};
 `;
 
 export default Flex;
