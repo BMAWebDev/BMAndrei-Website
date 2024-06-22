@@ -14,6 +14,7 @@ enum Routes {
   About = '/about',
   Contact = '/contact',
   GDPR = '/gdpr',
+  CV = '/cv',
 }
 
 enum Breakpoints {

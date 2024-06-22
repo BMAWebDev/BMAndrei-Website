@@ -5,6 +5,7 @@ import Hero from './Hero';
 import CareerHistory from './CareerHistory';
 import PersonalProjects from './PersonalProjects';
 import Services from './Services';
+import Contact from './Contact';
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
       <CareerHistory index={1} />
       <PersonalProjects index={2} />
       <Services index={3} />
+      <Contact index={4} />
     </>
   );
 };
