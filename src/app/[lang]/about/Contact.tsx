@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 // constants
 import config from '@constants/config';
 // models
@@ -9,7 +10,6 @@ import Flex, { Col } from '@components/Flex';
 import { SubTitle, Text, Title } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
 import { PrimaryButton } from '@/components/Buttons';
-import Link from 'next/link';
 
 const Contact: React.FC<SectionProps> = ({ index }) => {
   return (

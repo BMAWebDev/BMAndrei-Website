@@ -45,7 +45,7 @@ const Services: React.FC<SectionProps> = ({ index }) => {
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
       <Title>Ce pot face pentru tine</Title>
 
-      <Flex direction="column" gap={80} align="flex-start">
+      <Flex direction="column" gap={80} align="flex-start" isFullWidth>
         {services.map((service, index) => (
           <Flex key={index} direction="column" gap={40} align="flex-start">
             <SubTitle>{service.title}</SubTitle>

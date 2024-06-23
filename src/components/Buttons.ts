@@ -4,7 +4,7 @@ import config from '@constants/config';
 
 const Button = styled.button`
   border: 1px solid ${config.colors.DarkThird};
-  border-radius: ${config.borderRadius};
+  border-radius: ${config.borderRadius.button};
   text-align: center;
   padding: 15px 25px;
   font-size: 20px;
@@ -13,8 +13,10 @@ const Button = styled.button`
   color: ${config.colors.White};
 `;
 
-export const PrimaryButton = styled(Button)`
+export const PrimaryButton = styled(Button)<{ width?: number | string }>`
   background: ${config.colors.DarkThird};
+  width: ${({ width }) =>
+    width && (typeof width === 'number' ? `${width}px` : width)};
 `;
 
 export const SecondaryButton = styled(Button)`

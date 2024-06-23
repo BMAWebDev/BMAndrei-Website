@@ -26,7 +26,7 @@ export const Col = styled(Flex).attrs({
 
 export const Card = styled(Flex)`
   background: ${config.colors.DarkThird};
-  border-radius: ${config.borderRadius};
+  border-radius: ${config.borderRadius.normal};
   padding: 30px;
 `;
 

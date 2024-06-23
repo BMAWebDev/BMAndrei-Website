@@ -7,6 +7,7 @@ enum Colors {
   DarkSecondary = '#0F122B',
   DarkThird = '#1E2556',
   LightBlue = '#00F0FF',
+  Red = '#E53E00',
 }
 
 enum Routes {
@@ -35,7 +36,22 @@ export default {
     section: '85px',
     sectionValue: 85,
   },
-  borderRadius: '25px',
+  text: {
+    normal: {
+      size: 20,
+    },
+    title: {
+      size: 40,
+    },
+    subtitle: {
+      size: 26,
+    },
+  },
+  borderRadius: {
+    normal: '25px',
+    button: '8px',
+    input: '8px',
+  },
   fontFamily: 'K2D',
   languages: i18nConfig.locales,
   routes: Routes,
