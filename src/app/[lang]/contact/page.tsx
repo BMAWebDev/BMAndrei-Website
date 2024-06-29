@@ -30,11 +30,19 @@ const Contact = () => {
           <ContactForm />
         </Col>
 
-        <Col align="center" gap={40}>
+        <Col align="center" flex={0.25} gap={40}>
           <SubTitle>LinkedIn</SubTitle>
 
-          <Link href={config.socialMedia.linkedin} target="_blank">
-            <Image src={LinkedInIcon} alt="LinkedIn icon" />
+          <Link
+            href={config.socialMedia.linkedin}
+            style={{ width: '100%' }}
+            target="_blank"
+          >
+            <Image
+              src={LinkedInIcon}
+              style={{ width: '100%', height: '100%' }}
+              alt="LinkedIn icon"
+            />
           </Link>
         </Col>
       </Flex>

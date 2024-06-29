@@ -12,7 +12,16 @@ export const ContactForm: React.FC = () => {
       initialValues={INITIAL_VALUES}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        console.log(values);
+        fetch('/api/send-contact-message', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        })
+          .then((res) => res.json())
+          .catch((err) => console.log(err));
       }}
     >
       <Form style={{ width: '100%' }}>
@@ -30,7 +39,7 @@ export const ContactForm: React.FC = () => {
             name="message"
             label="Message"
             placeholder="Motivul pentru care îmi scrii"
-            as="textarea"
+            asComponent="textarea"
             rows={10}
           />
 

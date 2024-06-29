@@ -22,14 +22,19 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
       </Flex>
 
       <Flex justify="space-between" align="flex-start" isFullWidth>
-        <Col gap={40} align="center">
+        <Col gap={40} align="flex-start">
           <Text>Scrie-mi pe LinkedIn</Text>
           <Link href={config.socialMedia.linkedin} target="_blank">
-            <Image src={LinkedInIcon} alt="LinkedIn icon" />
+            <Image
+              src={LinkedInIcon}
+              width={245}
+              height={245}
+              alt="LinkedIn icon"
+            />
           </Link>
         </Col>
 
-        <Col gap={40} align="center">
+        <Col gap={40} align="flex-end">
           <Text>Scrie-mi prin formularul de contact</Text>
           <Link href={config.routes.Contact}>
             <PrimaryButton>Contactează-mă</PrimaryButton>

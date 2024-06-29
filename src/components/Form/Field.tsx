@@ -10,7 +10,7 @@ interface FieldProps {
   type?: 'email' | 'text' | 'number' | 'tel' | 'textarea';
   placeholder?: string;
   value?: any;
-  as?: 'input' | 'select' | 'textarea';
+  asComponent?: 'input' | 'select' | 'textarea';
   rows?: number;
 }
 
@@ -20,7 +20,7 @@ const Field: React.FC<FieldProps> = ({
   label,
   placeholder,
   value,
-  as = 'input',
+  asComponent,
   rows,
 }) => (
   <Flex direction="column" align="flex-start" gap={5} isFullWidth>
@@ -31,7 +31,7 @@ const Field: React.FC<FieldProps> = ({
       type={type}
       name={name}
       placeholder={placeholder}
-      as={as}
+      component={asComponent}
       rows={rows}
     />
 

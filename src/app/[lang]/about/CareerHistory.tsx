@@ -11,7 +11,7 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
     <Section index={index} direction="column" gap={40}>
       <Title>Istoric Carieră</Title>
 
-      <Flex>
+      <Flex gap={110}>
         <Col>
           <Image
             src={CodeImg}
@@ -34,7 +34,7 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
         </Col>
       </Flex>
 
-      <Flex>
+      <Flex gap={110}>
         <Col gap={30}>
           <Title align="right">Team Leader</Title>
 

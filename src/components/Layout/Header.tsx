@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
 // constants
 import config from '@constants/config';
 // translations
@@ -18,7 +19,9 @@ const Header = () => {
   return (
     <Style.Wrapper>
       <Style.Container justify="space-between">
-        <Text>BMAndrei</Text>
+        <Link href={config.routes.Homepage}>
+          <Text isPointer>BMAndrei</Text>
+        </Link>
 
         <Flex gap={50}>
           <Style.Link href={config.routes.Homepage}>

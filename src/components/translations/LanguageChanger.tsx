@@ -4,12 +4,12 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import Select, { components, ControlProps, StylesConfig } from 'react-select';
 import { useState } from 'react';
+import Image from 'next/image';
 // constants
 import config from '@constants/config';
 // translation
 import i18nConfig from '@/i18n-config.json';
 import { IOption } from '@models/select';
-import Image from 'next/image';
 
 const selectStyles: StylesConfig = {
   option: (style) => ({ ...style, cursor: 'pointer' }),
@@ -23,6 +23,7 @@ const selectStyles: StylesConfig = {
   singleValue: (style) => ({
     ...style,
     color: config.colors.White,
+    fontSize: 40,
   }),
 };
 

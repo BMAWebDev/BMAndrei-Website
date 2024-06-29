@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // constants
 import config from '@constants/config';
 // components
-import { Text } from '../Texts';
+import { Text, Title } from '../Texts';
 import Flex from '../Flex';
 
 const Wrapper = styled.div`
@@ -21,7 +21,7 @@ const Col = styled(Flex).attrs({
   gap: 48,
 })``;
 
-const ColTitle = styled(Text).attrs({ size: 40 })``;
+const ColTitle = styled(Title).attrs({ size: 40 })``;
 
 const ColText = styled(Text).attrs({ isPointer: true })``;
 

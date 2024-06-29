@@ -7,7 +7,7 @@ export const UList = styled.ul`
 
   li {
     color: ${config.colors.White};
-    font-size: 20px;
+    font-size: ${config.text.normal.size}px;
   }
 `;
 
@@ -17,6 +17,6 @@ export const OList = styled.ol`
 
   li {
     color: ${config.colors.White};
-    font-size: 20px;
+    font-size: ${config.text.normal.size}px;
   }
 `;

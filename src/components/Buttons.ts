@@ -6,8 +6,8 @@ const Button = styled.button`
   border: 1px solid ${config.colors.DarkThird};
   border-radius: ${config.borderRadius.button};
   text-align: center;
-  padding: 15px 25px;
-  font-size: 20px;
+  padding: 35px 65px;
+  font-size: ${config.text.normal.size}px;
   cursor: pointer;
   font-family: ${config.fontFamily};
   color: ${config.colors.White};

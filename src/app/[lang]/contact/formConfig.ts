@@ -1,13 +1,10 @@
 import * as yup from 'yup';
+// models
+import { IContactTemplate } from '@models/mail';
+// constants
 import { REQUIRED_FIELD } from '@constants/texts';
 
-interface IFormFields {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export const INITIAL_VALUES: IFormFields = {
+export const INITIAL_VALUES: IContactTemplate = {
   name: '',
   email: '',
   message: '',

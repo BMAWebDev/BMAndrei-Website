@@ -15,7 +15,7 @@ enum Routes {
   About = '/about',
   Contact = '/contact',
   GDPR = '/gdpr',
-  CV = '/cv',
+  CV = '/CV-Bardita-Andrei.pdf',
 }
 
 enum Breakpoints {
@@ -38,18 +38,18 @@ export default {
   },
   text: {
     normal: {
-      size: 20,
-    },
-    title: {
       size: 40,
     },
+    title: {
+      size: 64,
+    },
     subtitle: {
-      size: 26,
+      size: 48,
     },
   },
   borderRadius: {
     normal: '25px',
-    button: '8px',
+    button: '25px',
     input: '8px',
   },
   fontFamily: 'K2D',
