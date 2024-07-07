@@ -13,6 +13,18 @@ const Flex = styled.div<FlexProps>`
   flex: ${({ flex }) => flex};
   align-self: ${({ alignSelf }) => alignSelf};
   width: ${({ isFullWidth }) => isFullWidth && '100%'};
+
+  ${({ hideOnMobile }) =>
+    hideOnMobile &&
+    `@media (max-width: ${config.breakpoints.Medium}px) {
+    display: none;
+  }`}
+
+  ${({ hideOnDesktop }) =>
+    hideOnDesktop &&
+    `@media (min-width: ${config.breakpoints.Medium}px) {
+    display: none;
+  }`}
 `;
 
 export const Col = styled(Flex).attrs({
@@ -28,6 +40,11 @@ export const Card = styled(Flex)`
   background: ${config.colors.DarkThird};
   border-radius: ${config.borderRadius.normal};
   padding: 60px;
+
+  @media (max-width: ${config.breakpoints.Large}px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 export default Flex;

@@ -12,6 +12,7 @@ const Text = styled.p<TextProps>`
   cursor: ${({ isPointer }) => (isPointer ? 'pointer' : 'initial')};
   text-align: ${({ align }) => align};
   width: ${({ isFullWidth }) => isFullWidth && '100%'};
+  align-self: ${({ alignSelf }) => alignSelf || 'auto'};
 `;
 
 const Title = styled.h1<TextProps>`

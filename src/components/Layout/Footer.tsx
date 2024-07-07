@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <Style.Wrapper>
       <Style.Container direction="column" align="flex-start" gap={50}>
-        <Flex justify="space-between" isFullWidth>
+        <Style.ColumnsContainer justify="space-between" isFullWidth>
           <Style.Col>
             <Style.ColTitle>BMAndrei</Style.ColTitle>
           </Style.Col>
@@ -68,9 +68,11 @@ const Footer = () => {
               </Link>
             </Style.IconsContainer>
           </Style.Col>
-        </Flex>
+        </Style.ColumnsContainer>
 
-        <Text>{t('credits')}</Text>
+        <Text alignSelf="center" align="center">
+          {t('credits')}
+        </Text>
       </Style.Container>
     </Style.Wrapper>
   );

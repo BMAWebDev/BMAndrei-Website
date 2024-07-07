@@ -9,8 +9,7 @@ import { getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
 import { Title, SubTitle } from '@components/Texts';
-import Flex, { Col } from '@components/Flex';
-import { PrimaryButton, SecondaryButton } from '@components/Buttons';
+import Flex from '@components/Flex';
 import AvatarImg from '@assets/avatar.png';
 // style
 import Style from './style';
@@ -20,27 +19,31 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
 
   return (
     <Section index={index} gap={15}>
-      <Col gap={90} direction="column">
+      <Style.HeroColLeft>
         <Title>{t('homepage.hero.title')}</Title>
+
         <SubTitle>
           {t('homepage.hero.description', {
             yearsOfExperience: getYearsOfExperience(),
           })}
         </SubTitle>
 
-        <Flex gap={15}>
-          <Link href={config.routes.About}>
-            <PrimaryButton>{t('learn_more')}</PrimaryButton>
-          </Link>
-          <Link href={config.routes.Contact}>
-            <SecondaryButton>{t('contact_me')}</SecondaryButton>
-          </Link>
-        </Flex>
-      </Col>
+        <Style.HeroButtonsContainer gap={15} isFullWidth>
+          <Style.HeroLink href={config.routes.About}>
+            <Style.HeroPrimaryButton>{t('learn_more')}</Style.HeroPrimaryButton>
+          </Style.HeroLink>
 
-      <Col>
+          <Style.HeroLink href={config.routes.Contact}>
+            <Style.HeroSecondaryButton>
+              {t('contact_me')}
+            </Style.HeroSecondaryButton>
+          </Style.HeroLink>
+        </Style.HeroButtonsContainer>
+      </Style.HeroColLeft>
+
+      <Style.HeroColRight>
         <Style.ProfileImage src={AvatarImg} alt="profile image" />
-      </Col>
+      </Style.HeroColRight>
     </Section>
   );
 };

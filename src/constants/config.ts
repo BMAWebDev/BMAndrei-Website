@@ -34,17 +34,18 @@ export default {
   padding: {
     page: '30px 85px',
     section: '85px',
+    mobile: '20px',
     sectionValue: 85,
   },
   text: {
-    normal: {
-      size: 40,
-    },
     title: {
-      size: 64,
+      size: 32,
     },
     subtitle: {
-      size: 48,
+      size: 26,
+    },
+    normal: {
+      size: 22,
     },
   },
   borderRadius: {

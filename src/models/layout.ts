@@ -12,4 +12,6 @@ export interface FlexProps {
   flex?: number;
   alignSelf?: FlexAlignment;
   isFullWidth?: boolean;
+  hideOnMobile?: boolean;
+  hideOnDesktop?: boolean;
 }

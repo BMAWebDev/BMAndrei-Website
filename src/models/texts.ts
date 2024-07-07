@@ -4,4 +4,5 @@ export interface TextProps {
   isPointer?: boolean;
   align?: 'left' | 'center' | 'right' | 'justify';
   isFullWidth?: boolean;
+  alignSelf?: 'center' | 'end' | 'start';
 }

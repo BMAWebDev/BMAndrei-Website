@@ -13,6 +13,10 @@ const SectionContainer = styled(Flex)`
   padding: ${config.padding.section};
   max-width: ${config.maxWidth}px;
   margin: 0 auto;
+
+  @media (max-width: ${config.breakpoints.Large}px) {
+    padding: ${config.padding.mobile};
+  }
 `;
 
 export default { SectionWrapper, SectionContainer };

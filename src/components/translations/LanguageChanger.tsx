@@ -23,7 +23,7 @@ const selectStyles: StylesConfig = {
   singleValue: (style) => ({
     ...style,
     color: config.colors.White,
-    fontSize: 40,
+    fontSize: config.text.normal.size,
   }),
 };
 

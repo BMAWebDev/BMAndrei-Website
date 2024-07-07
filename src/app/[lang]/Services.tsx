@@ -4,7 +4,7 @@ import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
 import { SubTitle, Text, Title } from '@components/Texts';
-import Flex from '@components/Flex';
+import Flex, { Card } from '@components/Flex';
 // style
 import Style from './style';
 import { OList } from '@components/Lists';
@@ -12,8 +12,9 @@ import { OList } from '@components/Lists';
 const frontendTechnologies = [
   'React (NextJS / Vite)',
   'Vue (NuxtJS / Vite)',
-  'Style Components / SCSS',
+  'Styled Components / SCSS',
 ];
+
 const backendTechnologies = ['NodeJS (Express)', 'C# (.NET)', 'REST API'];
 
 const Services: React.FC<SectionProps> = ({ index }) => {
@@ -26,8 +27,8 @@ const Services: React.FC<SectionProps> = ({ index }) => {
         <SubTitle align="center">{t('homepage.services.subtitle')}</SubTitle>
       </Flex>
 
-      <Style.CardsContainer justify="space-between" gap={30}>
-        <Style.Card direction="column" gap={30} flex={0.5} align="flex-start">
+      <Style.CardsContainer gap={30}>
+        <Card direction="column" gap={30} flex={0.5} align="flex-start">
           <SubTitle align="center" isFullWidth>
             Front-end
           </SubTitle>
@@ -38,9 +39,9 @@ const Services: React.FC<SectionProps> = ({ index }) => {
               <li key={index}>{tech}</li>
             ))}
           </OList>
-        </Style.Card>
+        </Card>
 
-        <Style.Card direction="column" gap={30} flex={0.5} align="flex-start">
+        <Card direction="column" gap={30} flex={0.5} align="flex-start">
           <SubTitle align="center" isFullWidth>
             Back-end
           </SubTitle>
@@ -51,7 +52,7 @@ const Services: React.FC<SectionProps> = ({ index }) => {
               <li key={index}>{tech}</li>
             ))}
           </OList>
-        </Style.Card>
+        </Card>
       </Style.CardsContainer>
     </Section>
   );

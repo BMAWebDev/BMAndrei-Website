@@ -13,13 +13,30 @@ const Container = styled(Flex)`
   padding: ${config.padding.page};
   max-width: ${config.maxWidth}px;
   margin: 0 auto;
+
+  @media (max-width: ${config.breakpoints.Large}px) {
+    padding: ${config.padding.mobile};
+  }
+`;
+
+const ColumnsContainer = styled(Flex)`
+  @media (max-width: ${config.breakpoints.Medium}px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const Col = styled(Flex).attrs({
   direction: 'column',
-  alignSelf: 'flex-start',
-  gap: 48,
-})``;
+})`
+  align-self: flex-start;
+  gap: 48px;
+
+  @media (max-width: ${config.breakpoints.Medium}px) {
+    align-self: center;
+    gap: 30px;
+  }
+`;
 
 const ColTitle = styled(Title).attrs({ size: 40 })``;
 
@@ -27,4 +44,12 @@ const ColText = styled(Text).attrs({ isPointer: true })``;
 
 const IconsContainer = styled(Flex)``;
 
-export default { Wrapper, Container, Col, ColTitle, ColText, IconsContainer };
+export default {
+  Wrapper,
+  Container,
+  ColumnsContainer,
+  Col,
+  ColTitle,
+  ColText,
+  IconsContainer,
+};
