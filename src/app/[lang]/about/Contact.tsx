@@ -6,23 +6,25 @@ import config from '@constants/config';
 import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
-import Flex, { Col } from '@components/Flex';
+import Flex from '@components/Flex';
 import { SubTitle, Text, Title } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
 import { PrimaryButton } from '@/components/Buttons';
+// style
+import Style from './style';
 
 const Contact: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
       <Flex direction="column" gap={35}>
         <Title>Te-am făcut curios?</Title>
-        <SubTitle>
+        <SubTitle align="center">
           Haide să discutăm la o cafea despre următoarea ta idee de succes.
         </SubTitle>
       </Flex>
 
-      <Flex justify="space-between" align="flex-start" isFullWidth>
-        <Col gap={40} align="flex-start">
+      <Style.ContactRow justify="space-between" isFullWidth>
+        <Style.ContactColumn align="flex-start">
           <Text>Scrie-mi pe LinkedIn</Text>
           <Link href={config.socialMedia.linkedin} target="_blank">
             <Image
@@ -32,17 +34,17 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
               alt="LinkedIn icon"
             />
           </Link>
-        </Col>
+        </Style.ContactColumn>
 
-        <Col gap={40} align="flex-end">
+        <Style.ContactColumn align="flex-end">
           <Text>Scrie-mi prin formularul de contact</Text>
           <Link href={config.routes.Contact}>
             <PrimaryButton>Contactează-mă</PrimaryButton>
           </Link>
-        </Col>
-      </Flex>
+        </Style.ContactColumn>
+      </Style.ContactRow>
 
-      <Text>
+      <Text align="center">
         Îmi poți vizualiza între timp CV-ul{' '}
         <Link
           href={config.routes.CV}

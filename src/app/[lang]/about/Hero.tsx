@@ -9,6 +9,8 @@ import Section from '@components/Section';
 import Flex, { Col } from '@components/Flex';
 import { SubTitle, Text, Title } from '@components/Texts';
 import AvatarIcon from '@assets/avatar.png';
+// style
+import Style from './style';
 
 const age = getCurrentAge();
 const yearsOfExperience = getYearsOfExperience();
@@ -23,8 +25,8 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
         <SubTitle>{t('aboutpage.hero.position_title')}</SubTitle>
       </Flex>
 
-      <Flex justify="space-between" isFullWidth>
-        <Col gap={40}>
+      <Style.HeroRow justify="space-between" isFullWidth>
+        <Style.HeroCol gap={40}>
           <SubTitle>{t('aboutpage.hero.title')}</SubTitle>
           <Text>
             {t('aboutpage.hero.description', {
@@ -32,12 +34,12 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
               yearsOfExperience,
             })}
           </Text>
-        </Col>
+        </Style.HeroCol>
 
-        <Col flex={0.4}>
+        <Style.HeroCol flex={0.4} hideOnMobile>
           <Image src={AvatarIcon} className="full-size" alt="Avatar icon" />
-        </Col>
-      </Flex>
+        </Style.HeroCol>
+      </Style.HeroRow>
     </Section>
   );
 };

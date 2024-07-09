@@ -1,26 +1,29 @@
 import Image from 'next/image';
+// models
 import { SectionProps } from '@models/layout';
+// components
 import Section from '@components/Section';
-import { Title, SubTitle, Text } from '@components/Texts';
-import Flex, { Col } from '@components/Flex';
+import { Title, Text } from '@components/Texts';
 import CodeImg from '@assets/code.png';
 import TeamImg from '@assets/team.png';
+// style
+import Style from './style';
 
 const CareerHistory: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} direction="column" gap={40}>
       <Title>Istoric Carieră</Title>
 
-      <Flex gap={110}>
-        <Col>
+      <Style.CareerHistoryPosition>
+        <Style.CareerHistoryColumn>
           <Image
             src={CodeImg}
             className="full-size"
             alt="Software development image"
           />
-        </Col>
+        </Style.CareerHistoryColumn>
 
-        <Col align="flex-end" gap={30}>
+        <Style.CareerHistoryColumn align="flex-end">
           <Title align="right">Software Developer</Title>
 
           <Text align="right">
@@ -31,11 +34,11 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
             React, dar și in zona de Back-End, unde am căpătat cunoștințe cu
             ajutorul NodeJS și Express.
           </Text>
-        </Col>
-      </Flex>
+        </Style.CareerHistoryColumn>
+      </Style.CareerHistoryPosition>
 
-      <Flex gap={110}>
-        <Col gap={30}>
+      <Style.CareerHistoryPosition isReversed>
+        <Style.CareerHistoryColumn>
           <Title align="right">Team Leader</Title>
 
           <Text>
@@ -48,12 +51,12 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
             periodice pentru actualizarea statusului proiectelor sau pentru noi
             informații în vederea implementării.
           </Text>
-        </Col>
+        </Style.CareerHistoryColumn>
 
-        <Col>
+        <Style.CareerHistoryColumn>
           <Image src={TeamImg} className="full-size" alt="Team image" />
-        </Col>
-      </Flex>
+        </Style.CareerHistoryColumn>
+      </Style.CareerHistoryPosition>
     </Section>
   );
 };

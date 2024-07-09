@@ -42,7 +42,7 @@ const Header = () => {
         <LanguageChanger />
       </>
     ),
-    [t],
+    [t, pathname],
   );
 
   return (

@@ -1,16 +1,17 @@
+import Image from 'next/image';
+import Link from 'next/link';
 // constants
 import config from '@constants/config';
 // models
 import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
-import Flex, { Card } from '@components/Flex';
 import { Text, Title } from '@components/Texts';
 import CSharpIcon from '@assets/icons/c-sharp.svg';
 import NextJSIcon from '@assets/icons/next-js.svg';
 import NodeJSIcon from '@assets/icons/node-js.svg';
-import Image from 'next/image';
-import Link from 'next/link';
+// style
+import Style from './style';
 
 interface IProject {
   link: string;
@@ -48,12 +49,12 @@ const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
       <Title>Proiecte personale</Title>
 
       {projects.map((project, index) => (
-        <Card key={index} justify="space-between" isFullWidth>
+        <Style.Project key={index} justify="space-between" isFullWidth>
           <Link href={project.link} target="_blank">
-            <Flex gap={45}>
+            <Style.ProjectContent gap={45}>
               <Image src={project.icon} alt="project icon" />
               <Text isPointer>{project.title}</Text>
-            </Flex>
+            </Style.ProjectContent>
           </Link>
 
           <Text
@@ -62,7 +63,7 @@ const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
           >
             {project.description}
           </Text>
-        </Card>
+        </Style.Project>
       ))}
 
       <Text>
