@@ -10,6 +10,8 @@ import Section from '@components/Section';
 import Flex, { Col } from '@components/Flex';
 import { SubTitle, Title } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
+// style
+import Style from './style';
 
 const Contact = () => {
   return (
@@ -23,14 +25,14 @@ const Contact = () => {
         </SubTitle>
       </Flex>
 
-      <Flex justify="space-between" align="flex-start" isFullWidth>
-        <Col gap={40}>
+      <Style.PageRow justify="space-between" align="flex-start" isFullWidth>
+        <Style.PageCol gap={40}>
           <SubTitle>Formular de contact</SubTitle>
 
           <ContactForm />
-        </Col>
+        </Style.PageCol>
 
-        <Col align="center" flex={0.25} gap={40}>
+        <Style.PageCol align="center" flex={0.25} gap={40}>
           <SubTitle>LinkedIn</SubTitle>
 
           <Link
@@ -38,14 +40,10 @@ const Contact = () => {
             style={{ width: '100%' }}
             target="_blank"
           >
-            <Image
-              src={LinkedInIcon}
-              style={{ width: '100%', height: '100%' }}
-              alt="LinkedIn icon"
-            />
+            <Image src={LinkedInIcon} alt="LinkedIn icon" />
           </Link>
-        </Col>
-      </Flex>
+        </Style.PageCol>
+      </Style.PageRow>
     </Section>
   );
 };

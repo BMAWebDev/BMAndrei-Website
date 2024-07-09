@@ -5,6 +5,8 @@ import { INITIAL_VALUES, validationSchema } from './formConfig';
 import { PrimaryButton } from '@components/Buttons';
 import { Field } from '@components/Form';
 import Flex from '@components/Flex';
+// style
+import Style from './style';
 
 export const ContactForm: React.FC = () => {
   return (
@@ -43,9 +45,7 @@ export const ContactForm: React.FC = () => {
             rows={10}
           />
 
-          <PrimaryButton type="submit" width="50%">
-            Trimite mesajul
-          </PrimaryButton>
+          <Style.SubmitButton type="submit">Trimite mesajul</Style.SubmitButton>
         </Flex>
       </Form>
     </Formik>
