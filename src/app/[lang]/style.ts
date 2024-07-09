@@ -63,6 +63,12 @@ const HeroSecondaryButton = styled(SecondaryButton)`
 const ProfileImage = styled(Image)`
   width: 100%;
   height: 100%;
+
+  @media (min-width: ${config.breakpoints.XXLarge}px) {
+    max-height: 600px;
+    width: fit-content;
+    object-fit: contain;
+  }
 `;
 
 const CardsContainer = styled(Flex)`

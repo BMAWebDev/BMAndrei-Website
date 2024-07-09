@@ -41,7 +41,7 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
         </Style.HeroButtonsContainer>
       </Style.HeroColLeft>
 
-      <Style.HeroColRight>
+      <Style.HeroColRight align="flex-end">
         <Style.ProfileImage src={AvatarImg} alt="profile image" />
       </Style.HeroColRight>
     </Section>

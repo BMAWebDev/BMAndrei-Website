@@ -4,9 +4,18 @@ import config from '@constants/config';
 // components
 import Flex, { Card, Col } from '@components/Flex';
 
-const HeroRow = styled(Flex)``;
-
 const HeroCol = styled(Col)`
+  img {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: ${config.breakpoints.XXLarge}px) {
+      max-height: 600px;
+      width: fit-content;
+      object-fit: contain;
+    }
+  }
+
   @media (max-width: ${config.breakpoints.Medium}px) {
     flex: 1;
   }
@@ -78,7 +87,6 @@ const ContactColumn = styled(Flex).attrs({ direction: 'column' })`
 `;
 
 export default {
-  HeroRow,
   HeroCol,
   CareerHistoryPosition,
   CareerHistoryColumn,

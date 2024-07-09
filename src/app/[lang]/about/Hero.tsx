@@ -6,7 +6,7 @@ import { SectionProps } from '@models/layout';
 import { getCurrentAge, getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
-import Flex, { Col } from '@components/Flex';
+import Flex from '@components/Flex';
 import { SubTitle, Text, Title } from '@components/Texts';
 import AvatarIcon from '@assets/avatar.png';
 // style
@@ -25,7 +25,7 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
         <SubTitle>{t('aboutpage.hero.position_title')}</SubTitle>
       </Flex>
 
-      <Style.HeroRow justify="space-between" isFullWidth>
+      <Flex justify="space-between" isFullWidth>
         <Style.HeroCol gap={40}>
           <SubTitle>{t('aboutpage.hero.title')}</SubTitle>
           <Text>
@@ -36,10 +36,10 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
           </Text>
         </Style.HeroCol>
 
-        <Style.HeroCol flex={0.4} hideOnMobile>
+        <Style.HeroCol flex={0.4} align="flex-end" hideOnMobile>
           <Image src={AvatarIcon} className="full-size" alt="Avatar icon" />
         </Style.HeroCol>
-      </Style.HeroRow>
+      </Flex>
     </Section>
   );
 };
