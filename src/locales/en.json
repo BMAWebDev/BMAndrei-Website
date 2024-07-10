@@ -1,0 +1,109 @@
+{
+  "home_page": "Home",
+  "about_page": "About",
+  "contact_page": "Contact",
+  "homepage": {
+    "hero": {
+      "title": "Hello, welcome!",
+      "description": "I am Andrei and i've been a Software Developer for more than {{ yearsOfExperience }} years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
+    },
+    "services": {
+      "title": "Offered services",
+      "subtitle": "I offer backend + frontend services, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
+      "modern_technologies": "Building apps with modern technologies, like:"
+    },
+    "social_media": {
+      "title": "Social Media",
+      "subtitle": "You can also find me on social media",
+      "linkedin_description": "Personal contact page, containing a short description of my professional career.",
+      "github_description": "Github personal page, containing projects and ocasional ideas, open-source."
+    }
+  },
+  "aboutpage": {
+    "hero": {
+      "position_title": "Software Developer",
+      "title": "About me",
+      "description": "I am Andrei, I'm {{ age }} years old and i've been a software developer for over {{ yearsOfExperience }} years. In my free time i play the guitar and video games."
+    },
+    "career_history": {
+      "title": "Career History",
+      "software_developer": {
+        "title": "Software Developer",
+        "description": "I have been working as a software developer since August 2020. During this time I've developed my skills in programming and managing a clean team and infrastructure. I gained a rich experience in the Front-End area, using Javascript frameworks such as Vue or React, but also in the Back-End area, where I gained knowledge with the help of NodeJS and Express."
+      },
+      "team_leader": {
+        "title": "Team Leader",
+        "description": "During my career I also held the position of Team Leader for the Web team in one of the jobs I was hired at. In this position I managed a team of 4 people on several projects simultaneously, written in different frameworks or languages, bringing them all to the finish line. At the same time, I kept a close connection with the company's clients, arranging periodic meetings to update the status of the projects or for new information regarding implementation."
+      }
+    },
+    "personal_projects": {
+      "title": "Personal projects",
+      "fmkey": {
+        "title": "FMKey",
+        "description": "A 3D virtual shop in WebGL, written in C# through Unity."
+      },
+      "next_three_globe": {
+        "title": "Next Three Globe",
+        "description": "Project written in NextJS that renders a 3D globe in ThreeJS which can be rotated and zoomed to see different partners worldwide."
+      },
+      "bmaskates": {
+        "title": "BMASkates",
+        "description": "Full Stack application with vanilla Javascript on Front-End and NodeJS + Express in Back-End. The server works both on the views method and on the REST API."
+      },
+      "github_page": "For more information, visit the <1>Github page</1>."
+    },
+    "services": {
+      "title": "Offered services",
+      "development": {
+        "title": "Web/Mobile/Game Application Development",
+        "description": "Creation of one or more applications, from prototyping and discussions to maintenance."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "1:1 meetings to understand and provide you with the best service based on your needs."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Maintenance of the application, after its completion, for a set period of time."
+      },
+      "bugfixing": {
+        "title": "Troubleshooting / Help with existing projects",
+        "description": "Solving problems arising from other developments or implementing new functionality."
+      },
+      "ecommerce_start": {
+        "title": "Getting started in E-Commerce",
+        "description": "Installing and learning a CMS (Content Management System), such as Wordpress, to start an online store and sell products."
+      }
+    },
+    "contact": {
+      "title": "Did i make you curious?",
+      "subtitle": "Let's talk over coffee about your next successful idea.",
+      "write_through_linkedin": "Write me on LinkedIn",
+      "write_through_contact_form": "Write me through the contact form",
+      "contact_me_button": "Contact me",
+      "view_my_cv_here": "In the meantime, you can view my CV <1>here</1>."
+    }
+  },
+  "contactpage": {
+    "hero": {
+      "subtitle": "I'm glad you made it this far. I am very curious about all your plans and wish we could talk more about them. Wanna get in touch?"
+    },
+    "form": {
+      "title": "Contact form",
+      "name_label": "Name",
+      "email_label": "Email",
+      "message_label": "Message",
+      "name_placeholder": "What's your name?",
+      "email_placeholder": "Sender email",
+      "message_placeholder": "Your reason of contact",
+      "send_button": "Send the message"
+    }
+  },
+  "learn_more": "Learn more",
+  "contact_me": "Contact me",
+  "pages": "Pages",
+  "useful_links": "Useful Links",
+  "anpc": "ANPC",
+  "gdpr": "GDPR",
+  "credits": "© Bărdiță Andrei 2024. All rights reserved."
+}

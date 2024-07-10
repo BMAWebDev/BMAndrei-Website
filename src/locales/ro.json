@@ -1,0 +1,109 @@
+{
+  "home_page": "Acasă",
+  "about_page": "Despre mine",
+  "contact_page": "Contact",
+  "homepage": {
+    "hero": {
+      "title": "Salutare, bine ai venit!",
+      "description": "Eu sunt Andrei și am o experiență de peste {{ yearsOfExperience }} ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
+    },
+    "services": {
+      "title": "Servicii oferite",
+      "subtitle": "Ofer servicii backend + frontend, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sapien mauris. Nulla rutrum enim pharetra ultrices aliquam.",
+      "modern_technologies": "Folosesc tehnologii moderne, precum:"
+    },
+    "social_media": {
+      "title": "Rețele sociale",
+      "subtitle": "Mă poți găsi și pe rețelele sociale",
+      "linkedin_description": "Pagină personală de contact, conținând o scurtă descriere a carierei mele profesionale.",
+      "github_description": "Pagină de Github cu proiecte și idei ocazionale, open-source."
+    }
+  },
+  "aboutpage": {
+    "hero": {
+      "position_title": "Software Developer",
+      "title": "Despre mine",
+      "description": "Eu sunt Andrei, am {{ age }} de ani și sunt programator de {{ yearsOfExperience }} ani. În timpul liber cânt la chitară și mă joc jocuri video."
+    },
+    "career_history": {
+      "title": "Istoric Carieră",
+      "software_developer": {
+        "title": "Software Developer",
+        "description": "Lucrez ca programator din August 2020. În acest timp mi-am dezvoltat abilitățile de programare și administrare a unei echipe și a unei infrastructuri curate. Am căpătat o experiență bogată în zona de Front-End, folosind framework-uri Javascript cum ar fi Vue sau React, dar și in zona de Back-End, unde am căpătat cunoștințe cu ajutorul NodeJS și Express."
+      },
+      "team_leader": {
+        "title": "Team Leader",
+        "description": "Pe parcursul carierei am ocupat de asemenea și poziția de Team Leader pentru echipa de Web într-unul dintre locurile de muncă la care am fost angajat. În această poziție am administrat o echipă de 4 oameni pe mai multe proiecte simultan, scrise în diferite framework-uri sau limbaje, ducându-le pe toate la final. Totodată am păstrat o conexiune strânsă cu clienții firmei, aranjând întâlniri periodice pentru actualizarea statusului proiectelor sau pentru noi informații în vederea implementării."
+      }
+    },
+    "personal_projects": {
+      "title": "Proiecte personale",
+      "fmkey": {
+        "title": "FMKey",
+        "description": "Un magazin virtual 3D în WebGL, scris în C# prin Unity."
+      },
+      "next_three_globe": {
+        "title": "Next Three Globe",
+        "description": "Proiect scris în NextJS care redă un glob 3D în ThreeJS ce poate fi rotit și mărit, pentru a vedea diferiți parteneri la nivel mondial."
+      },
+      "bmaskates": {
+        "title": "BMASkates",
+        "description": "Aplicație Full-stack cu Javascript vanilla în Front-End și NodeJS + Express în Back-End. Serverul funcționează atât pe metoda views, cât și pe REST API."
+      },
+      "github_page": "Pentru mai multe informații, accesează <1>pagina de Github</1>."
+    },
+    "services": {
+      "title": "Ce pot face pentru tine",
+      "development": {
+        "title": "Dezvoltare aplicații Web/Mobile/Jocuri",
+        "description": "Crearea uneia sau a mai multor aplicații, de la faza de prototipare și discuții până la mentenanță."
+      },
+      "consulting": {
+        "title": "Consultanță",
+        "description": "Discuții 1:1 pentru a înțelege și a-ți oferi cel mai bun serviciu bazat pe nevoile tale."
+      },
+      "maintenance": {
+        "title": "Mentenanță",
+        "description": "Îngrijirea aplicației, după finalizarea acesteia, pentru o perioadă stabilită."
+      },
+      "bugfixing": {
+        "title": "Rezolvare probleme / Ajutor cu proiecte existente",
+        "description": "Rezolvarea problemelor apărute în urma dezvoltării de către alte persoane sau implementarea unor noi funcționalități."
+      },
+      "ecommerce_start": {
+        "title": "Inițierea în E-Commerce",
+        "description": "Instalarea și învățarea unui CMS (Content Management System) precum Wordpress pentru a porni un magazin online și a vinde produse."
+      }
+    },
+    "contact": {
+      "title": "Te-am făcut curios?",
+      "subtitle": "Haide să discutăm la o cafea despre următoarea ta idee de succes.",
+      "write_through_linkedin": "Scrie-mi pe LinkedIn",
+      "write_through_contact_form": "Scrie-mi prin formularul de contact",
+      "contact_me_button": "Contactează-mă",
+      "view_my_cv_here": "Îmi poți vizualiza între timp CV-ul <1>aici</1>."
+    }
+  },
+  "contactpage": {
+    "hero": {
+      "subtitle": "Mă bucur că ai ajuns până aici. Sunt foarte curios de toate planurile tale și îmi doresc să vorbim mai multe despre ele. Ce zici, vrei să luăm legătura?"
+    },
+    "form": {
+      "title": "Formular de contact",
+      "name_label": "Nume",
+      "email_label": "Email",
+      "message_label": "Mesaj",
+      "name_placeholder": "Cum te cheamă?",
+      "email_placeholder": "Adresa de pe care îmi scrii",
+      "message_placeholder": "Motivul pentru care îmi scrii",
+      "send_button": "Trimite mesajul"
+    }
+  },
+  "learn_more": "Află mai multe",
+  "contact_me": "Contactează-mă",
+  "pages": "Pagini",
+  "useful_links": "Link-uri utile",
+  "anpc": "ANPC",
+  "gdpr": "GDPR",
+  "credits": "© Bărdiță Andrei 2024. Toate drepturile rezervate."
+}
