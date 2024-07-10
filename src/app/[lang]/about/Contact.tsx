@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation, Trans } from 'react-i18next';
 // constants
 import config from '@constants/config';
 // models
@@ -14,18 +15,18 @@ import { PrimaryButton } from '@/components/Buttons';
 import Style from './style';
 
 const Contact: React.FC<SectionProps> = ({ index }) => {
+  const { t } = useTranslation();
+
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
       <Flex direction="column" gap={35}>
-        <Title>Te-am făcut curios?</Title>
-        <SubTitle align="center">
-          Haide să discutăm la o cafea despre următoarea ta idee de succes.
-        </SubTitle>
+        <Title>{t('aboutpage.contact.title')}</Title>
+        <SubTitle align="center">{t('aboutpage.contact.subtitle')}</SubTitle>
       </Flex>
 
       <Style.ContactRow justify="space-between" isFullWidth>
         <Style.ContactColumn align="flex-start">
-          <Text>Scrie-mi pe LinkedIn</Text>
+          <Text>{t('aboutpage.contact.write_through_linkedin')}</Text>
           <Link href={config.socialMedia.linkedin} target="_blank">
             <Image
               src={LinkedInIcon}
@@ -37,22 +38,28 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
         </Style.ContactColumn>
 
         <Style.ContactColumn align="flex-end">
-          <Text>Scrie-mi prin formularul de contact</Text>
+          <Text>{t('aboutpage.contact.write_through_contact_form')}</Text>
           <Link href={config.routes.Contact}>
-            <PrimaryButton>Contactează-mă</PrimaryButton>
+            <PrimaryButton>
+              {t('aboutpage.contact.contact_me_button')}
+            </PrimaryButton>
           </Link>
         </Style.ContactColumn>
       </Style.ContactRow>
 
       <Text align="center">
-        Îmi poți vizualiza între timp CV-ul{' '}
-        <Link
-          href={config.routes.CV}
-          style={{ color: config.colors.LightBlue }}
+        <Trans
+          components={{
+            1: (
+              <Link
+                href={config.routes.CV}
+                style={{ color: config.colors.LightBlue }}
+              />
+            ),
+          }}
         >
-          aici
-        </Link>
-        .
+          {t('aboutpage.contact.view_my_cv_here')}
+        </Trans>
       </Text>
     </Section>
   );

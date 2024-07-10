@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 // models
 import { SectionProps } from '@models/layout';
 // components
@@ -10,9 +11,11 @@ import TeamImg from '@assets/team.png';
 import Style from './style';
 
 const CareerHistory: React.FC<SectionProps> = ({ index }) => {
+  const { t } = useTranslation();
+
   return (
     <Section index={index} direction="column" gap={40}>
-      <Title>Istoric Carieră</Title>
+      <Title>{t('aboutpage.career_history.title')}</Title>
 
       <Style.CareerHistoryPosition>
         <Style.CareerHistoryColumn>
@@ -24,33 +27,23 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
         </Style.CareerHistoryColumn>
 
         <Style.CareerHistoryColumn align="flex-end">
-          <Title align="right">Software Developer</Title>
+          <Title align="right">
+            {t('aboutpage.career_history.software_developer.title')}
+          </Title>
 
           <Text align="right">
-            Lucrez ca programator din August 2020. În acest timp mi-am dezvoltat
-            abilitățile de programare și administrare a unei echipe și a unei
-            infrastructuri curate. Am căpătat o experiență bogată în zona de
-            Front-End, folosind framework-uri Javascript cum ar fi Vue sau
-            React, dar și in zona de Back-End, unde am căpătat cunoștințe cu
-            ajutorul NodeJS și Express.
+            {t('aboutpage.career_history.software_developer.description')}
           </Text>
         </Style.CareerHistoryColumn>
       </Style.CareerHistoryPosition>
 
       <Style.CareerHistoryPosition isReversed>
         <Style.CareerHistoryColumn>
-          <Title align="right">Team Leader</Title>
+          <Title align="right">
+            {t('aboutpage.career_history.team_leader.title')}
+          </Title>
 
-          <Text>
-            Pe parcursul carierei am ocupat de asemenea și poziția de Team
-            Leader pentru echipa de Web într-unul dintre locurile de muncă la
-            care am fost angajat. În această poziție am administrat o echipă de
-            4 oameni pe mai multe proiecte simultan, scrise în diferite
-            framework-uri sau limbaje, ducându-le pe toate la final. Totodată am
-            păstrat o conexiune strânsă cu clienții firmei, aranjând întâlniri
-            periodice pentru actualizarea statusului proiectelor sau pentru noi
-            informații în vederea implementării.
-          </Text>
+          <Text>{t('aboutpage.career_history.team_leader.description')}</Text>
         </Style.CareerHistoryColumn>
 
         <Style.CareerHistoryColumn>

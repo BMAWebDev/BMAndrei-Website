@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 // constants
 import config from '@constants/config';
 // models
@@ -12,38 +14,38 @@ interface IService {
   description: string;
 }
 
-const services: IService[] = [
-  {
-    title: 'Dezvoltare aplicații Web/Mobile/Jocuri',
-    description:
-      'Crearea uneia sau a mai multor aplicații, de la faza de prototipare și discuții până la mentenanță.',
-  },
-  {
-    title: 'Consultanță',
-    description:
-      'Discuții 1:1 pentru a înțelege și a-ți oferi cel mai bun serviciu bazat pe nevoile tale.',
-  },
-  {
-    title: 'Mentenanță',
-    description:
-      'Îngrijirea aplicației, după finalizarea acesteia, pentru o perioadă stabilită.',
-  },
-  {
-    title: 'Rezolvare probleme / Ajutor cu proiecte existente',
-    description:
-      'Rezolvarea problemelor apărute în urma dezvoltării de către alte persoane sau implementarea unor noi funcționalități.',
-  },
-  {
-    title: 'Inițierea în E-Commerce',
-    description:
-      'Instalarea și învățarea unui CMS (Content Management System) precum Wordpress pentru a porni un magazin online și a vinde produse.',
-  },
-];
-
 const Services: React.FC<SectionProps> = ({ index }) => {
+  const { t } = useTranslation();
+
+  const services: IService[] = useMemo(
+    () => [
+      {
+        title: t('aboutpage.services.development.title'),
+        description: t('aboutpage.services.development.description'),
+      },
+      {
+        title: t('aboutpage.services.consulting.title'),
+        description: t('aboutpage.services.consulting.description'),
+      },
+      {
+        title: t('aboutpage.services.maintenance.title'),
+        description: t('aboutpage.services.maintenance.description'),
+      },
+      {
+        title: t('aboutpage.services.bugfixing.title'),
+        description: t('aboutpage.services.bugfixing.description'),
+      },
+      {
+        title: t('aboutpage.services.ecommerce_start.title'),
+        description: t('aboutpage.services.ecommerce_start.description'),
+      },
+    ],
+    [t],
+  );
+
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
-      <Title>Ce pot face pentru tine</Title>
+      <Title>{t('aboutpage.services.title')}</Title>
 
       <Flex direction="column" gap={80} align="flex-start" isFullWidth>
         {services.map((service, index) => (

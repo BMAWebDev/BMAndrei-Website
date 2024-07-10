@@ -24,6 +24,64 @@
       "position_title": "Software Developer",
       "title": "About me",
       "description": "I am Andrei, I'm {{ age }} years old and i've been a software developer for over {{ yearsOfExperience }} years. In my free time i play the guitar and video games."
+    },
+    "career_history": {
+      "title": "Career History",
+      "software_developer": {
+        "title": "Software Developer",
+        "description": "I have been working as a software developer since August 2020. During this time I've developed my skills in programming and managing a clean team and infrastructure. I gained a rich experience in the Front-End area, using Javascript frameworks such as Vue or React, but also in the Back-End area, where I gained knowledge with the help of NodeJS and Express."
+      },
+      "team_leader": {
+        "title": "Team Leader",
+        "description": "During my career I also held the position of Team Leader for the Web team in one of the jobs I was hired at. In this position I managed a team of 4 people on several projects simultaneously, written in different frameworks or languages, bringing them all to the finish line. At the same time, I kept a close connection with the company's clients, arranging periodic meetings to update the status of the projects or for new information regarding implementation."
+      }
+    },
+    "personal_projects": {
+      "title": "Personal projects",
+      "fmkey": {
+        "title": "FMKey",
+        "description": "A 3D virtual shop in WebGL, written in C# through Unity."
+      },
+      "next_three_globe": {
+        "title": "Next Three Globe",
+        "description": "Project written in NextJS that renders a 3D globe in ThreeJS which can be rotated and zoomed to see different partners worldwide."
+      },
+      "bmaskates": {
+        "title": "BMASkates",
+        "description": "Full Stack application with vanilla Javascript on Front-End and NodeJS + Express in Back-End. The server works both on the views method and on the REST API."
+      },
+      "github_page": "For more information, visit the <1>Github page</1>."
+    },
+    "services": {
+      "title": "Offered services",
+      "development": {
+        "title": "Web/Mobile/Game Application Development",
+        "description": "Creation of one or more applications, from prototyping and discussions to maintenance."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "1:1 meetings to understand and provide you with the best service based on your needs."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Maintenance of the application, after its completion, for a set period of time."
+      },
+      "bugfixing": {
+        "title": "Troubleshooting / Help with existing projects",
+        "description": "Solving problems arising from other developments or implementing new functionality."
+      },
+      "ecommerce_start": {
+        "title": "Getting started in E-Commerce",
+        "description": "Installing and learning a CMS (Content Management System), such as Wordpress, to start an online store and sell products."
+      }
+    },
+    "contact": {
+      "title": "Did i make you curious?",
+      "subtitle": "Let's talk over coffee about your next successful idea.",
+      "write_through_linkedin": "Write me on LinkedIn",
+      "write_through_contact_form": "Write me through the contact form",
+      "contact_me_button": "Contact me",
+      "view_my_cv_here": "In the meantime, you can view my CV <1>here</1>."
     }
   },
   "contactpage": {

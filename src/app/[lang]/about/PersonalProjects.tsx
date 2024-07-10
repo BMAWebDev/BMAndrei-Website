@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation, Trans } from 'react-i18next';
 // constants
 import config from '@constants/config';
 // models
@@ -12,6 +13,7 @@ import NextJSIcon from '@assets/icons/next-js.svg';
 import NodeJSIcon from '@assets/icons/node-js.svg';
 // style
 import Style from './style';
+import { useMemo } from 'react';
 
 interface IProject {
   link: string;
@@ -20,33 +22,38 @@ interface IProject {
   description: string;
 }
 
-const projects: IProject[] = [
-  {
-    link: 'https://github.com/BMAWebDev/FMKey',
-    icon: CSharpIcon,
-    title: 'FMKey',
-    description: 'Un magazin virtual 3D în WebGL, scris în C# prin Unity.',
-  },
-  {
-    link: 'https://github.com/BMAWebDev/next-three-globe',
-    icon: NextJSIcon,
-    title: 'Next Three Globe',
-    description:
-      'Proiect scris în NextJS care redă un glob 3D în ThreeJS ce poate fi rotit și mărit, pentru a vedea diferiți parteneri la nivel mondial.',
-  },
-  {
-    link: 'https://github.com/BMAWebDev/BMASkates',
-    icon: NodeJSIcon,
-    title: 'BMASkates',
-    description:
-      'Aplicație Full-stack cu Javascript vanilla în Front-End și NodeJS + Express în Back-End. Serverul funcționează atât pe metoda views, cât și pe REST API.',
-  },
-];
-
 const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
+  const { t } = useTranslation();
+
+  const projects: IProject[] = useMemo(
+    () => [
+      {
+        link: 'https://github.com/BMAWebDev/FMKey',
+        icon: CSharpIcon,
+        title: t('aboutpage.personal_projects.fmkey.title'),
+        description: t('aboutpage.personal_projects.fmkey.description'),
+      },
+      {
+        link: 'https://github.com/BMAWebDev/next-three-globe',
+        icon: NextJSIcon,
+        title: t('aboutpage.personal_projects.next_three_globe.title'),
+        description: t(
+          'aboutpage.personal_projects.next_three_globe.description',
+        ),
+      },
+      {
+        link: 'https://github.com/BMAWebDev/BMASkates',
+        icon: NodeJSIcon,
+        title: t('aboutpage.personal_projects.bmaskates.title'),
+        description: t('aboutpage.personal_projects.bmaskates.description'),
+      },
+    ],
+    [t],
+  );
+
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
-      <Title>Proiecte personale</Title>
+      <Title>{t('aboutpage.personal_projects.title')}</Title>
 
       {projects.map((project, index) => (
         <Style.Project key={index} justify="space-between" isFullWidth>
@@ -67,15 +74,19 @@ const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
       ))}
 
       <Text>
-        Pentru mai multe informații, accesează{' '}
-        <Link
-          href="https://github.com/BMAWebDev"
-          target="_blank"
-          style={{ color: config.colors.LightBlue }}
+        <Trans
+          components={{
+            1: (
+              <Link
+                href="https://github.com/BMAWebDev"
+                target="_blank"
+                style={{ color: config.colors.LightBlue }}
+              />
+            ),
+          }}
         >
-          pagina de Github
-        </Link>
-        .
+          {t('aboutpage.personal_projects.github_page')}
+        </Trans>
       </Text>
     </Section>
   );
