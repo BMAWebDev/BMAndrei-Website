@@ -3,7 +3,16 @@ import styled from 'styled-components';
 import config from '@constants/config';
 // components
 import Flex, { Col } from '@components/Flex';
-import { PrimaryButton } from '@/components/Buttons';
+import { PrimaryButton } from '@components/Buttons';
+import { SubTitle } from '@components/Texts';
+
+const PageSubtitle = styled(SubTitle)`
+  max-width: 90%;
+
+  @media (max-width: ${config.breakpoints.Medium}px) {
+    max-width: 100%;
+  }
+`;
 
 const PageRow = styled(Flex)`
   @media (max-width: ${config.breakpoints.Medium}px) {
@@ -37,4 +46,4 @@ const SubmitButton = styled(PrimaryButton)`
   }
 `;
 
-export default { PageRow, PageCol, SubmitButton };
+export default { PageSubtitle, PageRow, PageCol, SubmitButton };

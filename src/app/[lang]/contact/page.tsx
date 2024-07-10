@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 // constants
 import config from '@constants/config';
 // components
@@ -14,20 +15,19 @@ import LinkedInIcon from '@assets/icons/linkedin.svg';
 import Style from './style';
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <Section index={0} direction="column" gap={config.padding.sectionValue}>
       <Flex direction="column" gap={40}>
         <Title>Contact</Title>
-        <SubTitle align="center" style={{ maxWidth: '90%' }}>
-          Mă bucur că ai ajuns până aici. Sunt foarte curios de toate planurile
-          tale și îmi doresc să vorbim mai multe despre ele. Ce zici, vrei să
-          luăm legătura?
-        </SubTitle>
+        <Style.PageSubtitle align="center">
+          {t('contactpage.hero.subtitle')}
+        </Style.PageSubtitle>
       </Flex>
 
       <Style.PageRow justify="space-between" align="flex-start" isFullWidth>
         <Style.PageCol gap={40}>
-          <SubTitle>Formular de contact</SubTitle>
+          <SubTitle>{t('contactpage.form.title')}</SubTitle>
 
           <ContactForm />
         </Style.PageCol>

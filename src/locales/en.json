@@ -26,6 +26,21 @@
       "description": "I am Andrei, I'm {{ age }} years old and i've been a software developer for over {{ yearsOfExperience }} years. In my free time i play the guitar and video games."
     }
   },
+  "contactpage": {
+    "hero": {
+      "subtitle": "I'm glad you made it this far. I am very curious about all your plans and wish we could talk more about them. Wanna get in touch?"
+    },
+    "form": {
+      "title": "Contact form",
+      "name_label": "Name",
+      "email_label": "Email",
+      "message_label": "Message",
+      "name_placeholder": "What's your name?",
+      "email_placeholder": "Sender email",
+      "message_placeholder": "Your reason of contact",
+      "send_button": "Send the message"
+    }
+  },
   "learn_more": "Learn more",
   "contact_me": "Contact me",
   "pages": "Pages",

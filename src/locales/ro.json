@@ -26,6 +26,21 @@
       "description": "Eu sunt Andrei, am {{ age }} de ani și sunt programator de {{ yearsOfExperience }} ani. În timpul liber cânt la chitară și mă joc jocuri video."
     }
   },
+  "contactpage": {
+    "hero": {
+      "subtitle": "Mă bucur că ai ajuns până aici. Sunt foarte curios de toate planurile tale și îmi doresc să vorbim mai multe despre ele. Ce zici, vrei să luăm legătura?"
+    },
+    "form": {
+      "title": "Formular de contact",
+      "name_label": "Nume",
+      "email_label": "Email",
+      "message_label": "Mesaj",
+      "name_placeholder": "Cum te cheamă?",
+      "email_placeholder": "Adresa de pe care îmi scrii",
+      "message_placeholder": "Motivul pentru care îmi scrii",
+      "send_button": "Trimite mesajul"
+    }
+  },
   "learn_more": "Află mai multe",
   "contact_me": "Contactează-mă",
   "pages": "Pagini",

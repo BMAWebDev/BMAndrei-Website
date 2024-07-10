@@ -1,14 +1,16 @@
 import { Formik, Form } from 'formik';
+import { useTranslation } from 'react-i18next';
 // constants
 import { INITIAL_VALUES, validationSchema } from './formConfig';
 // components
-import { PrimaryButton } from '@components/Buttons';
 import { Field } from '@components/Form';
 import Flex from '@components/Flex';
 // style
 import Style from './style';
 
 export const ContactForm: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Formik
       initialValues={INITIAL_VALUES}
@@ -28,24 +30,30 @@ export const ContactForm: React.FC = () => {
     >
       <Form style={{ width: '100%' }}>
         <Flex direction="column" align="flex-start" gap={45}>
-          <Field name="name" label="Name" placeholder="Cum te cheamă?" />
+          <Field
+            name="name"
+            label={t('contactpage.form.name_label')}
+            placeholder={t('contactpage.form.name_placeholder')}
+          />
 
           <Field
             type="email"
             name="email"
-            label="Email"
-            placeholder="Adresa de pe care îmi scrii"
+            label={t('contactpage.form.email_label')}
+            placeholder={t('contactpage.form.email_placeholder')}
           />
 
           <Field
             name="message"
-            label="Message"
-            placeholder="Motivul pentru care îmi scrii"
+            label={t('contactpage.form.message_label')}
+            placeholder={t('contactpage.form.message_placeholder')}
             asComponent="textarea"
             rows={10}
           />
 
-          <Style.SubmitButton type="submit">Trimite mesajul</Style.SubmitButton>
+          <Style.SubmitButton type="submit">
+            {t('contactpage.form.send_button')}
+          </Style.SubmitButton>
         </Flex>
       </Form>
     </Formik>
