@@ -86,7 +86,7 @@ const ContactColumn = styled(Flex).attrs({ direction: 'column' })`
   }
 `;
 
-export default {
+const Style = {
   HeroCol,
   CareerHistoryPosition,
   CareerHistoryColumn,
@@ -95,3 +95,5 @@ export default {
   ContactRow,
   ContactColumn,
 };
+
+export default Style;

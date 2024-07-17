@@ -46,4 +46,6 @@ const SubmitButton = styled(PrimaryButton)`
   }
 `;
 
-export default { PageSubtitle, PageRow, PageCol, SubmitButton };
+const Style = { PageSubtitle, PageRow, PageCol, SubmitButton };
+
+export default Style;

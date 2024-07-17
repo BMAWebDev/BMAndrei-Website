@@ -29,7 +29,7 @@ enum Breakpoints {
 
 const dateOfExperienceStart = new Date('25 Aug 2020');
 
-export default {
+const config = {
   colors: Colors,
   padding: {
     page: '30px 85px',
@@ -67,3 +67,5 @@ export default {
     anpc: 'https://anpc.ro/',
   },
 };
+
+export default config;

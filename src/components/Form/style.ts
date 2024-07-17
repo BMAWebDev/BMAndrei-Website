@@ -22,4 +22,6 @@ const Error = styled(Text).attrs({ size: 14 })`
   color: ${config.colors.Red};
 `;
 
-export default { Input, Error };
+const Style = { Input, Error };
+
+export default Style;
