@@ -105,5 +105,6 @@
   "useful_links": "Useful Links",
   "anpc": "ANPC",
   "gdpr": "GDPR",
-  "credits": "© Bărdiță Andrei 2024. All rights reserved."
+  "credits": "© Bărdiță Andrei 2024. All rights reserved.",
+  "success_message": "Your message has been successfully sent."
 }

@@ -39,6 +39,9 @@ const PageCol = styled(Col)`
 
 const SubmitButton = styled(PrimaryButton)`
   width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 
   @media (max-width: ${config.breakpoints.Medium}px) {
     width: 100%;

@@ -1,4 +1,5 @@
 export interface TextProps {
+  color?: string;
   isUnderline?: boolean;
   size?: number;
   isPointer?: boolean;

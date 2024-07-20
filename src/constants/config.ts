@@ -8,6 +8,7 @@ enum Colors {
   DarkThird = '#1E2556',
   LightBlue = '#00F0FF',
   Red = '#E53E00',
+  Green = '#3DD42C',
 }
 
 enum Routes {
