@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.2",
+    "axios": "^1.7.2",
     "formik": "^2.4.6",
     "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",

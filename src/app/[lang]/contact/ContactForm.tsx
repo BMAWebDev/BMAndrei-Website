@@ -1,6 +1,7 @@
 import { Formik, Form } from 'formik';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import axios from 'axios';
 // constants
 import { INITIAL_VALUES, validationSchema } from './formConfig';
 import config from '@constants/config';
@@ -25,14 +26,7 @@ export const ContactForm: React.FC = () => {
         setIsLoading(true);
 
         try {
-          await fetch('/api/send-contact-message', {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(values),
-          });
+          await axios.post('/api/send-contact-message', values);
 
           helpers.resetForm();
 
