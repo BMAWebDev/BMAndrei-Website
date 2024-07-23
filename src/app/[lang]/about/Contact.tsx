@@ -54,6 +54,7 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
               <Link
                 href={config.routes.CV}
                 style={{ color: config.colors.LightBlue }}
+                download="CV-Andrei-Bardita"
               />
             ),
           }}
