@@ -16,7 +16,7 @@ enum Routes {
   About = '/about',
   Contact = '/contact',
   GDPR = '/gdpr',
-  CV = '/CV-Bardita-Andrei.pdf',
+  CV = '/CV-Andrei-Bardita.pdf',
 }
 
 enum Breakpoints {
