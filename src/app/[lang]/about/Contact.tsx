@@ -51,10 +51,15 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
         <Trans
           components={{
             1: (
-              <Link
+              // <Link
+              //   href={config.routes.CV}
+              //   style={{ color: config.colors.LightBlue }}
+              //   download="CV-Andrei-Bardita"
+              // />
+              <a
                 href={config.routes.CV}
                 style={{ color: config.colors.LightBlue }}
-                download="CV-Andrei-Bardita"
+                download
               />
             ),
           }}
