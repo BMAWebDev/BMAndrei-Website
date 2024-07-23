@@ -57,7 +57,7 @@ const BurgerMenuLine = styled.div<{ index: number; isActive: boolean }>`
   transition: margin-top .75s, transform .75s;
 `;
 
-export default {
+const Style = {
   Wrapper,
   Link,
   Container,
@@ -65,3 +65,5 @@ export default {
   BurgerToggle,
   BurgerMenuLine,
 };
+
+export default Style;

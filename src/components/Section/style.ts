@@ -19,4 +19,6 @@ const SectionContainer = styled(Flex)`
   }
 `;
 
-export default { SectionWrapper, SectionContainer };
+const Style = { SectionWrapper, SectionContainer };
+
+export default Style;

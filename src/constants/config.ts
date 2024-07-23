@@ -8,6 +8,7 @@ enum Colors {
   DarkThird = '#1E2556',
   LightBlue = '#00F0FF',
   Red = '#E53E00',
+  Green = '#3DD42C',
 }
 
 enum Routes {
@@ -15,7 +16,7 @@ enum Routes {
   About = '/about',
   Contact = '/contact',
   GDPR = '/gdpr',
-  CV = '/CV-Bardita-Andrei.pdf',
+  CV = '/CV-Andrei-Bardita.pdf',
 }
 
 enum Breakpoints {
@@ -29,7 +30,7 @@ enum Breakpoints {
 
 const dateOfExperienceStart = new Date('25 Aug 2020');
 
-export default {
+const config = {
   colors: Colors,
   padding: {
     page: '30px 85px',
@@ -67,3 +68,5 @@ export default {
     anpc: 'https://anpc.ro/',
   },
 };
+
+export default config;

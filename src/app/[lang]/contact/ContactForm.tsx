@@ -1,31 +1,45 @@
 import { Formik, Form } from 'formik';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import axios from 'axios';
 // constants
 import { INITIAL_VALUES, validationSchema } from './formConfig';
+import config from '@constants/config';
 // components
 import { Field } from '@components/Form';
 import Flex from '@components/Flex';
+import { Text } from '@components/Texts';
+import Spinner from '@components/Spinner';
 // style
 import Style from './style';
 
 export const ContactForm: React.FC = () => {
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
 
   return (
     <Formik
       initialValues={INITIAL_VALUES}
       validationSchema={validationSchema}
-      onSubmit={(values) => {
-        fetch('/api/send-contact-message', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(values),
-        })
-          .then((res) => res.json())
-          .catch((err) => console.log(err));
+      onSubmit={async (values, helpers) => {
+        setIsLoading(true);
+
+        try {
+          await axios.post('/api/send-contact-message', values);
+
+          helpers.resetForm();
+
+          setShowSuccessMessage(true);
+
+          setTimeout(() => {
+            setShowSuccessMessage(false);
+          }, 3000);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setIsLoading(false);
+        }
       }}
     >
       <Form style={{ width: '100%' }}>
@@ -51,8 +65,12 @@ export const ContactForm: React.FC = () => {
             rows={10}
           />
 
+          {showSuccessMessage && (
+            <Text color={config.colors.Green}>{t('success_message')}</Text>
+          )}
+
           <Style.SubmitButton type="submit">
-            {t('contactpage.form.send_button')}
+            {isLoading ? <Spinner /> : t('contactpage.form.send_button')}
           </Style.SubmitButton>
         </Flex>
       </Form>

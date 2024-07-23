@@ -44,7 +44,7 @@ const ColText = styled(Text).attrs({ isPointer: true })``;
 
 const IconsContainer = styled(Flex)``;
 
-export default {
+const Style = {
   Wrapper,
   Container,
   ColumnsContainer,
@@ -53,3 +53,5 @@ export default {
   ColText,
   IconsContainer,
 };
+
+export default Style;

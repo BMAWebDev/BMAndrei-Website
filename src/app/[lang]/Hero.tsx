@@ -42,7 +42,7 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
       </Style.HeroColLeft>
 
       <Style.HeroColRight align="flex-end">
-        <Style.ProfileImage src={AvatarImg} alt="profile image" />
+        <Style.ProfileImage src={AvatarImg} priority alt="profile image" />
       </Style.HeroColRight>
     </Section>
   );

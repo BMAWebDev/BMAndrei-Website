@@ -110,7 +110,7 @@ const SocialMediaCardDescription = styled(Text).attrs({ align: 'center' })`
   flex: 0.75;
 `;
 
-export default {
+const Style = {
   HeroColLeft,
   HeroColRight,
   HeroPrimaryButton,
@@ -124,3 +124,5 @@ export default {
   SocialMediaCardDescription,
   SocialMediaCardContent,
 };
+
+export default Style;

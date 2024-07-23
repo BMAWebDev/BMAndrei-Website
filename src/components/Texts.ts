@@ -5,7 +5,7 @@ import { TextProps } from '@models/texts';
 import config from '@constants/config';
 
 const Text = styled.p<TextProps>`
-  color: ${config.colors.White};
+  color: ${({ color }) => color || config.colors.White};
   text-decoration: ${({ isUnderline }) => (isUnderline ? 'underline' : 'none')};
   font-size: ${({ size }) =>
     size ? `${size}px` : `${config.text.normal.size}px`};
