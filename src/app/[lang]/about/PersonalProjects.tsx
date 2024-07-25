@@ -7,7 +7,7 @@ import config from '@constants/config';
 import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
-import { Text, Title } from '@components/Texts';
+import { Text, Heading1 } from '@components/Texts';
 import CSharpIcon from '@assets/icons/c-sharp.svg';
 import NextJSIcon from '@assets/icons/next-js.svg';
 import NodeJSIcon from '@assets/icons/node-js.svg';
@@ -53,7 +53,7 @@ const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
 
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
-      <Title>{t('aboutpage.personal_projects.title')}</Title>
+      <Heading1>{t('aboutpage.personal_projects.title')}</Heading1>
 
       {projects.map((project, index) => (
         <Style.Project key={index} justify="space-between" isFullWidth>

@@ -8,7 +8,7 @@ import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
 import Flex from '@components/Flex';
-import { SubTitle, Text, Title } from '@components/Texts';
+import { Heading2, Text, Heading1 } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
 import { PrimaryButton } from '@/components/Buttons';
 // style
@@ -20,8 +20,8 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
       <Flex direction="column" gap={35}>
-        <Title>{t('aboutpage.contact.title')}</Title>
-        <SubTitle align="center">{t('aboutpage.contact.subtitle')}</SubTitle>
+        <Heading1>{t('aboutpage.contact.title')}</Heading1>
+        <Heading2 align="center">{t('aboutpage.contact.subtitle')}</Heading2>
       </Flex>
 
       <Style.ContactRow justify="space-between" isFullWidth>

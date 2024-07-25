@@ -49,7 +49,7 @@ const Header = () => {
     <Style.Wrapper>
       <Style.Container justify="space-between">
         <Link href={config.routes.Homepage}>
-          <Text isPointer>BMAndrei</Text>
+          <Text isPointer>BMAWebDev</Text>
         </Link>
 
         <Flex gap={50} hideOnMobile>

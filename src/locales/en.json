@@ -10,7 +10,8 @@
     "services": {
       "title": "Offered services",
       "subtitle": "I offer backend + frontend services.",
-      "modern_technologies": "Building apps with modern technologies, like:"
+      "modern_technologies": "Building apps with modern technologies, like:",
+      "more_info": "Interested in more details? Learn more <1>here</1>."
     },
     "social_media": {
       "title": "Social Media",

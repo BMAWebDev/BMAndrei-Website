@@ -7,10 +7,11 @@ type SectionComponentProps = SectionProps & FlexProps;
 
 const Section: React.FC<PropsWithChildren<SectionComponentProps>> = ({
   index,
+  id,
   children,
   ...restProps
 }) => (
-  <Style.SectionWrapper index={index}>
+  <Style.SectionWrapper id={id} index={index}>
     <Style.SectionContainer {...restProps}>{children}</Style.SectionContainer>
   </Style.SectionWrapper>
 );

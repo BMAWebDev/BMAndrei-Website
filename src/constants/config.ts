@@ -42,8 +42,14 @@ const config = {
     title: {
       size: 32,
     },
-    subtitle: {
+    heading2: {
+      size: 32,
+    },
+    heading3: {
       size: 26,
+    },
+    heading4: {
+      size: 24,
     },
     normal: {
       size: 22,

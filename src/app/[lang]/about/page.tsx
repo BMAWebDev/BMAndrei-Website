@@ -1,22 +1,9 @@
-'use client';
-
+import { Metadata } from 'next';
 // components
-import Hero from './Hero';
-import CareerHistory from './CareerHistory';
-import PersonalProjects from './PersonalProjects';
-import Services from './Services';
-import Contact from './Contact';
+import Wrapper from './Wrapper';
 
-const About = () => {
-  return (
-    <>
-      <Hero index={0} />
-      <CareerHistory index={1} />
-      <PersonalProjects index={2} />
-      <Services index={3} />
-      <Contact index={4} />
-    </>
-  );
+export const metadata: Metadata = {
+  title: 'About | BMAWebDev - Your friendly neighbourhood software developer',
 };
 
-export default About;
+export default Wrapper;

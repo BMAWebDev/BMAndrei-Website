@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 // components
 import { Text } from '../Texts';
-import Flex from '../Flex';
 import LinkedinIcon from '@assets/icons/linkedin.svg';
 import GithubWhiteIcon from '@assets/icons/github-white.svg';
 // style
@@ -18,7 +17,7 @@ const Footer = () => {
       <Style.Container direction="column" align="flex-start" gap={50}>
         <Style.ColumnsContainer justify="space-between" isFullWidth>
           <Style.Col>
-            <Style.ColTitle>BMAndrei</Style.ColTitle>
+            <Style.ColTitle>BMAWebDev</Style.ColTitle>
           </Style.Col>
 
           <Style.Col>
@@ -44,9 +43,9 @@ const Footer = () => {
               <Style.ColText>{t('anpc')}</Style.ColText>
             </Link>
 
-            <Link href={config.routes.GDPR}>
+            {/* <Link href={config.routes.GDPR}>
               <Style.ColText>{t('gdpr')}</Style.ColText>
-            </Link>
+            </Link> */}
 
             <Style.IconsContainer justify="space-between" isFullWidth>
               <Link href={config.socialMedia.github} target="_blank">

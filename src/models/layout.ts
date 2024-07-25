@@ -1,5 +1,6 @@
 export interface SectionProps {
   index: number;
+  id?: string;
 }
 
 type FlexAlignment = 'flex-start' | 'flex-end' | 'center';

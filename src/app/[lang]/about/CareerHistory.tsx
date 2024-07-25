@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
-import { Title, Text } from '@components/Texts';
+import { Heading1, Text } from '@components/Texts';
 import CodeImg from '@assets/code.png';
 import TeamImg from '@assets/team.png';
 // style
@@ -15,7 +15,7 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
 
   return (
     <Section index={index} direction="column" gap={40}>
-      <Title>{t('aboutpage.career_history.title')}</Title>
+      <Heading1>{t('aboutpage.career_history.title')}</Heading1>
 
       <Style.CareerHistoryPosition>
         <Style.CareerHistoryColumn>
@@ -27,9 +27,9 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
         </Style.CareerHistoryColumn>
 
         <Style.CareerHistoryColumn align="flex-end">
-          <Title align="right">
+          <Heading1 align="right">
             {t('aboutpage.career_history.software_developer.title')}
-          </Title>
+          </Heading1>
 
           <Text align="right">
             {t('aboutpage.career_history.software_developer.description')}
@@ -39,9 +39,9 @@ const CareerHistory: React.FC<SectionProps> = ({ index }) => {
 
       <Style.CareerHistoryPosition isReversed>
         <Style.CareerHistoryColumn>
-          <Title align="right">
+          <Heading1 align="right">
             {t('aboutpage.career_history.team_leader.title')}
-          </Title>
+          </Heading1>
 
           <Text>{t('aboutpage.career_history.team_leader.description')}</Text>
         </Style.CareerHistoryColumn>

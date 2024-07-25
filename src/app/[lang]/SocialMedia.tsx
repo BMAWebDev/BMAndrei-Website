@@ -6,8 +6,7 @@ import config from '@constants/config';
 import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
-import { Title, SubTitle, Text } from '@components/Texts';
-import Flex from '@components/Flex';
+import { Heading2, Heading3, Heading4 } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
 import GithubWhiteIcon from '@assets/icons/github-white.svg';
 // style
@@ -18,8 +17,8 @@ const SocialMedia: React.FC<SectionProps> = ({ index }) => {
 
   return (
     <Section index={index} direction="column" gap={50}>
-      <Title>{t('homepage.social_media.title')}</Title>
-      <SubTitle>{t('homepage.social_media.subtitle')}</SubTitle>
+      <Heading2>{t('homepage.social_media.title')}</Heading2>
+      <Heading3>{t('homepage.social_media.subtitle')}</Heading3>
 
       <Style.CardsContainer direction="column" gap={65}>
         <Style.SocialMediaCard>
@@ -28,7 +27,7 @@ const SocialMedia: React.FC<SectionProps> = ({ index }) => {
               <Style.SocialMediaIcon src={LinkedInIcon} alt="LinkedIn icon" />
             </Link>
 
-            <Text>LinkedIn</Text>
+            <Heading4>LinkedIn</Heading4>
           </Style.SocialMediaCardContent>
 
           <Style.SocialMediaCardDescription>
@@ -45,7 +44,7 @@ const SocialMedia: React.FC<SectionProps> = ({ index }) => {
               />
             </Link>
 
-            <Text>Github</Text>
+            <Heading4>Github</Heading4>
           </Style.SocialMediaCardContent>
 
           <Style.SocialMediaCardDescription>
