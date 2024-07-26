@@ -11,7 +11,7 @@
       "title": "Offered services",
       "subtitle": "I offer backend + frontend services.",
       "modern_technologies": "Building apps with modern technologies, like:",
-      "more_info": "Interested in more details? Learn more <1>here</1>."
+      "more_info": "Interested? <1>Learn more details about services</1>."
     },
     "social_media": {
       "title": "Social Media",
@@ -100,7 +100,7 @@
       "send_button": "Send the message"
     }
   },
-  "learn_more": "Learn more",
+  "learn_more": "Learn more about me",
   "contact_me": "Contact me",
   "pages": "Pages",
   "useful_links": "Useful Links",

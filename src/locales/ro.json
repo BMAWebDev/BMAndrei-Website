@@ -11,7 +11,7 @@
       "title": "Servicii oferite",
       "subtitle": "Ofer servicii backend + frontend.",
       "modern_technologies": "Folosesc tehnologii moderne, precum:",
-      "more_info": "Interesat de mai multe informații? Află mai multe <1>aici</1>."
+      "more_info": "Interesat? <1>Află mai multe informații despre servicii</1>."
     },
     "social_media": {
       "title": "Rețele sociale",
@@ -100,7 +100,7 @@
       "send_button": "Trimite mesajul"
     }
   },
-  "learn_more": "Află mai multe",
+  "learn_more": "Află mai multe despre mine",
   "contact_me": "Contactează-mă",
   "pages": "Pagini",
   "useful_links": "Link-uri utile",
