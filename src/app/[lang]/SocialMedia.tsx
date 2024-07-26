@@ -23,8 +23,16 @@ const SocialMedia: React.FC<SectionProps> = ({ index }) => {
       <Style.CardsContainer direction="column" gap={65}>
         <Style.SocialMediaCard>
           <Style.SocialMediaCardContent gap={50}>
-            <Link href={config.socialMedia.linkedin} target="_blank">
-              <Style.SocialMediaIcon src={LinkedInIcon} alt="LinkedIn icon" />
+            <Link
+              href={config.socialMedia.linkedin}
+              target="_blank"
+              title="LinkedIn"
+            >
+              <Style.SocialMediaIcon
+                src={LinkedInIcon}
+                alt="LinkedIn icon"
+                title="LinkedIn icon"
+              />
             </Link>
 
             <Heading4>LinkedIn</Heading4>
@@ -37,10 +45,15 @@ const SocialMedia: React.FC<SectionProps> = ({ index }) => {
 
         <Style.SocialMediaCard>
           <Style.SocialMediaCardContent gap={50}>
-            <Link href={config.socialMedia.github} target="_blank">
+            <Link
+              href={config.socialMedia.github}
+              target="_blank"
+              title="Github"
+            >
               <Style.SocialMediaIcon
                 src={GithubWhiteIcon}
                 alt="Github white icon"
+                title="Github white icon"
               />
             </Link>
 

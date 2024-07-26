@@ -40,8 +40,13 @@ const Wrapper = () => {
             href={config.socialMedia.linkedin}
             style={{ width: '100%' }}
             target="_blank"
+            title="LinkedIn link"
           >
-            <Image src={LinkedInIcon} alt="LinkedIn icon" />
+            <Image
+              src={LinkedInIcon}
+              alt="LinkedIn icon"
+              title="LinkedIn icon"
+            />
           </Link>
         </Style.PageCol>
       </Style.PageRow>

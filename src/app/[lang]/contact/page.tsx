@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Wrapper from './Wrapper';
 
 export const metadata: Metadata = {
-  title: 'Contact | BMAWebDev - Your friendly neighbourhood software developer',
+  title: 'Contact | BMAWebDev - Your friendly neighbourhood developer',
 };
 
 export default Wrapper;

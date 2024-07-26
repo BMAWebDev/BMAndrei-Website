@@ -21,19 +21,19 @@ const Header = () => {
   const navbarElements = useMemo(
     () => (
       <>
-        <Style.Link href={config.routes.Homepage}>
+        <Style.Link href={config.routes.Homepage} title="Home page">
           <Text isUnderline={pathname === config.routes.Homepage} isPointer>
             {t('home_page')}
           </Text>
         </Style.Link>
 
-        <Style.Link href={config.routes.About}>
+        <Style.Link href={config.routes.About} title="About page">
           <Text isUnderline={pathname === config.routes.About} isPointer>
             {t('about_page')}
           </Text>
         </Style.Link>
 
-        <Style.Link href={config.routes.Contact}>
+        <Style.Link href={config.routes.Contact} title="Contact page">
           <Text isUnderline={pathname === config.routes.Contact} isPointer>
             {t('contact_page')}
           </Text>
@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <Style.Wrapper>
       <Style.Container justify="space-between">
-        <Link href={config.routes.Homepage}>
+        <Link href={config.routes.Homepage} title="Home page">
           <Text isPointer>BMAWebDev</Text>
         </Link>
 

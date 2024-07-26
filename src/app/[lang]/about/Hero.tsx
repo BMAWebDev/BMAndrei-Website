@@ -7,7 +7,7 @@ import { getCurrentAge, getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
 import Flex from '@components/Flex';
-import { Heading2, Text, Heading1 } from '@components/Texts';
+import { Heading2, Text, Heading1, Heading3 } from '@components/Texts';
 import AvatarImg from '@assets/avatar.png';
 // style
 import Style from './style';
@@ -21,13 +21,15 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} direction="column" gap={50}>
       <Flex direction="column" align="center">
-        <Heading1>Andrei Bărdiță</Heading1>
-        <Heading2>{t('aboutpage.hero.position_title')}</Heading2>
+        <Heading1>{t('aboutpage.hero.title')}</Heading1>
       </Flex>
 
       <Flex justify="space-between" isFullWidth>
         <Style.HeroCol gap={40}>
-          <Heading2>{t('aboutpage.hero.title')}</Heading2>
+          <Heading2>
+            Andrei Bărdiță - {t('aboutpage.hero.position_title')}
+          </Heading2>
+
           <Text>
             {t('aboutpage.hero.description', {
               age,
@@ -42,6 +44,7 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
             priority
             className="full-size"
             alt="profile image"
+            title="profile image"
           />
         </Style.HeroCol>
       </Flex>

@@ -7,7 +7,7 @@ import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
 import Flex from '@components/Flex';
-import { Heading2, Text, Heading1 } from '@components/Texts';
+import { Heading2, Text, Heading1, Heading3 } from '@components/Texts';
 
 interface IService {
   title: string;
@@ -50,12 +50,12 @@ const Services: React.FC<SectionProps> = ({ index }) => {
       direction="column"
       gap={config.padding.sectionValue}
     >
-      <Heading1>{t('aboutpage.services.title')}</Heading1>
+      <Heading2>{t('aboutpage.services.title')}</Heading2>
 
       <Flex direction="column" gap={80} align="flex-start" isFullWidth>
         {services.map((service, index) => (
           <Flex key={index} direction="column" gap={40} align="flex-start">
-            <Heading2>{service.title}</Heading2>
+            <Heading3>{service.title}</Heading3>
             <Text>{service.description}</Text>
           </Flex>
         ))}

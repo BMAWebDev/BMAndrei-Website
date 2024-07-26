@@ -39,6 +39,7 @@ const Control: React.FC<ControlProps> = (props) => {
         width={50}
         height={40}
         alt="country flag"
+        title="country flag"
         style={{ borderRadius: '10px' }}
       />
 

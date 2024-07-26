@@ -67,6 +67,7 @@ const Services: React.FC<SectionProps> = ({ index }) => {
               <Link
                 href={`${config.routes.About}?section=services`}
                 style={{ color: config.colors.LightBlue }}
+                title="Services"
               />
             ),
           }}
