@@ -95,6 +95,7 @@ export default function LanguageChanger() {
       styles={selectStyles}
       isSearchable={false}
       instanceId="language-changer"
+      aria-labelledby="Language changer"
     />
   );
 }
