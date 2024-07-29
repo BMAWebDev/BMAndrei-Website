@@ -56,7 +56,9 @@ const Wrapper = () => {
   return (
     <Section index={0} gap={50} direction="column">
       <Flex direction="column" gap={10}>
-        <Heading1 align="center">{t('gdprpage.title')}</Heading1>
+        <Heading1 align="center" style={{ textTransform: 'capitalize' }}>
+          {t('gdprpage.title')}
+        </Heading1>
         <Text>{t('gdprpage.last_modified_date')}</Text>
       </Flex>
 
