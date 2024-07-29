@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { K2D } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 // translations
 import i18nConfig from '@/i18n-config.json';
 // constants
@@ -46,6 +48,9 @@ const RootLayout = async ({ params: { lang }, children }: any) => {
       >
         <body className={inter.className}>
           <Layout>{children}</Layout>
+
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </TranslationsProvider>
