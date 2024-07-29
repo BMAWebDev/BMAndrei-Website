@@ -38,7 +38,7 @@ const Col = styled(Flex).attrs({
   }
 `;
 
-const ColTitle = styled(Heading2).attrs({ size: 40 })``;
+const ColTitle = styled(Heading2)``;
 
 const ColText = styled(Heading3).attrs({ isPointer: true })``;
 

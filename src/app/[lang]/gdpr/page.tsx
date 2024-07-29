@@ -1,5 +1,8 @@
+// components
+import Wrapper from './Wrapper';
+
 const GDPR = async () => {
-  return <div>gdpr page</div>;
+  return <Wrapper />;
 };
 
 export default GDPR;

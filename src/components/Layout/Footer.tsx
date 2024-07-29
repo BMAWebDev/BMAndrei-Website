@@ -47,9 +47,9 @@ const Footer = () => {
               <Style.ColText>{t('anpc')}</Style.ColText>
             </Link>
 
-            {/* <Link href={config.routes.GDPR} title="GDPR">
+            <Link href={config.routes.GDPR} title="GDPR">
               <Style.ColText>{t('gdpr')}</Style.ColText>
-            </Link> */}
+            </Link>
 
             <Style.IconsContainer justify="space-between" isFullWidth>
               <Link

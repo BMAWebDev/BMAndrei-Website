@@ -73,6 +73,8 @@ const config = {
   externalWebsites: {
     anpc: 'https://anpc.ro/',
   },
+  mainWebsite: process.env.WEBSITE_URL || 'https://bmawebdev.ro',
+  contactEmail: 'contact@bmawebdev.ro',
 };
 
 export default config;

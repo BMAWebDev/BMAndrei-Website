@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
-
-const URL = process.env.WEBSITE_URL;
+// constants
+import config from '@constants/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: `${URL}/sitemap.xml`,
+    sitemap: `${config.mainWebsite}/sitemap.xml`,
   };
 }

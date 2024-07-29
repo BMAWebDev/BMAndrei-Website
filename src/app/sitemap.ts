@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
+// constants
+import config from '@constants/config';
 
-const URL = process.env.WEBSITE_URL;
+const URL = config.mainWebsite;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!URL) return [];
