@@ -15,18 +15,33 @@ const Text = styled.p<TextProps>`
   align-self: ${({ alignSelf }) => alignSelf || 'auto'};
 `;
 
-const Title = styled.h1<TextProps>`
+const Heading1 = styled.h1<TextProps>`
   color: ${config.colors.White};
   font-size: ${config.text.title.size}px;
   text-align: ${({ align }) => align};
   width: ${({ isFullWidth }) => isFullWidth && '100%'};
 `;
 
-const SubTitle = styled.h2<TextProps>`
+const Heading2 = styled.h2<TextProps>`
   color: ${config.colors.White};
-  font-size: ${config.text.subtitle.size}px;
+  font-size: ${({ size }) =>
+    size ? `${size}px` : `${config.text.heading2.size}px`};
   text-align: ${({ align }) => align};
   width: ${({ isFullWidth }) => isFullWidth && '100%'};
 `;
 
-export { Text, Title, SubTitle };
+const Heading3 = styled.h3<TextProps>`
+  color: ${config.colors.White};
+  font-size: ${config.text.heading3.size}px;
+  text-align: ${({ align }) => align};
+  width: ${({ isFullWidth }) => isFullWidth && '100%'};
+`;
+
+const Heading4 = styled.h4<TextProps>`
+  color: ${config.colors.White};
+  font-size: ${config.text.heading4.size}px;
+  text-align: ${({ align }) => align};
+  width: ${({ isFullWidth }) => isFullWidth && '100%'};
+`;
+
+export { Text, Heading1, Heading2, Heading3, Heading4 };

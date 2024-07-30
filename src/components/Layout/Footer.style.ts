@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // constants
 import config from '@constants/config';
 // components
-import { Text, Title } from '../Texts';
+import { Heading2, Heading3 } from '../Texts';
 import Flex from '../Flex';
 
 const Wrapper = styled.div`
@@ -38,9 +38,9 @@ const Col = styled(Flex).attrs({
   }
 `;
 
-const ColTitle = styled(Title).attrs({ size: 40 })``;
+const ColTitle = styled(Heading2)``;
 
-const ColText = styled(Text).attrs({ isPointer: true })``;
+const ColText = styled(Heading3).attrs({ isPointer: true })``;
 
 const IconsContainer = styled(Flex)``;
 

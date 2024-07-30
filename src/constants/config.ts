@@ -42,8 +42,14 @@ const config = {
     title: {
       size: 32,
     },
-    subtitle: {
+    heading2: {
+      size: 32,
+    },
+    heading3: {
       size: 26,
+    },
+    heading4: {
+      size: 24,
     },
     normal: {
       size: 22,
@@ -67,6 +73,8 @@ const config = {
   externalWebsites: {
     anpc: 'https://anpc.ro/',
   },
+  mainWebsite: process.env.WEBSITE_URL || 'https://bmawebdev.ro',
+  contactEmail: 'contact@bmawebdev.ro',
 };
 
 export default config;

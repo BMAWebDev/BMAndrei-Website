@@ -4,9 +4,9 @@ import config from '@constants/config';
 // components
 import Flex, { Col } from '@components/Flex';
 import { PrimaryButton } from '@components/Buttons';
-import { SubTitle } from '@components/Texts';
+import { Heading2 } from '@components/Texts';
 
-const PageSubtitle = styled(SubTitle)`
+const PageHeading2 = styled(Heading2)`
   max-width: 90%;
 
   @media (max-width: ${config.breakpoints.Medium}px) {
@@ -49,6 +49,6 @@ const SubmitButton = styled(PrimaryButton)`
   }
 `;
 
-const Style = { PageSubtitle, PageRow, PageCol, SubmitButton };
+const Style = { PageHeading2, PageRow, PageCol, SubmitButton };
 
 export default Style;

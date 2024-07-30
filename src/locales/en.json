@@ -10,7 +10,8 @@
     "services": {
       "title": "Offered services",
       "subtitle": "I offer backend + frontend services.",
-      "modern_technologies": "Building apps with modern technologies, like:"
+      "modern_technologies": "Building apps with modern technologies, like:",
+      "more_info": "Interested? <1>Learn more details about services</1>."
     },
     "social_media": {
       "title": "Social Media",
@@ -99,7 +100,41 @@
       "send_button": "Send the message"
     }
   },
-  "learn_more": "Learn more",
+  "gdprpage": {
+    "title": "General Data Protection Regulation",
+    "last_modified_date": "July 29th, 2024",
+    "sections": {
+      "who_am_i": {
+        "title": "Who am i?",
+        "description": "I am Andrei, a software developer who takes care of the client's needs under the legal form BĂRDIȚĂ MIHAI-ANDREI PERSOANĂ FIZICĂ AUTORIZATĂ, Unique Registration Code 50377857, Order Number in the Trade Register F40/5176/2024, dated 16.07.2024."
+      },
+      "website_intent": {
+        "title": "What does this website represent?",
+        "description": "The <strong>BMAWebDev</strong> website is my landing page where i present myself, enlist the provided services and offer the contact options, either by the contact form or by the LinkedIn page."
+      },
+      "contact_form": {
+        "title": "The contact form",
+        "description": "In order to get in touch with me, there are two ways to send a message on the contact page: either through LinkedIn or through the contact form. The contact form was created so that a LinkedIn account is not required. The form asks each user for a name, email and message. The name and email are personal data that are sent in the contact message, but they are not saved anywhere on the website, and will be deleted from the form upon submission. This data is used to send the email and to return back with a message following the request."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "description": "Cookies are used for the proper functioning of the web page. In this website, only the selected language will be saved, so that it can be used when you re-enter the page. The user can opt out of the website saving the cookies, but the functionality will no longer work as intended and the language will be reset upon entering the page."
+      },
+      "storing_data": {
+        "title": "How is your data stored",
+        "description": "The data entered on this website (<url>https://bmawebdev.ro</url>) is not saved in any way."
+      },
+      "sharing_data": {
+        "title": "How is your data shared or used",
+        "description": "The data entered on this website (<url>https://bmawebdev.ro</url>) is not shared with third-party users / companies and is not used for any purpose other than that mentioned on the website, such as sending a message through the contact form."
+      },
+      "contact_info": {
+        "title": "Contact info",
+        "description": "For any concerns, questions, discussions or messages, I am available at the following email address: <email>contact@bmawebdev.ro</email>. For phone information, a specific request for a contact phone number is required in the email message to avoid spam."
+      }
+    }
+  },
+  "learn_more": "Learn more about me",
   "contact_me": "Contact me",
   "pages": "Pages",
   "useful_links": "Useful Links",

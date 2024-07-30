@@ -8,7 +8,7 @@ import { SectionProps } from '@models/layout';
 // components
 import Section from '@components/Section';
 import Flex from '@components/Flex';
-import { SubTitle, Text, Title } from '@components/Texts';
+import { Heading2, Text, Heading1, Heading3 } from '@components/Texts';
 import LinkedInIcon from '@assets/icons/linkedin.svg';
 import { PrimaryButton } from '@/components/Buttons';
 // style
@@ -20,26 +20,33 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
       <Flex direction="column" gap={35}>
-        <Title>{t('aboutpage.contact.title')}</Title>
-        <SubTitle align="center">{t('aboutpage.contact.subtitle')}</SubTitle>
+        <Heading2>{t('aboutpage.contact.title')}</Heading2>
+        <Heading3 align="center">{t('aboutpage.contact.subtitle')}</Heading3>
       </Flex>
 
       <Style.ContactRow justify="space-between" isFullWidth>
         <Style.ContactColumn align="flex-start">
-          <Text>{t('aboutpage.contact.write_through_linkedin')}</Text>
-          <Link href={config.socialMedia.linkedin} target="_blank">
+          <Heading3>{t('aboutpage.contact.write_through_linkedin')}</Heading3>
+          <Link
+            href={config.socialMedia.linkedin}
+            target="_blank"
+            title="LinkedIn"
+          >
             <Image
               src={LinkedInIcon}
               width={245}
               height={245}
               alt="LinkedIn icon"
+              title="LinkedIn icon"
             />
           </Link>
         </Style.ContactColumn>
 
         <Style.ContactColumn align="flex-end">
-          <Text>{t('aboutpage.contact.write_through_contact_form')}</Text>
-          <Link href={config.routes.Contact}>
+          <Heading3>
+            {t('aboutpage.contact.write_through_contact_form')}
+          </Heading3>
+          <Link href={config.routes.Contact} title="Contact page">
             <PrimaryButton>
               {t('aboutpage.contact.contact_me_button')}
             </PrimaryButton>
@@ -55,6 +62,7 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
                 href={config.routes.CV}
                 style={{ color: config.colors.LightBlue }}
                 download
+                title="CV"
               />
             ),
           }}

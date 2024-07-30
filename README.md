@@ -1,6 +1,6 @@
-# BMAndrei Website
+# BMAWebDev Landing Page
 
-Landing page for [BMAndrei Website](https://bmandrei.ro). Written in NextJS, builds a static output folder for using in hosting. Open-source mindset.
+Landing page for [BMAWebDev](https://bmawebdev.ro). Written in NextJS, builds a static output folder for using in hosting. Open-source mindset.
 
 ## Running locally
 

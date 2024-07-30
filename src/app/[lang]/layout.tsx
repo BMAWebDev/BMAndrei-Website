@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { K2D } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 // translations
 import i18nConfig from '@/i18n-config.json';
 // constants
@@ -15,9 +17,23 @@ import '@styles/globals.css';
 const inter = K2D({ subsets: ['latin'], weight: '300' });
 
 export const metadata: Metadata = {
-  title: 'BMAndrei',
+  title: 'BMAWebDev - Your friendly neighbourhood developer',
   description:
-    'PFA Bărdiță Mihai Andrei - your friendly neighbourhood software developer.',
+    'Home page - Bărdiță Mihai-Andrei Persoană Fizică Autorizată (Authorized Person) - your friendly neighbourhood software developer, helping people with their software needs. Welcome to my webpage!',
+  keywords: [
+    'software developer',
+    'web developer',
+    'software engineer',
+    'developer',
+    'react',
+    'javascript',
+    'typescript',
+    'node',
+    'Andrei Bardita',
+    'PFA',
+    'Andrei Bardita PFA',
+    'BARDITA MIHAI-ANDREI PERSOANA FIZICA AUTORIZATA',
+  ],
 };
 
 export const generateStaticParams = () => {
@@ -36,6 +52,9 @@ const RootLayout = async ({ params: { lang }, children }: any) => {
       >
         <body className={inter.className}>
           <Layout>{children}</Layout>
+
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </TranslationsProvider>

@@ -10,7 +10,8 @@
     "services": {
       "title": "Servicii oferite",
       "subtitle": "Ofer servicii backend + frontend.",
-      "modern_technologies": "Folosesc tehnologii moderne, precum:"
+      "modern_technologies": "Folosesc tehnologii moderne, precum:",
+      "more_info": "Interesat? <1>Află mai multe informații despre servicii</1>."
     },
     "social_media": {
       "title": "Rețele sociale",
@@ -99,7 +100,41 @@
       "send_button": "Trimite mesajul"
     }
   },
-  "learn_more": "Află mai multe",
+  "gdprpage": {
+    "title": "Regulamentul general privind protecția datelor",
+    "last_modified_date": "29 Iulie 2024",
+    "sections": {
+      "who_am_i": {
+        "title": "Cine sunt?",
+        "description": "Eu sunt Andrei, un dezvoltator software care se ocupă de nevoile clientului sub forma juridică BĂRDIȚĂ MIHAI-ANDREI PERSOANĂ FIZICĂ AUTORIZATĂ, Cod Unic de Înregistrare 50377857, Număr de Ordine în Registrul Comerțului F40/5176/2024, din data 16.07.2024."
+      },
+      "website_intent": {
+        "title": "Ce reprezintă acest website?",
+        "description": "Website-ul <strong>BMAWebDev</strong> este pagina mea web de prezentare prin care mă descriu, listez serviciile prestate și ofer opțiunile de contact, fie prin formularul de mail, fie prin pagina de LinkedIn."
+      },
+      "contact_form": {
+        "title": "Formularul de contact",
+        "description": "Pentru a putea lua legătura cu mine, în pagina de contact se află două metode de a trimite un mesaj: fie prin LinkedIn, fie prin formularul de contact. Formularul de contact a fost creat pentru a nu fi necesar un cont de LinkedIn. Formularul cere fiecărui utilizator un nume, email și mesaj. Numele și email-ul sunt date personale care sunt trimise în mesajul de contact, însă acestea nu sunt salvate nicăieri în website, urmând a fi șterse din formular la trimitere. Aceste date sunt folosite pentru a trimite email-ul și pentru a reveni cu un mesaj înapoi în urma solicitării."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "description": "Cookie-urile sunt folosite pentru buna funcționare a paginii web. În acest site web doar limba selectată va fi salvată, pentru a putea fi folosită la reintrarea în pagină. Utilizatorul poate opta ca website-ul să nu salveze cookie-uri, însă funcționalitatea nu va mai fi la fel de bună, însemnând că limba va fi resetată la intrarea în pagină."
+      },
+      "storing_data": {
+        "title": "Cum îți sunt stocate datele",
+        "description": "Datele introduse pe acest website (<url>https://bmawebdev.ro</url>) nu sunt salvate în niciun fel."
+      },
+      "sharing_data": {
+        "title": "Cum îți sunt partajate sau folosite datele",
+        "description": "Datele introduse pe acest website (<url>https://bmawebdev.ro</url>) nu sunt partajate către utilizatori terți / companii terțe și nu sunt folosite în niciun alt scop decât cel menționat și în website, cum ar fi trimiterea mesajului de contact prin formular."
+      },
+      "contact_info": {
+        "title": "Informații de contact",
+        "description": "Pentru orice nelămurire, întrebare, discuție sau mesaj sunt disponibil la adresa de email: <email>contact@bmawebdev.ro</email>. Pentru informații telefonice este necesară în mesajul de mail cererea specifică a unui număr de telefon de contact pentru a evita spam-ul."
+      }
+    }
+  },
+  "learn_more": "Află mai multe despre mine",
   "contact_me": "Contactează-mă",
   "pages": "Pagini",
   "useful_links": "Link-uri utile",

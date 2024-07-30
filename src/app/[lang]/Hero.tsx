@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 // constants
 import config from '@constants/config';
@@ -8,8 +7,7 @@ import { SectionProps } from '@models/layout';
 import { getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
-import { Title, SubTitle } from '@components/Texts';
-import Flex from '@components/Flex';
+import { Heading1, Text } from '@components/Texts';
 import AvatarImg from '@assets/avatar.png';
 // style
 import Style from './style';
@@ -20,20 +18,20 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
   return (
     <Section index={index} gap={15}>
       <Style.HeroColLeft>
-        <Title>{t('homepage.hero.title')}</Title>
+        <Heading1>{t('homepage.hero.title')}</Heading1>
 
-        <SubTitle>
+        <Text size={config.text.heading2.size}>
           {t('homepage.hero.description', {
             yearsOfExperience: getYearsOfExperience(),
           })}
-        </SubTitle>
+        </Text>
 
         <Style.HeroButtonsContainer gap={15} isFullWidth>
-          <Style.HeroLink href={config.routes.About}>
+          <Style.HeroLink href={config.routes.About} title="About page">
             <Style.HeroPrimaryButton>{t('learn_more')}</Style.HeroPrimaryButton>
           </Style.HeroLink>
 
-          <Style.HeroLink href={config.routes.Contact}>
+          <Style.HeroLink href={config.routes.Contact} title="Contact page">
             <Style.HeroSecondaryButton>
               {t('contact_me')}
             </Style.HeroSecondaryButton>
@@ -42,7 +40,12 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
       </Style.HeroColLeft>
 
       <Style.HeroColRight align="flex-end">
-        <Style.ProfileImage src={AvatarImg} priority alt="profile image" />
+        <Style.ProfileImage
+          src={AvatarImg}
+          priority
+          alt="profile image"
+          title="profile image"
+        />
       </Style.HeroColRight>
     </Section>
   );
