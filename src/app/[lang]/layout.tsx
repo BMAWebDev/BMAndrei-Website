@@ -17,7 +17,7 @@ import '@styles/globals.css';
 const inter = K2D({ subsets: ['latin'], weight: '300' });
 
 export const metadata: Metadata = {
-  title: 'Home | BMAWebDev - Your friendly neighbourhood developer',
+  title: 'BMAWebDev - Your friendly neighbourhood developer',
   description:
     'Home page - Bărdiță Mihai-Andrei Persoană Fizică Autorizată (Authorized Person) - your friendly neighbourhood software developer, helping people with their software needs. Welcome to my webpage!',
   keywords: [
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     'javascript',
     'typescript',
     'node',
+    'Andrei Bardita',
+    'PFA',
+    'Andrei Bardita PFA',
+    'BARDITA MIHAI-ANDREI PERSOANA FIZICA AUTORIZATA',
   ],
 };
 
