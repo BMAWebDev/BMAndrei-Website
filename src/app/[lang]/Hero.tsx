@@ -8,7 +8,7 @@ import { getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
 import { Heading1, Text } from '@components/Texts';
-import AvatarImg from '@assets/avatar.png';
+// import AvatarImg from '@assets/avatar.png';
 // style
 import Style from './style';
 
@@ -40,12 +40,12 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
       </Style.HeroColLeft>
 
       <Style.HeroColRight align="flex-end">
-        <Style.ProfileImage
+        {/* <Style.ProfileImage
           src={AvatarImg}
           priority
           alt="profile image"
           title="profile image"
-        />
+        /> */}
       </Style.HeroColRight>
     </Section>
   );

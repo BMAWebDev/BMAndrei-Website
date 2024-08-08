@@ -7,8 +7,8 @@ import { getCurrentAge, getYearsOfExperience } from '@utils/datetime';
 // components
 import Section from '@components/Section';
 import Flex from '@components/Flex';
-import { Heading2, Text, Heading1, Heading3 } from '@components/Texts';
-import AvatarImg from '@assets/avatar.png';
+import { Heading2, Text, Heading1 } from '@components/Texts';
+// import AvatarImg from '@assets/avatar.png';
 // style
 import Style from './style';
 
@@ -39,13 +39,13 @@ const Hero: React.FC<SectionProps> = ({ index }) => {
         </Style.HeroCol>
 
         <Style.HeroCol flex={0.4} align="flex-end" hideOnMobile>
-          <Image
+          {/* <Image
             src={AvatarImg}
             priority
             className="full-size"
             alt="profile image"
             title="profile image"
-          />
+          /> */}
         </Style.HeroCol>
       </Flex>
     </Section>

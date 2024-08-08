@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.69 129.77">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #151515;
+        stroke-width: 3px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #fff;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-family: DINAlternate-Bold, 'DIN Alternate';
+        font-size: 12.43px;
+        font-weight: 700;
+        letter-spacing: .06em;
+      }
+
+      .cls-4 {
+        stroke-width: 5px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke: #aaa;
+        stroke-width: 7px;
+      }
+
+      .cls-6 {
+        fill: #aaa;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <path class="cls-3" d="m231.43,128.27H7.26c-3.18,0-5.76-3.14-5.76-7V8.5C1.5,4.64,4.08,1.5,7.26,1.5h224.17c3.18,0,5.76,3.14,5.76,7v112.76c0,3.87-2.58,7-5.76,7Z"/>
+    <g>
+      <path class="cls-4" d="m159.18,91.06l-.79-69.69c-.34-1.82,21.6,6.72,34.11,27.69,12.5,20.97,13.84,39.35,12.5,41.26"/>
+      <path class="cls-5" d="m154.55,91.06l.79-69.69c.66-2.23-22.8,7.92-34.11,27.69"/>
+      <path class="cls-4" d="m83.54,91.06l.79-69.69c.14-2.42-25.37,9.86-35.16,29.67"/>
+      <path class="cls-4" d="m84.33,70.94c.35,15.51-20.91,19.7-33.99,18.27-14.58-1.5-19.34-12.64-16.1-21.55,3.21-8.93,12.93-16.74,24.29-20.91l6.56-2.21"/>
+      <path class="cls-6" d="m124.91,48.99c-.07,3.87-7.01,3.87-7.08,0,.07-3.87,7.01-3.87,7.08,0Z"/>
+      <path class="cls-5" d="m88.19,91.06l-.79-69.69c-.66-2.23,22.8,7.92,34.11,27.69"/>
+      <path class="cls-4" d="m197.43,58.35c-1.52-3.39-11.07-10.92-19.41-13.8"/>
+      <path class="cls-1" d="m180.53,44.36c.19,3.3-4.72,3.67-5.02.37-.19-3.3,4.72-3.67,5.02-.37Z"/>
+      <path class="cls-1" d="m67.62,44.55c-.06,3.32-5,3.32-5.05,0,.06-3.32,5-3.32,5.05,0Z"/>
+    </g>
+    <text class="cls-2" transform="translate(36.09 112.83) scale(1.38 1)"><tspan x="0" y="0">WEB DEVELOPMENT</tspan></text>
+  </g>
+</svg>

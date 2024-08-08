@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.14 98.67">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: DINAlternate-Bold, 'DIN Alternate';
+        font-size: 12.43px;
+        font-weight: 700;
+        letter-spacing: .06em;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        stroke: #aaa;
+        stroke-width: 7px;
+      }
+
+      .cls-5 {
+        fill: #aaa;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <path class="cls-3" d="m128.41,73.49l-.79-69.69c-.34-1.82,21.6,6.72,34.11,27.69,12.5,20.97,13.84,39.35,12.5,41.26"/>
+      <path class="cls-4" d="m123.77,73.49l.79-69.69c.66-2.23-22.8,7.92-34.11,27.69"/>
+      <path class="cls-3" d="m52.77,73.49l.79-69.69c.14-2.42-25.37,9.86-35.16,29.67"/>
+      <path class="cls-3" d="m53.56,53.37c.35,15.51-20.91,19.7-33.99,18.27C4.99,70.14.23,59,3.47,50.09c3.21-8.93,12.93-16.74,24.29-20.91l6.56-2.21"/>
+      <path class="cls-5" d="m94.13,31.42c-.07,3.87-7.01,3.87-7.08,0,.07-3.87,7.01-3.87,7.08,0Z"/>
+      <path class="cls-4" d="m57.41,73.49l-.79-69.69c-.66-2.23,22.8,7.92,34.11,27.69"/>
+      <path class="cls-3" d="m166.66,40.77c-1.52-3.39-11.07-10.92-19.41-13.8"/>
+      <path class="cls-1" d="m149.76,26.79c.19,3.3-4.72,3.67-5.02.37-.19-3.3,4.72-3.67,5.02-.37Z"/>
+      <path class="cls-1" d="m36.85,26.97c-.06,3.32-5,3.32-5.05,0,.06-3.32,5-3.32,5.05,0Z"/>
+    </g>
+    <text class="cls-2" transform="translate(5.32 95.26) scale(1.38 1)"><tspan x="0" y="0">WEB DEVELOPMENT</tspan></text>
+  </g>
+</svg>
