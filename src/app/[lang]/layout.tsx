@@ -50,6 +50,30 @@ const RootLayout = async ({ params: { lang }, children }: any) => {
         dir="ltr"
         style={{ backgroundColor: config.colors.DarkPrimary }}
       >
+        <head>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#111530" />
+          <meta name="msapplication-TileColor" content="#111530" />
+          <meta name="theme-color" content="#111530" />
+        </head>
+
         <body className={inter.className}>
           <Layout>{children}</Layout>
 
