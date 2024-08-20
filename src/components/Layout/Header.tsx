@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 // constants
 import config from '@constants/config';
 // translations
@@ -10,6 +11,7 @@ import useGetPathname from '@hooks/useGetPathname';
 // compontents
 import Flex from '../Flex';
 import { Text } from '../Texts';
+import Logo from '@assets/logo-1.svg';
 // style
 import Style from './Header.style';
 
@@ -49,7 +51,13 @@ const Header = () => {
     <Style.Wrapper>
       <Style.Container justify="space-between">
         <Link href={config.routes.Homepage} title="Home page">
-          <Text isPointer>BMAWebDev</Text>
+          <Image
+            src={Logo}
+            width={175}
+            height={100}
+            alt="Logo"
+            title="BMAWebDev Logo Footer"
+          />
         </Link>
 
         <Flex gap={50} hideOnMobile>

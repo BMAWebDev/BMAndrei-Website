@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Text } from '../Texts';
 import LinkedinIcon from '@assets/icons/linkedin.svg';
 import GithubWhiteIcon from '@assets/icons/github-white.svg';
+import Logo from '@assets/logo-1.svg';
 // style
 import Style from './Footer.style';
 import config from '@constants/config';
@@ -17,7 +18,13 @@ const Footer = () => {
       <Style.Container direction="column" align="flex-start" gap={50}>
         <Style.ColumnsContainer justify="space-between" isFullWidth>
           <Style.Col>
-            <Style.ColTitle>BMAWebDev</Style.ColTitle>
+            <Image
+              src={Logo}
+              width={175}
+              height={100}
+              alt="BMAWebDev Logo"
+              title="BMAWebDev Logo Footer"
+            />
           </Style.Col>
 
           <Style.Col>
