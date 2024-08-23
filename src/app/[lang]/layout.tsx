@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { K2D } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-// translations
-import i18nConfig from '@/i18n-config';
+import { headers, cookies } from 'next/headers';
 // constants
 import config from '@constants/config';
 // utils
 import initTranslations from '@utils/translations/initTranslations';
+import { getI18nConfig } from '@utils/translations/config';
 // components
 import Layout from '@components/Layout';
 import { TranslationsProvider } from '@components/translations';
@@ -37,14 +37,20 @@ export const metadata: Metadata = {
 };
 
 export const generateStaticParams = () => {
-  return i18nConfig.locales.map((locale) => ({ lang: locale }));
+  return getI18nConfig().locales.map((locale) => ({ lang: locale }));
 };
 
 const RootLayout = async ({ params: { lang }, children }: any) => {
-  const { resources } = await initTranslations(lang);
+  const i18nConfig = getI18nConfig(headers(), cookies());
+
+  const { resources } = await initTranslations(lang, i18nConfig);
 
   return (
-    <TranslationsProvider resources={resources} lang={lang}>
+    <TranslationsProvider
+      resources={resources}
+      i18nConfig={i18nConfig}
+      lang={lang}
+    >
       <html
         lang={lang}
         dir="ltr"

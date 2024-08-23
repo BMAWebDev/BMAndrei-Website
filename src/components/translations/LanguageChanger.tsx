@@ -7,9 +7,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 // constants
 import config from '@constants/config';
-// translation
-import i18nConfig from '@/i18n-config';
+// models
 import { IOption } from '@models/select';
+// utils
+import { getI18nConfig } from '@utils/translations/config';
 
 const selectStyles: StylesConfig = {
   option: (style) => ({ ...style, cursor: 'pointer' }),
@@ -48,7 +49,7 @@ const Control: React.FC<ControlProps> = (props) => {
   );
 };
 
-const langs = config.languages.map((lng) => ({
+const langs = config.languages.map((lng: any) => ({
   value: lng,
   label: lng.toUpperCase(),
 }));
@@ -66,6 +67,8 @@ export default function LanguageChanger() {
 
   const handleChange = (e: IOption) => {
     const { value } = e;
+
+    const i18nConfig = getI18nConfig();
 
     i18n.changeLanguage(value);
 
