@@ -3,7 +3,7 @@ import { K2D } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 // translations
-import i18nConfig from '@/i18n-config.json';
+import i18nConfig from '@/i18n-config';
 // constants
 import config from '@constants/config';
 // utils
