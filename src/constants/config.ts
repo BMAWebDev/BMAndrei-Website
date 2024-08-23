@@ -1,4 +1,4 @@
-import i18nConfig from '@/i18n-config.json';
+import i18nConfig from '@/i18n-config';
 
 enum Colors {
   White = '#FFFFFF',

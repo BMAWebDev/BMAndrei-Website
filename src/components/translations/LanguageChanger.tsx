@@ -8,7 +8,7 @@ import Image from 'next/image';
 // constants
 import config from '@constants/config';
 // translation
-import i18nConfig from '@/i18n-config.json';
+import i18nConfig from '@/i18n-config';
 import { IOption } from '@models/select';
 
 const selectStyles: StylesConfig = {
@@ -69,7 +69,7 @@ export default function LanguageChanger() {
 
     i18n.changeLanguage(value);
 
-    //  redirect to the new locale path
+    // redirect to the new locale path
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
