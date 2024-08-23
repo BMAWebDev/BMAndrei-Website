@@ -2,11 +2,11 @@ import { createInstance, i18n } from 'i18next';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { Resource } from 'i18next';
-// translations
-import i18nConfig from '@/i18n-config';
+import { Dictionary } from 'lodash';
 
 const initTranslations = async (
   locale: string,
+  i18nConfig: Dictionary<any>,
   resources?: Resource,
   i18nInstance?: i18n,
 ) => {
