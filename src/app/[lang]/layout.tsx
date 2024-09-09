@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { K2D } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { headers, cookies } from 'next/headers';
+import { GoogleAnalytics } from '@next/third-parties/google';
 // constants
 import config from '@constants/config';
 // utils
@@ -83,8 +82,9 @@ const RootLayout = async ({ params: { lang }, children }: any) => {
         <body className={inter.className}>
           <Layout>{children}</Layout>
 
-          <Analytics />
-          <SpeedInsights />
+          {process.env.GTAG_ANALYTICS_ID && (
+            <GoogleAnalytics gaId={process.env.GTAG_ANALYTICS_ID} />
+          )}
         </body>
       </html>
     </TranslationsProvider>
