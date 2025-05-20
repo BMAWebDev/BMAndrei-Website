@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // models
@@ -23,7 +23,7 @@ interface IProject {
 }
 
 const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const projects: IProject[] = useMemo(
     () => [
@@ -78,20 +78,18 @@ const PersonalProjects: React.FC<SectionProps> = ({ index }) => {
       ))}
 
       <Text>
-        <Trans
-          components={{
-            1: (
-              <Link
-                href="https://github.com/BMAWebDev"
-                target="_blank"
-                style={{ color: config.colors.LightBlue }}
-                title="Github"
-              />
-            ),
-          }}
-        >
-          {t('aboutpage.personal_projects.github_page')}
-        </Trans>
+        {t.rich('aboutpage.personal_projects.github_page', {
+          a: (chunks) => (
+            <Link
+              href="https://github.com/BMAWebDev"
+              target="_blank"
+              style={{ color: config.colors.LightBlue }}
+              title="Github"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
       </Text>
     </Section>
   );

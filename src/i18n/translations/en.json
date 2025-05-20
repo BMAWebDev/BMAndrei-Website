@@ -5,13 +5,13 @@
   "homepage": {
     "hero": {
       "title": "Hello, welcome!",
-      "description": "I am Andrei and i've been a Software Developer for more than {{ yearsOfExperience }} years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
+      "description": "I am Andrei and i've been a Software Developer for more than { yearsOfExperience } years, mainly in the web area. Wanna know how i can help you out? Let's have a coffee and talk! Contact me for more details."
     },
     "services": {
       "title": "Offered services",
       "subtitle": "I offer backend + frontend services.",
       "modern_technologies": "Building apps with modern technologies, like:",
-      "more_info": "Interested? <1>Learn more details about services</1>."
+      "more_info": "Interested? <a>Learn more details about services</a>."
     },
     "social_media": {
       "title": "Social Media",
@@ -24,7 +24,7 @@
     "hero": {
       "position_title": "Software Developer",
       "title": "About me",
-      "description": "I am Andrei, I'm {{ age }} years old and i've been a software developer for over {{ yearsOfExperience }} years. In my free time i play the guitar and video games."
+      "description": "I am Andrei, I'm { age } years old and i've been a software developer for over { yearsOfExperience } years. In my free time i play the guitar and video games."
     },
     "career_history": {
       "title": "Career History",
@@ -51,7 +51,7 @@
         "title": "BMASkates",
         "description": "Full Stack application with vanilla Javascript on Front-End and NodeJS + Express in Back-End. The server works both on the views method and on the REST API."
       },
-      "github_page": "For more information, visit the <1>Github page</1>."
+      "github_page": "For more information, visit the <a>Github page</a>."
     },
     "services": {
       "title": "Offered services",
@@ -82,7 +82,7 @@
       "write_through_linkedin": "Write me on LinkedIn",
       "write_through_contact_form": "Write me through the contact form",
       "contact_me_button": "Contact me",
-      "view_my_cv_here": "In the meantime, you can view my CV <1>here</1>."
+      "view_my_cv_here": "In the meantime, you can view my CV <a>here</a>."
     }
   },
   "contactpage": {
@@ -140,6 +140,6 @@
   "useful_links": "Useful Links",
   "anpc": "ANPC",
   "gdpr": "GDPR",
-  "credits": "© Bărdiță Andrei 2024. All rights reserved.",
+  "credits": "© Bărdiță Andrei {currentYear}. All rights reserved.",
   "success_message": "Your message has been successfully sent."
 }

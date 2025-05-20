@@ -1,5 +1,5 @@
 import { Formik, Form } from 'formik';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import axios from 'axios';
 // constants
@@ -14,7 +14,7 @@ import Spinner from '@components/Spinner';
 import Style from './style';
 
 export const ContactForm: React.FC = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
 

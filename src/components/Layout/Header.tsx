@@ -1,13 +1,12 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from '@i18n/navigation';
 // constants
 import config from '@constants/config';
 // translations
-import { LanguageChanger } from '../translations';
-// hooks
-import useGetPathname from '@hooks/useGetPathname';
+import LanguageChanger from '../LanguageChanger';
 // compontents
 import Flex from '../Flex';
 import { Text } from '../Texts';
@@ -16,8 +15,8 @@ import Logo from '@assets/logo-1.svg';
 import Style from './Header.style';
 
 const Header = () => {
-  const pathname = useGetPathname();
-  const { t } = useTranslation();
+  const pathname = usePathname();
+  const t = useTranslations();
   const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false);
 
   const navbarElements = useMemo(

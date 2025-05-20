@@ -1,16 +1,17 @@
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
+import { Link } from '@i18n/navigation';
 // constants
 import config from '@constants/config';
 // models
 import { SectionProps } from '@models/layout';
+import { Page } from '@models/i18n';
 // components
 import Section from '@components/Section';
 import { Heading2, Heading3, Text } from '@components/Texts';
 import Flex, { Card } from '@components/Flex';
+import { OList } from '@components/Lists';
 // style
 import Style from './style';
-import { OList } from '@components/Lists';
-import Link from 'next/link';
 
 const frontendTechnologies = [
   'React (NextJS / Vite)',
@@ -21,7 +22,7 @@ const frontendTechnologies = [
 const backendTechnologies = ['NodeJS (Express)', 'C# (.NET)', 'REST API'];
 
 const Services: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={index} direction="column" gap={50}>
@@ -61,19 +62,17 @@ const Services: React.FC<SectionProps> = ({ index }) => {
       </Style.CardsContainer>
 
       <Text>
-        <Trans
-          components={{
-            1: (
-              <Link
-                href={`${config.routes.About}?section=services`}
-                style={{ color: config.colors.LightBlue }}
-                title="Services"
-              />
-            ),
-          }}
-        >
-          {t('homepage.services.more_info')}
-        </Trans>
+        {t.rich('homepage.services.more_info', {
+          a: (chunks) => (
+            <Link
+              href={`${config.routes.About}?section=services` as Page}
+              style={{ color: config.colors.LightBlue }}
+              title="Services"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
       </Text>
     </Section>
   );

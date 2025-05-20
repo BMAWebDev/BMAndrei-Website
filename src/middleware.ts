@@ -1,12 +1,11 @@
-import { i18nRouter } from 'next-i18n-router';
-import { MiddlewareConfig, NextRequest } from 'next/server';
-// utils
-import { getI18nConfig } from './utils/translations/config';
+import createMiddleware from 'next-intl/middleware';
+import routing from '@i18n/routing';
 
-export const middleware = (request: NextRequest) => {
-  return i18nRouter(request, getI18nConfig());
-};
+export default createMiddleware(routing);
 
-export const config: MiddlewareConfig = {
-  matcher: '/((?!api|static|.*\\..*|_next).*)',
+export const config = {
+  // Match all pathnames except for
+  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
 };
