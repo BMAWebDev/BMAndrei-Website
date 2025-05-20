@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // models
@@ -13,7 +13,7 @@ import GithubWhiteIcon from '@assets/icons/github-white.svg';
 import Style from './style';
 
 const SocialMedia: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={index} direction="column" gap={50}>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 // constants
 import config from '@constants/config';
@@ -17,37 +17,37 @@ interface IElement {
 }
 
 const Wrapper = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const elements: IElement[] = useMemo(
     () => [
       {
         title: t('gdprpage.sections.who_am_i.title'),
-        description: t('gdprpage.sections.who_am_i.description'),
+        description: 'gdprpage.sections.who_am_i.description',
       },
       {
         title: t('gdprpage.sections.website_intent.title'),
-        description: t('gdprpage.sections.website_intent.description'),
+        description: 'gdprpage.sections.website_intent.description',
       },
       {
         title: t('gdprpage.sections.contact_form.title'),
-        description: t('gdprpage.sections.contact_form.description'),
+        description: 'gdprpage.sections.contact_form.description',
       },
       {
         title: t('gdprpage.sections.cookies.title'),
-        description: t('gdprpage.sections.cookies.description'),
+        description: 'gdprpage.sections.cookies.description',
       },
       {
         title: t('gdprpage.sections.storing_data.title'),
-        description: t('gdprpage.sections.storing_data.description'),
+        description: 'gdprpage.sections.storing_data.description',
       },
       {
         title: t('gdprpage.sections.sharing_data.title'),
-        description: t('gdprpage.sections.sharing_data.description'),
+        description: 'gdprpage.sections.sharing_data.description',
       },
       {
         title: t('gdprpage.sections.contact_info.title'),
-        description: t('gdprpage.sections.contact_info.description'),
+        description: 'gdprpage.sections.contact_info.description',
       },
     ],
     [t],
@@ -74,27 +74,31 @@ const Wrapper = () => {
             <Heading2>{element.title}</Heading2>
 
             <Text>
-              <Trans
-                components={{
-                  url: (
-                    <Link
-                      href={config.mainWebsite}
-                      target="_blank"
-                      title="Main website URL"
-                    />
-                  ),
-                  email: (
-                    <Link
-                      href={`mailto:${config.contactEmail}`}
-                      target="_blank"
-                      title="Contact mail"
-                    />
-                  ),
-                  strong: <span style={{ color: config.colors.LightBlue }} />,
-                }}
-              >
-                {element.description}
-              </Trans>
+              {t.rich(element.description, {
+                url: (chunks) => (
+                  <Link
+                    href={config.mainWebsite}
+                    target="_blank"
+                    title="Main website URL"
+                  >
+                    {chunks}
+                  </Link>
+                ),
+                email: (chunks) => (
+                  <Link
+                    href={`mailto:${config.contactEmail}`}
+                    target="_blank"
+                    title="Contact mail"
+                  >
+                    {chunks}
+                  </Link>
+                ),
+                strong: (chunks) => (
+                  <span style={{ color: config.colors.LightBlue }}>
+                    {chunks}
+                  </span>
+                ),
+              })}
             </Text>
           </Flex>
         ))}

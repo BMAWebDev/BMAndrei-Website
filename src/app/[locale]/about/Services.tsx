@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // models
@@ -15,7 +15,7 @@ interface IService {
 }
 
 const Services: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const services: IService[] = useMemo(
     () => [

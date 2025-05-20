@@ -5,13 +5,13 @@
   "homepage": {
     "hero": {
       "title": "Salutare, bine ai venit!",
-      "description": "Eu sunt Andrei și am o experiență de peste {{ yearsOfExperience }} ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
+      "description": "Eu sunt Andrei și am o experiență de peste { yearsOfExperience } ani ca Software Developer în zona web. Vrei să afli mai multe despre cum te pot ajuta? Hai să discutăm la o cafea! Contactează-mă pentru mai multe detalii."
     },
     "services": {
       "title": "Servicii oferite",
       "subtitle": "Ofer servicii backend + frontend.",
       "modern_technologies": "Folosesc tehnologii moderne, precum:",
-      "more_info": "Interesat? <1>Află mai multe informații despre servicii</1>."
+      "more_info": "Interesat? <a>Află mai multe informații despre servicii</a>."
     },
     "social_media": {
       "title": "Rețele sociale",
@@ -24,7 +24,7 @@
     "hero": {
       "position_title": "Software Developer",
       "title": "Despre mine",
-      "description": "Eu sunt Andrei, am {{ age }} de ani și sunt programator de {{ yearsOfExperience }} ani. În timpul liber cânt la chitară și mă joc jocuri video."
+      "description": "Eu sunt Andrei, am { age } de ani și sunt programator de { yearsOfExperience } ani. În timpul liber cânt la chitară și mă joc jocuri video."
     },
     "career_history": {
       "title": "Istoric Carieră",
@@ -51,7 +51,7 @@
         "title": "BMASkates",
         "description": "Aplicație Full-stack cu Javascript vanilla în Front-End și NodeJS + Express în Back-End. Serverul funcționează atât pe metoda views, cât și pe REST API."
       },
-      "github_page": "Pentru mai multe informații, accesează <1>pagina de Github</1>."
+      "github_page": "Pentru mai multe informații, accesează <a>pagina de Github</a>."
     },
     "services": {
       "title": "Ce pot face pentru tine",
@@ -82,7 +82,7 @@
       "write_through_linkedin": "Scrie-mi pe LinkedIn",
       "write_through_contact_form": "Scrie-mi prin formularul de contact",
       "contact_me_button": "Contactează-mă",
-      "view_my_cv_here": "Îmi poți vizualiza între timp CV-ul <1>aici</1>."
+      "view_my_cv_here": "Îmi poți vizualiza între timp CV-ul <a>aici</a>."
     }
   },
   "contactpage": {
@@ -140,6 +140,6 @@
   "useful_links": "Link-uri utile",
   "anpc": "ANPC",
   "gdpr": "GDPR",
-  "credits": "© Bărdiță Andrei 2024. Toate drepturile rezervate.",
+  "credits": "© Bărdiță Andrei {currentYear}. Toate drepturile rezervate.",
   "success_message": "Mesajul a fost trimis cu succes."
 }

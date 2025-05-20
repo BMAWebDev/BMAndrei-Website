@@ -1,16 +1,20 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
-import Select, { components, ControlProps, StylesConfig } from 'react-select';
-import { useState } from 'react';
+import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
+import { usePathname } from '@i18n/navigation';
+import { components, ControlProps, StylesConfig } from 'react-select';
 import Image from 'next/image';
+import { useLocale } from 'next-intl';
+import { redirect } from '@i18n/navigation';
 // constants
 import config from '@constants/config';
+import { LOCALES } from '@constants/i18n';
 // models
 import { IOption } from '@models/select';
-// utils
-import { getI18nConfig } from '@utils/translations/config';
+import { Page } from '@models/i18n';
+
+const Select = dynamic(() => import('react-select'), { ssr: false });
 
 const selectStyles: StylesConfig = {
   option: (style) => ({ ...style, cursor: 'pointer' }),
@@ -49,47 +53,36 @@ const Control: React.FC<ControlProps> = (props) => {
   );
 };
 
-const langs = config.languages.map((lng: any) => ({
+const langs = LOCALES.map((lng: any) => ({
   value: lng,
   label: lng.toUpperCase(),
 }));
 
 export default function LanguageChanger() {
-  const { i18n } = useTranslation();
-  const currentLocale = i18n.language;
-  const router = useRouter();
-  const currentPathname = usePathname();
+  const locale = useLocale();
+  const pathname = usePathname();
 
-  const [selectedLang] = useState<IOption>({
-    value: currentLocale,
-    label: currentLocale.toUpperCase(),
-  });
+  const lang: IOption = useMemo(
+    () => ({
+      value: locale,
+      label: locale.toUpperCase(),
+    }),
+    [locale],
+  );
 
   const handleChange = (e: IOption) => {
     const { value } = e;
 
-    const i18nConfig = getI18nConfig();
+    const href = pathname;
 
-    i18n.changeLanguage(value);
-
-    // redirect to the new locale path
-    if (
-      currentLocale === i18nConfig.defaultLocale &&
-      !i18nConfig.prefixDefault
-    ) {
-      router.push('/' + value + currentPathname);
-    } else {
-      router.push(currentPathname.replace(`/${currentLocale}`, `/${value}`));
-    }
-
-    router.refresh();
+    redirect({ href, locale: value });
   };
 
   return (
     <Select
       onChange={(e) => handleChange(e as IOption)}
       options={langs}
-      value={selectedLang}
+      value={lang}
       components={{
         DropdownIndicator: null,
         IndicatorSeparator: null,

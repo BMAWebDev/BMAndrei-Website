@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // components
 import { Text } from '../Texts';
 import LinkedinIcon from '@assets/icons/linkedin.svg';
@@ -11,7 +11,7 @@ import Style from './Footer.style';
 import config from '@constants/config';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Style.Wrapper>
@@ -91,7 +91,9 @@ const Footer = () => {
         </Style.ColumnsContainer>
 
         <Text alignSelf="center" align="center">
-          {t('credits')}
+          {t('credits', {
+            currentYear: new Date().getFullYear(),
+          })}
         </Text>
       </Style.Container>
     </Style.Wrapper>

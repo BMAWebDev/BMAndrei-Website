@@ -1,4 +1,4 @@
-import { getI18nConfig } from '@utils/translations/config';
+import { LOCALES } from './i18n';
 
 enum Colors {
   White = '#FFFFFF',
@@ -61,7 +61,7 @@ const config = {
     input: '8px',
   },
   fontFamily: 'K2D',
-  languages: getI18nConfig().locales,
+  languages: LOCALES,
   routes: Routes,
   maxWidth: 1920,
   breakpoints: Breakpoints,

@@ -1,28 +1,42 @@
 'use client';
 
-import { PropsWithChildren } from 'react';
 import { StyleSheetManager } from 'styled-components';
+import { NextIntlClientProvider } from 'next-intl';
 import emotionIsPropValid from '@emotion/is-prop-valid';
+import { Dictionary } from 'lodash';
+// models
+import { Locale } from '@models/i18n';
 // components
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout: React.FC<PropsWithChildren> = ({ children }) => {
+type LayoutProps = React.PropsWithChildren & {
+  locale: Locale;
+  messages: Dictionary<string>;
+};
+
+const Layout: React.FC<LayoutProps> = ({ children, locale, messages }) => {
   return (
-    <StyleSheetManager
-      enableVendorPrefixes
-      shouldForwardProp={(propName, elementToBeRendered) => {
-        return typeof elementToBeRendered === 'string'
-          ? emotionIsPropValid(propName)
-          : true;
-      }}
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages}
+      timeZone="Europe/Bucharest"
     >
-      <Header />
+      <StyleSheetManager
+        enableVendorPrefixes
+        shouldForwardProp={(propName, elementToBeRendered) => {
+          return typeof elementToBeRendered === 'string'
+            ? emotionIsPropValid(propName)
+            : true;
+        }}
+      >
+        <Header />
 
-      {children}
+        {children}
 
-      <Footer />
-    </StyleSheetManager>
+        <Footer />
+      </StyleSheetManager>
+    </NextIntlClientProvider>
   );
 };
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // models
@@ -15,7 +15,7 @@ import { PrimaryButton } from '@/components/Buttons';
 import Style from './style';
 
 const Contact: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={index} direction="column" gap={config.padding.sectionValue}>
@@ -55,20 +55,18 @@ const Contact: React.FC<SectionProps> = ({ index }) => {
       </Style.ContactRow>
 
       <Text align="center">
-        <Trans
-          components={{
-            1: (
-              <a
-                href={config.routes.CV}
-                style={{ color: config.colors.LightBlue }}
-                download
-                title="CV"
-              />
-            ),
-          }}
-        >
-          {t('aboutpage.contact.view_my_cv_here')}
-        </Trans>
+        {t.rich('aboutpage.contact.view_my_cv_here', {
+          a: (chunks) => (
+            <a
+              href={config.routes.CV}
+              style={{ color: config.colors.LightBlue }}
+              title="CV"
+              download
+            >
+              {chunks}
+            </a>
+          ),
+        })}
       </Text>
     </Section>
   );

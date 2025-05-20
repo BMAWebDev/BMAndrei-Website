@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // models
 import { SectionProps } from '@models/layout';
 // components
@@ -11,7 +11,7 @@ import TeamImg from '@assets/team.png';
 import Style from './style';
 
 const CareerHistory: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={index} direction="column" gap={40}>

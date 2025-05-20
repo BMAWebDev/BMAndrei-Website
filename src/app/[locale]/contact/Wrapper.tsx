@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // components
@@ -15,7 +15,7 @@ import LinkedInIcon from '@assets/icons/linkedin.svg';
 import Style from './style';
 
 const Wrapper = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={0} direction="column" gap={config.padding.sectionValue}>

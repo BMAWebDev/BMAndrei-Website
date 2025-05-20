@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 // constants
 import config from '@constants/config';
 // models
@@ -13,7 +13,7 @@ import { Heading1, Text } from '@components/Texts';
 import Style from './style';
 
 const Hero: React.FC<SectionProps> = ({ index }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <Section index={index} gap={15}>
