@@ -24,23 +24,24 @@ export default function Home() {
     setIsServerPasswordSet(
       sessionStorage.getItem('serverPasswordEnabled') === 'true',
     );
+
+    console.log(
+      process.env.DEV_SERVER_PASSWORD,
+      process.env.DEV_SERVER_PASSWORD_ENABLED,
+    );
   }, []);
 
   if (
     !isServerPasswordSet &&
-    process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED === 'on'
+    process.env.DEV_SERVER_PASSWORD_ENABLED === 'on'
   ) {
-    console.log(process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD);
-
     return (
       <div className="w-screen h-screen content-center max-w-3xl justify-self-center px-2">
         <Formik
           initialValues={serverPasswordInitialValues}
           validationSchema={serverPasswordValidationSchema}
           onSubmit={async (values, { setFieldError }) => {
-            if (
-              values.password !== process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD
-            ) {
+            if (values.password !== process.env.DEV_SERVER_PASSWORD) {
               setFieldError('password', 'Incorrect password');
               return;
             }
