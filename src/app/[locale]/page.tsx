@@ -28,9 +28,9 @@ export default function Home() {
 
   if (
     !isServerPasswordSet &&
-    process.env.DEV_SERVER_PASSWORD_ENABLED === 'on'
+    process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED === 'on'
   ) {
-    console.log(process.env.DEV_SERVER_PASSWORD);
+    console.log(process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD);
 
     return (
       <div className="w-screen h-screen content-center max-w-3xl justify-self-center px-2">
@@ -38,7 +38,9 @@ export default function Home() {
           initialValues={serverPasswordInitialValues}
           validationSchema={serverPasswordValidationSchema}
           onSubmit={async (values, { setFieldError }) => {
-            if (values.password !== process.env.DEV_SERVER_PASSWORD) {
+            if (
+              values.password !== process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD
+            ) {
               setFieldError('password', 'Incorrect password');
               return;
             }
