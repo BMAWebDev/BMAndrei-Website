@@ -24,17 +24,11 @@ export default function Home() {
     setIsServerPasswordSet(
       sessionStorage.getItem('serverPasswordEnabled') === 'true',
     );
-
-    console.log(
-      process.env,
-      process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD,
-      process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED,
-    );
   }, []);
 
   if (
     !isServerPasswordSet &&
-    process.env.DEV_SERVER_PASSWORD_ENABLED === 'on'
+    process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED === 'on'
   ) {
     return (
       <div className="w-screen h-screen content-center max-w-3xl justify-self-center px-2">
@@ -42,7 +36,9 @@ export default function Home() {
           initialValues={serverPasswordInitialValues}
           validationSchema={serverPasswordValidationSchema}
           onSubmit={async (values, { setFieldError }) => {
-            if (values.password !== process.env.DEV_SERVER_PASSWORD) {
+            if (
+              values.password !== process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD
+            ) {
               setFieldError('password', 'Incorrect password');
               return;
             }
