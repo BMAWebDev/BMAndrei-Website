@@ -26,8 +26,9 @@ export default function Home() {
     );
 
     console.log(
-      process.env.DEV_SERVER_PASSWORD,
-      process.env.DEV_SERVER_PASSWORD_ENABLED,
+      process.env,
+      process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD,
+      process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED,
     );
   }, []);
 
