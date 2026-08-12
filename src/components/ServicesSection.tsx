@@ -1,7 +1,7 @@
 'use client';
 
-import { useTranslation } from '@/i18n';
-import type { TranslationKey } from '@/i18n';
+import { useTranslation } from '@i18n/index';
+import type { TranslationKey } from '@i18n/index';
 
 const services: {
   icon: string;
@@ -29,7 +29,7 @@ export default function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section id="services" className="py-24 px-6 bg-slate-900/30">
+    <section id="services" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 mb-16 max-w-2xl">
           <h2 className="text-primary font-bold uppercase tracking-widest text-sm">

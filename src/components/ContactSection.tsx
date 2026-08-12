@@ -1,7 +1,9 @@
-export default function ContactSection() {
+'use client';
+
+const ContactSection = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-md mx-auto glass p-8 rounded-3xl border-accent/20">
+    <section id="contact" className="py-20 px-6">
+      <div className="max-w-xl mx-auto glass rounded-3xl border-accent/20">
         <h2 className="text-3xl font-black text-white mb-2">
           Let&apos;s build <br />
           <span className="text-accent">together.</span>
@@ -47,4 +49,6 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+};
+
+export default ContactSection;

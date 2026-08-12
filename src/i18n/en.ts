@@ -15,8 +15,8 @@ const en = {
     'I build high-performance websites and bespoke digital experiences that drive growth, innovation, and user engagement.',
   'hero.cta.primary': 'View My Work',
   'hero.cta.secondary': 'Start a Project',
-  'hero.stats.title': '150+ Projects Launched',
-  'hero.stats.subtitle': 'Delivering quality since 2018',
+  'hero.stats.title': '10+ Delivered Projects',
+  'hero.stats.subtitle': 'Quality since 2020',
 
   // Services
   'services.label': 'My Expertise',

@@ -17,8 +17,8 @@ const ro: Record<TranslationKey, string> = {
     'Construiesc site-uri web performante și experiențe digitale personalizate care stimulează creșterea, inovația și implicarea utilizatorilor.',
   'hero.cta.primary': 'Vezi Proiectele',
   'hero.cta.secondary': 'Începe un Proiect',
-  'hero.stats.title': '150+ Proiecte Lansate',
-  'hero.stats.subtitle': 'Livrez calitate din 2020',
+  'hero.stats.title': '10+ Proiecte livrate',
+  'hero.stats.subtitle': 'Calitate din 2020',
 
   // Services
   'services.label': 'Expertiza Mea',

@@ -1,19 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { useTranslation } from '@/i18n';
-import type { TranslationKey } from '@/i18n';
+import { useTranslation } from '@i18n/index';
+import type { TranslationKey } from '@i18n/index';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const navLinks: { labelKey: TranslationKey; href: string }[] = [
-  { labelKey: 'nav.home', href: '#' },
-  { labelKey: 'nav.services', href: '#services' },
-  { labelKey: 'nav.projects', href: '#projects' },
-  { labelKey: 'nav.about', href: '#about' },
-  { labelKey: 'nav.contact', href: '#contact' },
+const navLinks: { labelKey: TranslationKey; href: string; icon?: string }[] = [
+  { labelKey: 'nav.home', href: '#hero', icon: 'home' },
+  { labelKey: 'nav.services', href: '#services', icon: 'work' },
+  // { labelKey: 'nav.projects', href: '#projects' },
+  // { labelKey: 'nav.about', href: '#about' },
+  { labelKey: 'nav.contact', href: '#contact', icon: 'mail' },
 ];
 
-export default function Header() {
+const Header = () => {
   const { t } = useTranslation();
 
   return (
@@ -32,20 +31,34 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.labelKey}
-              className="text-slate-300 hover:text-primary text-sm font-medium transition-colors"
-              href={link.href}
+              className="flex place-items-center gap-1 cursor-pointer text-slate-300 hover:text-primary text-sm font-medium transition-colors"
+              onClick={() => {
+                document.dispatchEvent(
+                  new CustomEvent('test123', {
+                    detail: {
+                      href: link.href,
+                    },
+                  }),
+                );
+              }}
             >
+              {link.icon && (
+                <span className="material-symbols-outlined text-lg!">
+                  {link.icon}
+                </span>
+              )}
               {t(link.labelKey)}
-            </Link>
+            </button>
           ))}
         </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
-          <button className="hidden sm:flex min-w-30 items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+          <button className="hidden sm:flex cursor-pointer min-w-30 items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+            <span className="material-symbols-outlined">attach_money</span>
             {t('header.cta')}
           </button>
           <button className="md:hidden text-slate-100">
@@ -55,4 +68,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

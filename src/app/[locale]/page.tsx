@@ -1,33 +1,50 @@
 'use client';
 
 import { Form, Formik, ErrorMessage, Field } from 'formik';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+// models
+import { RedirectEventData } from '@models/events';
+// utils
+import { getIsOnClient } from '@utils/client';
 // lib
 import {
   serverPasswordInitialValues,
   serverPasswordValidationSchema,
 } from './validation';
 // components
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import CTASection from '@/components/CTASection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
+import Header from '@components/Header';
+import HeroSection from '@components/HeroSection';
+import ServicesSection from '@components/ServicesSection';
+// import ProjectsSection from '@components/ProjectsSection';
+import CTASection from '@components/CTASection';
+import ContactSection from '@components/ContactSection';
+import Footer from '@components/Footer';
 
-export default function Home() {
-  const [isServerPasswordSet, setIsServerPasswordSet] =
-    useState<boolean>(false);
-
+const Home = () => {
   useEffect(() => {
-    setIsServerPasswordSet(
-      sessionStorage.getItem('serverPasswordEnabled') === 'true',
-    );
+    if (getIsOnClient()) {
+      document.addEventListener(
+        'test123',
+        (event: CustomEventInit<RedirectEventData>) => {
+          if (!event.detail?.href) {
+            return;
+          }
+
+          const section = document.querySelector(event.detail!.href) as
+            | HTMLElement
+            | undefined;
+
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        },
+      );
+    }
   }, []);
 
   if (
-    !isServerPasswordSet &&
+    getIsOnClient() &&
+    sessionStorage.getItem('serverPasswordEnabled') !== 'true' &&
     process.env.NEXT_PUBLIC_DEV_SERVER_PASSWORD_ENABLED === 'on'
   ) {
     return (
@@ -44,7 +61,6 @@ export default function Home() {
             }
 
             sessionStorage.setItem('serverPasswordEnabled', 'true');
-            setIsServerPasswordSet(true);
           }}
         >
           <Form className="flex flex-col gap-6 w-full border dark:border-white/30 glass rounded-lg sm:p-10 p-4">
@@ -77,16 +93,18 @@ export default function Home() {
   }
 
   return (
-    <div className="relative flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col w-full">
       <Header />
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <CTASection />
         <ContactSection />
       </main>
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

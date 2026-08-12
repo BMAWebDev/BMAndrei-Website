@@ -1,7 +1,7 @@
 'use client';
 
-import { useTranslation } from '@/i18n';
-import type { TranslationKey } from '@/i18n';
+import { useTranslation } from '@i18n/index';
+import type { TranslationKey } from '@i18n/index';
 
 const projects: {
   titleKey: TranslationKey;

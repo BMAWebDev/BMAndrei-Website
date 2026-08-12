@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { I18nProvider, locales, type Locale } from '@/i18n';
+import { I18nProvider, locales, type Locale } from '@i18n/index';
+// @ts-expect-error: side-effect import of CSS without module declaration
 import '../globals.css';
 
 interface LocaleLayoutProps {

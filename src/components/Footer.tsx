@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslation } from '@/i18n';
+import { useTranslation } from '@i18n/index';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -20,22 +20,22 @@ export default function Footer() {
         <div className="flex gap-8">
           <a
             className="text-slate-500 hover:text-white transition-colors"
-            href="#"
+            href="https://bmawebdev.ro"
           >
             <span className="material-symbols-outlined">public</span>
           </a>
           <a
             className="text-slate-500 hover:text-white transition-colors"
-            href="#"
+            href="mailto:contact@bmawebdev.ro"
           >
             <span className="material-symbols-outlined">mail</span>
           </a>
-          <a
+          {/* <a
             className="text-slate-500 hover:text-white transition-colors"
             href="#"
           >
             <span className="material-symbols-outlined">share</span>
-          </a>
+          </a> */}
         </div>
 
         <p className="text-slate-500 text-sm">
