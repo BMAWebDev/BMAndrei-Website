@@ -29,17 +29,17 @@ export default function HeroSection() {
               {t('hero.description')}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <button className="h-14 px-8 rounded-xl bg-primary text-white font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-primary/20 flex items-center gap-2">
+            {/* <div className="flex flex-wrap gap-4">
+              <button className="cursor-pointer h-14 px-8 rounded-xl bg-primary text-white font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-primary/20 flex items-center gap-2">
                 {t('hero.cta.primary')}
                 <span className="material-symbols-outlined text-xl">
                   arrow_forward
                 </span>
               </button>
-              <button className="h-14 px-8 rounded-xl bg-slate-800 text-slate-100 font-bold text-base border border-slate-700 hover:bg-slate-700 transition-colors">
+              <button className="cursor-pointer h-14 px-8 rounded-xl bg-slate-800 text-slate-100 font-bold text-base border border-slate-700 hover:bg-slate-700 transition-colors">
                 {t('hero.cta.secondary')}
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Hero image card */}

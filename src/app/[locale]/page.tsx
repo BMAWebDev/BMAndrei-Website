@@ -17,7 +17,7 @@ import HeroSection from '@components/HeroSection';
 import ServicesSection from '@components/ServicesSection';
 // import ProjectsSection from '@components/ProjectsSection';
 import CTASection from '@components/CTASection';
-import ContactSection from '@components/ContactSection';
+// import ContactSection from '@components/ContactSection';
 import Footer from '@components/Footer';
 
 const Home = () => {
@@ -100,7 +100,7 @@ const Home = () => {
         <ServicesSection />
         {/* <ProjectsSection /> */}
         <CTASection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>

@@ -58,15 +58,14 @@ export default function ServicesSection() {
               <p className="text-slate-400 leading-relaxed mb-6">
                 {t(service.descriptionKey)}
               </p>
-              <a
+              {/* <p
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-                href="#"
               >
                 {t('services.learnMore')}{' '}
                 <span className="material-symbols-outlined text-sm">
                   arrow_forward
                 </span>
-              </a>
+              </p> */}
             </div>
           ))}
         </div>

@@ -49,7 +49,7 @@ const en = {
   'cta.title.line1': 'Ready to build something',
   'cta.title.line2': 'extraordinary?',
   'cta.description':
-    'Let\u2019s collaborate to turn your vision into a high-performance digital reality. My experts are ready to guide you.',
+    'Let\u2019s collaborate to turn your vision into a high-performance digital reality.',
   'cta.primary': 'Start Your Project',
   'cta.secondary': 'Contact Me',
 

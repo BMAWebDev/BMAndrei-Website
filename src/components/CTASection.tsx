@@ -21,7 +21,7 @@ const CTASection = () => {
           {t('cta.description')}
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 relative z-10">
+        {/* <div className="flex flex-wrap justify-center gap-4 relative z-10">
           <button
             onClick={() => {
               document.dispatchEvent(
@@ -36,7 +36,7 @@ const CTASection = () => {
           >
             {t('cta.secondary')}
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

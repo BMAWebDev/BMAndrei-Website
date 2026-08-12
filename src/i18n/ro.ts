@@ -51,7 +51,7 @@ const ro: Record<TranslationKey, string> = {
   'cta.title.line1': 'Pregătit să construiești ceva',
   'cta.title.line2': 'extraordinar?',
   'cta.description':
-    'Hai să colaborăm pentru a transforma viziunea ta într-o realitate digitală performantă. Experții noștri sunt gata să te ghideze.',
+    'Hai să colaborăm pentru a-ți transforma viziunea într-o realitate digitală performantă.',
   'cta.primary': 'Începe Proiectul',
   'cta.secondary': 'Contactează-mă',
 
