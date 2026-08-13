@@ -18,7 +18,7 @@ const ro: Record<TranslationKey, string> = {
   'hero.cta.primary': 'Vezi Proiectele',
   'hero.cta.secondary': 'Începe un Proiect',
   'hero.stats.title': '10+ Proiecte livrate',
-  'hero.stats.subtitle': 'Calitate din 2020',
+  'hero.stats.subtitle': '{{ years }}+ ani de calitate și expertiză',
 
   // Services
   'services.label': 'Expertiza Mea',

@@ -5,7 +5,12 @@ import { redirectToSection } from '@utils/client';
 // components
 import HeroImage from '@assets/HeroImage.jpg';
 
-export default function HeroSection() {
+const dateOfExperienceStart = new Date('25 Aug 2020');
+
+const getYearsOfExperience = () =>
+  new Date(Date.now() - dateOfExperienceStart.getTime()).getFullYear() - 1970;
+
+const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
@@ -75,7 +80,10 @@ export default function HeroSection() {
                     <div>
                       <p className="text-white font-bold">Andrei Bărdiță</p>
                       <p className="text-slate-400 text-sm">
-                        {t('hero.stats.subtitle')}
+                        {t('hero.stats.subtitle').replace(
+                          '{{ years }}',
+                          getYearsOfExperience().toString(),
+                        )}
                       </p>
                     </div>
                   </div>
@@ -87,4 +95,6 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

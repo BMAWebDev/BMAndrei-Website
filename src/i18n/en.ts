@@ -16,7 +16,7 @@ const en = {
   'hero.cta.primary': 'View My Work',
   'hero.cta.secondary': 'Start a Project',
   'hero.stats.title': '10+ Delivered Projects',
-  'hero.stats.subtitle': 'Quality since 2020',
+  'hero.stats.subtitle': '{{ years }}+ years of quality and expertise',
 
   // Services
   'services.label': 'My Expertise',
