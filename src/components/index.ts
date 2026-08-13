@@ -1,0 +1,9 @@
+export { default as Header } from './Header';
+export { default as HeroSection } from './HeroSection';
+export { default as ServicesSection } from './ServicesSection';
+export { default as ProjectsSection } from './ProjectsSection';
+export { default as CTASection } from './CTASection';
+export { default as ContactSection } from './ContactSection';
+export { default as Logo } from './Logo';
+export { default as Footer } from './Footer';
+export { default as Spinner } from './Spinner';

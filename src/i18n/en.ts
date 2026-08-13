@@ -54,8 +54,7 @@ const en = {
   'cta.secondary': 'Contact Me',
 
   // Footer
-  'footer.copyright':
-    '\u00A9 {{ currentYear }} BMA WebDev. All rights reserved.',
+  'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',
 } as const;
 
 export type TranslationKey = keyof typeof en;

@@ -1,5 +1,8 @@
 'use client';
 
+// utils
+import { redirectToSection } from '@utils/client';
+// hooks
 import { useTranslation } from '@i18n/index';
 
 const CTASection = () => {
@@ -21,22 +24,16 @@ const CTASection = () => {
           {t('cta.description')}
         </p>
 
-        {/* <div className="flex flex-wrap justify-center gap-4 relative z-10">
+        <div className="flex flex-wrap justify-center gap-4 relative z-10">
           <button
             onClick={() => {
-              document.dispatchEvent(
-                new CustomEvent('test123', {
-                  detail: {
-                    href: '#contact',
-                  },
-                }),
-              );
+              redirectToSection('contact');
             }}
             className="h-14 cursor-pointer px-10 rounded-xl bg-white text-primary font-bold text-lg hover:bg-slate-50 transition-colors shadow-xl"
           >
             {t('cta.secondary')}
           </button>
-        </div> */}
+        </div>
       </div>
     </section>
   );

@@ -12,27 +12,28 @@ import {
   serverPasswordValidationSchema,
 } from './validation';
 // components
-import Header from '@components/Header';
-import HeroSection from '@components/HeroSection';
-import ServicesSection from '@components/ServicesSection';
-// import ProjectsSection from '@components/ProjectsSection';
-import CTASection from '@components/CTASection';
-// import ContactSection from '@components/ContactSection';
-import Footer from '@components/Footer';
+import {
+  Header,
+  HeroSection,
+  ServicesSection,
+  // ProjectsSection,
+  CTASection,
+  ContactSection,
+  Footer,
+} from '@components/index';
 
 const Home = () => {
   useEffect(() => {
     if (getIsOnClient()) {
       document.addEventListener(
-        'test123',
+        'sectionRedirect',
         (event: CustomEventInit<RedirectEventData>) => {
           if (!event.detail?.href) {
             return;
           }
 
           const section = document.querySelector(event.detail!.href) as
-            | HTMLElement
-            | undefined;
+            HTMLElement | undefined;
 
           if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
@@ -97,10 +98,10 @@ const Home = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <ServicesSection />
+        {/* <ServicesSection /> */}
         {/* <ProjectsSection /> */}
         <CTASection />
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
       <Footer />
     </div>

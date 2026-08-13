@@ -56,8 +56,7 @@ const ro: Record<TranslationKey, string> = {
   'cta.secondary': 'Contactează-mă',
 
   // Footer
-  'footer.copyright':
-    '\u00A9 {{ currentYear }} BMA WebDev. Toate drepturile rezervate.',
+  'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',
 };
 
 export default ro;

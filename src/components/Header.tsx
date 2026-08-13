@@ -8,10 +8,10 @@ import Logo from './Logo';
 
 const navLinks: { labelKey: TranslationKey; href: string; icon?: string }[] = [
   { labelKey: 'nav.home', href: '#hero', icon: 'home' },
-  { labelKey: 'nav.services', href: '#services', icon: 'work' },
+  // { labelKey: 'nav.services', href: '#services', icon: 'work' },
   // { labelKey: 'nav.projects', href: '#projects' },
   // { labelKey: 'nav.about', href: '#about' },
-  // { labelKey: 'nav.contact', href: '#contact', icon: 'mail' },
+  { labelKey: 'nav.contact', href: '#contact', icon: 'mail' },
 ];
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
               className="flex place-items-center gap-1 cursor-pointer text-slate-300 hover:text-primary text-sm font-medium transition-colors"
               onClick={() => {
                 document.dispatchEvent(
-                  new CustomEvent('test123', {
+                  new CustomEvent('sectionRedirect', {
                     detail: {
                       href: link.href,
                     },
