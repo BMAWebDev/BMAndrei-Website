@@ -1,94 +1,61 @@
+/* eslint-disable @next/next/no-page-custom-font */
+import { Slide, ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
-import { K2D } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
-// constants
-import config from '@constants/config';
-// components
-import Layout from '@components/Layout';
-// style
-import '@styles/globals.css';
-import { notFound } from 'next/navigation';
-import { hasLocale } from 'next-intl';
-import routing from '@/i18n/routing';
-import { getMessages } from 'next-intl/server';
+import { Inter } from 'next/font/google';
+import { I18nProvider, locales, type Locale } from '@i18n/index';
+import '../globals.css';
 
-const inter = K2D({ subsets: ['latin'], weight: '300' });
+interface LocaleLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'BMAWebDev - Your friendly neighbourhood developer',
+  title: 'BMA WebDev – Crafting Digital Excellence',
   description:
-    'Home page - Bărdiță Mihai-Andrei Persoană Fizică Autorizată (Authorized Person) - your friendly neighbourhood software developer, helping people with their software needs. Welcome to my webpage!',
-  keywords: [
-    'software developer',
-    'web developer',
-    'software engineer',
-    'developer',
-    'react',
-    'javascript',
-    'typescript',
-    'node',
-    'Andrei Bardita',
-    'PFA',
-    'Andrei Bardita PFA',
-    'BARDITA MIHAI-ANDREI PERSOANA FIZICA AUTORIZATA',
-  ],
+    'I build high-performance websites and bespoke digital experiences that drive growth, innovation, and user engagement.',
 };
 
-const RootLayout = async ({ params, children }: any) => {
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: LocaleLayoutProps) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  const messages = await getMessages();
-
-  if (!messages) {
-    notFound();
-  }
+  const safeLocale: Locale = locale === 'en' ? 'en' : 'ro';
 
   return (
-    <html
-      lang={locale}
-      dir="ltr"
-      style={{ backgroundColor: config.colors.DarkPrimary }}
-      suppressHydrationWarning
-    >
+    <html className="dark" lang={safeLocale}>
       <head>
         <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
         />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#111530" />
-        <meta name="msapplication-TileColor" content="#111530" />
-        <meta name="theme-color" content="#111530" />
       </head>
+      <body
+        className={`${inter.className} bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col w-full items-center`}
+      >
+        <I18nProvider locale={safeLocale}>{children}</I18nProvider>
 
-      <body className={inter.className}>
-        <Layout locale={locale} messages={messages}>
-          {children}
-        </Layout>
-
-        {process.env.GTAG_ANALYTICS_ID && (
-          <GoogleAnalytics gaId={process.env.GTAG_ANALYTICS_ID} />
-        )}
+        <ToastContainer
+          position="top-center"
+          transition={Slide}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
