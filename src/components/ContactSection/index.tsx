@@ -44,7 +44,9 @@ const ContactSection = () => {
 
               resetForm();
 
-              new Notification('Your message was sent.');
+              new Notification(
+                'Your message was sent. Thank you for reaching out!',
+              );
             } catch (error) {
               console.log(error);
             } finally {

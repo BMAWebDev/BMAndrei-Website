@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import { Slide, ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { I18nProvider, locales, type Locale } from '@i18n/index';
@@ -45,6 +46,15 @@ export default async function LocaleLayout({
         className={`${inter.className} bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col w-full items-center`}
       >
         <I18nProvider locale={safeLocale}>{children}</I18nProvider>
+
+        <ToastContainer
+          position="top-center"
+          transition={Slide}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </body>
     </html>
   );

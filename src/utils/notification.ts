@@ -2,7 +2,11 @@ import { toast } from 'react-toastify';
 
 class Notification {
   constructor(message: string) {
-    toast(message);
+    toast(message, {
+      style: {
+        fontFamily: 'Inter, Inter Fallback',
+      },
+    });
   }
 }
 
