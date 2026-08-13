@@ -55,9 +55,9 @@ const Header = () => {
             <span className="material-symbols-outlined">attach_money</span>
             {t('header.cta')}
           </button> */}
-          <button className="md:hidden text-slate-100">
+          {/* <button className="md:hidden text-slate-100">
             <span className="material-symbols-outlined">menu</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
