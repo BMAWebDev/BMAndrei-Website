@@ -8,12 +8,12 @@ import { IContactTemplate } from '@models/mail';
 // components
 import { ContactTemplate } from '@components/Email';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const getHTML = async (data: IContactTemplate) =>
   await render(<ContactTemplate {...data} />);
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const mailData: IContactTemplate = await req.json();
 
