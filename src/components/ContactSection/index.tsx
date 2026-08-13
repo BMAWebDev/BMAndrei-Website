@@ -2,25 +2,36 @@
 
 import { Form, Formik } from 'formik';
 import axios from 'axios';
+import { useMemo } from 'react';
 // lib
-import { INITIAL_VALUES, validationSchema } from './validation';
+import { INITIAL_VALUES, getValidationSchema } from './validation';
 // utils
 import Notification from '@utils/notification';
+import { getClassNames } from '@utils/tailwind';
+import { getIsOnClient } from '@utils/client';
+// hooks
+import { useTranslation } from '@i18n/index';
 // components
 import { Spinner } from '@components/index';
 import { InputText } from '@components/Form';
-import { getClassNames } from '@src/utils/tailwind';
 
 const ContactSection = () => {
+  const { t, locale } = useTranslation();
+
+  const validationSchema = useMemo(
+    () => (getIsOnClient() ? getValidationSchema(locale) : null),
+    [locale],
+  );
+
   return (
     <section id="contact" className="py-20 px-6">
       <div className="max-w-xl mx-auto glass rounded-3xl border-accent/20">
         <h2 className="text-3xl font-black text-white mb-2">
-          Let&apos;s build <br />
-          <span className="text-accent">together.</span>
+          {t('contact.title.line1')} <br />
+          <span className="text-accent">{t('contact.title.line2')}</span>
         </h2>
         <p className="text-slate-400 mb-8 text-sm">
-          Have a vision? I have the tools to make it reality.
+          {t('contact.description')}
         </p>
 
         <Formik
@@ -46,24 +57,24 @@ const ContactSection = () => {
               <div className="flex flex-col gap-4">
                 <InputText
                   name="name"
-                  label="Your name"
-                  placeholder="John Doe"
+                  label={t('contact.fields.name.label')}
+                  placeholder={t('contact.fields.name.placeholder')}
                   requiredText
                 />
 
                 <InputText
                   type="email"
                   name="email"
-                  label="Your email"
-                  placeholder="john@example.com"
+                  label={t('contact.fields.email.label')}
+                  placeholder={t('contact.fields.email.placeholder')}
                   requiredText
                 />
 
                 <InputText
                   type="textarea"
                   name="message"
-                  label="Project Details"
-                  placeholder="Tell me about your idea..."
+                  label={t('contact.fields.message.label')}
+                  placeholder={t('contact.fields.message.placeholder')}
                   requiredText
                 />
 
@@ -77,7 +88,7 @@ const ContactSection = () => {
                       : 'opacity-100',
                   )}
                 >
-                  {isSubmitting ? <Spinner /> : 'SEND INQUIRY'}
+                  {isSubmitting ? <Spinner /> : t('contact.submit')}
                 </button>
               </div>
             </Form>

@@ -9,7 +9,6 @@ import { useMemo } from 'react';
 import { FieldGroupProps } from '@models/form';
 // utils
 import { getClassNames } from '@utils/tailwind';
-import Image from 'next/image';
 // components
 // import { Select, Checkbox, RadioGroup } from '@components/index';
 // import PlusIcon from '@assets/icons/Plus.svg';
@@ -33,7 +32,7 @@ const FieldGroup = ({
   rows = 3,
   ...restProps
 }: FieldGroupProps) => {
-  const { values, errors, touched, setFieldValue } = useFormikContext();
+  const { errors, touched } = useFormikContext();
   const isError = useMemo(
     () =>
       !!errors[name as keyof typeof errors] &&
@@ -66,36 +65,25 @@ const FieldGroup = ({
       )}
 
       <div className="relative rounded-md shadow-sm">
-        {type === 'select' ? //   styles={{ //   }} //     multiValue: () => ' ', //     singleValue: () => ' ', //     control: () => ' py-1 px-2', //     menu: () => ' rounded-md shadow-lg', //   classNames={{ //   className={`block w-full bg-transparent rounded-md border dark:border-white/30 border-black outline-none sm:text-sm sm:leading-6 dark:text-gray-1 light:text-black dark:placeholder:text-gray-1 light:placeholder:text-black ${inputClassName ? ` ${inputClassName}` : ''}`} //   menuPlacement="bottom" //   menuPosition="absolute" //   isDisabled={isDisabled} //   placeholder={placeholder} //   name={name} //   id={id} //   value={(values as Record<string, number>)[name]} //   onChange={(e) => setFieldValue(name, e)} // <Select
-        //     valueContainer: (styles) => ({ ...styles, padding: '0 8px' }),
-        //   }}
-        //   components={{
-        //     DropdownIndicator: (props) => (
-        //       <components.DropdownIndicator {...props}>
-        //         <ChevronDownIcon
-        //           className="h-5 w-5 text-gray-400 mr-2"
-        //           aria-hidden="true"
-        //         />
-        //       </components.DropdownIndicator>
-        //     ),
-        //     IndicatorSeparator: () => null,
-        //   }}
-        //   {...selectProps}
+        {type === 'select' ? //   {...selectProps} //   }} //     IndicatorSeparator: () => null, //     ), //       </components.DropdownIndicator> //         /> //           aria-hidden="true" //           className="h-5 w-5 text-gray-400 mr-2" //         <ChevronDownIcon //       <components.DropdownIndicator {...props}> //     DropdownIndicator: (props) => ( //   components={{ //   }} //     valueContainer: (styles) => ({ ...styles, padding: '0 8px' }), //   styles={{ //   }} //     multiValue: () => ' ', //     singleValue: () => ' ', //     control: () => ' py-1 px-2', //     menu: () => ' rounded-md shadow-lg', //   classNames={{ //   className={`block w-full bg-transparent rounded-md border dark:border-white/30 border-black outline-none sm:text-sm sm:leading-6 dark:text-gray-1 light:text-black dark:placeholder:text-gray-1 light:placeholder:text-black ${inputClassName ? ` ${inputClassName}` : ''}`} //   menuPlacement="bottom" //   menuPosition="absolute" //   isDisabled={isDisabled} //   placeholder={placeholder} //   name={name} //   id={id} //   value={(values as Record<string, number>)[name]} //   onChange={(e) => setFieldValue(name, e)} // <Select
         // />
         null : type === 'textarea' ? (
           <Field
             as="textarea"
-            rows={rows}
             type={type}
             name={name}
             className={getClassNames(
-              'w-full bg-background-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:border-accent focus:ring-0 transition-colors',
+              'w-full bg-background-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:border-accent focus:ring-0 transition-colors outline-none',
               inputClassName,
               isDisabled ? 'opacity-70' : '',
             )}
             id={id}
             // should be moved to tailwind class after migrating to tailwind v4
-            style={{ fieldSizing: 'content', maxHeight: '100px' }}
+            style={{
+              fieldSizing: 'content',
+              minHeight: '6lh',
+              maxHeight: '10lh',
+            }}
             placeholder={placeholder}
             disabled={isDisabled}
             onKeyDown={(e: KeyboardEvent) => {
@@ -164,7 +152,7 @@ const FieldGroup = ({
             type={type}
             name={name}
             className={getClassNames(
-              'w-full bg-background-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:border-accent focus:ring-0 transition-colors',
+              'w-full bg-background-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:border-accent focus:ring-0 transition-colors outline-none',
               inputClassName,
               isDisabled ? 'opacity-70' : '',
             )}

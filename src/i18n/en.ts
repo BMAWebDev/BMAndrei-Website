@@ -53,6 +53,21 @@ const en = {
   'cta.primary': 'Start Your Project',
   'cta.secondary': 'Contact Me',
 
+  // Contact
+  'contact.title.line1': 'Let\u2019s build',
+  'contact.title.line2': 'together.',
+  'contact.description': 'Have a vision? I have the tools to make it reality.',
+  'contact.fields.name.label': 'Your name',
+  'contact.fields.name.placeholder': 'John Doe',
+  'contact.fields.email.label': 'Your email',
+  'contact.fields.email.placeholder': 'john@example.com',
+  'contact.fields.message.label': 'Project details',
+  'contact.fields.message.placeholder': 'Tell me about your idea...',
+  'contact.submit': 'SEND INQUIRY',
+
+  // General Form Texts
+  'form.field_required': 'Field is required',
+
   // Footer
   'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',
 } as const;

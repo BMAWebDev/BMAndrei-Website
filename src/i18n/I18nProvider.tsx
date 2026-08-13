@@ -6,7 +6,10 @@ import ro from './ro';
 
 export type Locale = 'en' | 'ro';
 
-const dictionaries: Record<Locale, Record<TranslationKey, string>> = { en, ro };
+export const dictionaries: Record<Locale, Record<TranslationKey, string>> = {
+  en,
+  ro,
+};
 
 interface I18nContextValue {
   locale: Locale;
@@ -42,3 +45,14 @@ export function useTranslation(): I18nContextValue {
   }
   return ctx;
 }
+
+export const useGetTranslationText = (key: TranslationKey): string => {
+  const ctx = useContext<I18nContextValue | null>(I18nContext);
+  if (!ctx) {
+    return '';
+  }
+
+  const { locale } = ctx;
+
+  return dictionaries[locale][key];
+};

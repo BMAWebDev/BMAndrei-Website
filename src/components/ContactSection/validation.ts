@@ -1,8 +1,8 @@
 import * as yup from 'yup';
 // models
 import { IContactTemplate } from '@models/mail';
-// constants
-import { REQUIRED_FIELD } from '@constants/texts';
+// hooks
+import { dictionaries } from '@i18n/I18nProvider';
 
 export const INITIAL_VALUES: IContactTemplate = {
   name: '',
@@ -10,8 +10,12 @@ export const INITIAL_VALUES: IContactTemplate = {
   message: '',
 };
 
-export const validationSchema = yup.object().shape({
-  name: yup.string().required(REQUIRED_FIELD),
-  email: yup.string().required(REQUIRED_FIELD).email(),
-  message: yup.string().required(REQUIRED_FIELD),
-});
+export const getValidationSchema = (locale: keyof typeof dictionaries) => {
+  const REQUIRED_FIELD = dictionaries[locale]['form.field_required'];
+
+  return yup.object().shape({
+    name: yup.string().required(REQUIRED_FIELD),
+    email: yup.string().required(REQUIRED_FIELD).email(),
+    message: yup.string().required(REQUIRED_FIELD),
+  });
+};

@@ -55,6 +55,23 @@ const ro: Record<TranslationKey, string> = {
   'cta.primary': 'Începe Proiectul',
   'cta.secondary': 'Contactează-mă',
 
+  // Contact
+  'contact.title.line1': 'Hai să construim',
+  'contact.title.line2': 'împreună.',
+  'contact.description':
+    'Ai o idee? Eu am instrumentele pentru a-ți transforma viziunea în realitate.',
+  'contact.fields.name.label': 'Numele tău',
+  'contact.fields.name.placeholder': 'John Doe',
+  'contact.fields.email.label': 'Email-ul tău',
+  'contact.fields.email.placeholder': 'john@example.com',
+  'contact.fields.message.label': 'Detaliile proiectului',
+  'contact.fields.message.placeholder':
+    'Spune-mi câteva cuvinte despre cerințele proiectului...',
+  'contact.submit': 'TRIMITE MESAJ',
+
+  // General Form Texts
+  'form.field_required': 'Câmpul este obligatoriu.',
+
   // Footer
   'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',
 };
