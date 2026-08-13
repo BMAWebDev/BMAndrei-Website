@@ -15,7 +15,7 @@ import {
 import {
   Header,
   HeroSection,
-  ServicesSection,
+  // ServicesSection,
   // ProjectsSection,
   CTASection,
   ContactSection,

@@ -1,8 +1,9 @@
-'use client';
-
 import { useTranslation } from '@i18n/index';
+import Image from 'next/image';
 // utils
 import { redirectToSection } from '@utils/client';
+// components
+import HeroImage from '@assets/HeroImage.jpg';
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -57,12 +58,11 @@ export default function HeroSection() {
               <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-purple-600/10 rounded-full blur-3xl" />
 
               <div className="relative z-10 w-full h-full rounded-2xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm overflow-hidden shadow-2xl">
-                {/* <img
-                  alt="Tech Hero"
-                  className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcvVw_Skr7seQlEgH4lgaMVRMUMggrB6LV6rbm7GxpjR5grI2Shcb6qHvwJSJdFtxUVVyr9sERFqTbsY9_3yh9bXm03cu1p2wzy_LWBS7NEP5H15P4MLI1n82MxIlN9VTSE-SdtcpoMKd-EZozWTrr9YhS3D8YU4c4YI-nap-JSc4NZIqMyfR6jXn9_WZJxyYr8s9Ba5ZWLPJJnw4XaN6bgdQKWgzaU4eXUdC__FxCIQu5MwbobC0HuaIBrbrIDUK8Mptl2Cjlqfo"
-                /> */}
-                <div className="absolute inset-0 bg-linear-to-t from-background-dark via-transparent to-transparent" />
+                <Image
+                  alt="Hero image"
+                  className="w-full h-full object-cover opacity-60 hover:opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:scale-105 transition-all duration-1000"
+                  src={HeroImage}
+                />
 
                 {/* Stats overlay */}
                 <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-700/50">
