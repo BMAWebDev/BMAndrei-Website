@@ -11,10 +11,10 @@ const ro: Record<TranslationKey, string> = {
 
   // Hero
   'hero.badge': 'Disponibil pentru proiecte noi',
-  'hero.title.line1': 'Construiesc Excelență',
+  'hero.title.line1': 'Experiența Ta',
   'hero.title.highlight': 'Digitală',
   'hero.description':
-    'Construiesc site-uri web performante și experiențe digitale personalizate care stimulează creșterea, inovația și implicarea utilizatorilor.',
+    'Construiesc site-uri web performante și experiențe digitale personalizate care stimulează creșterea, inovația și implicarea utilizatorilor. Ai o idee? Hai să o discutăm.',
   'hero.cta.primary': 'Vezi Proiectele',
   'hero.cta.secondary': 'Începe un Proiect',
   'hero.stats.title': '10+ Proiecte livrate',

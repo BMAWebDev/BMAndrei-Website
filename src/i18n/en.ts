@@ -9,10 +9,10 @@ const en = {
 
   // Hero
   'hero.badge': 'Available for new projects',
-  'hero.title.line1': 'Crafting Digital',
-  'hero.title.highlight': 'Excellence',
+  'hero.title.line1': 'Your digital',
+  'hero.title.highlight': 'Experience',
   'hero.description':
-    'I build high-performance websites and bespoke digital experiences that drive growth, innovation, and user engagement.',
+    'I build high-performance websites and bespoke digital experiences that drive growth, innovation, and user engagement. Got an idea? Let\u2019s talk about it.',
   'hero.cta.primary': 'View My Work',
   'hero.cta.secondary': 'Start a Project',
   'hero.stats.title': '10+ Delivered Projects',
