@@ -64,9 +64,12 @@ const en = {
   'contact.fields.message.label': 'Project details',
   'contact.fields.message.placeholder': 'Tell me about your idea...',
   'contact.submit': 'SEND INQUIRY',
+  'contact.submit_success_message':
+    'Your message was sent. Thank you for reaching out!',
 
   // General Form Texts
   'form.field_required': 'Field is required',
+  'form.invalid_email': 'Enter a valid email address',
 
   // Footer
   'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',

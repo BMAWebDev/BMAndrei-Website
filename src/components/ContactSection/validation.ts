@@ -12,10 +12,11 @@ export const INITIAL_VALUES: IContactTemplate = {
 
 export const getValidationSchema = (locale: keyof typeof dictionaries) => {
   const REQUIRED_FIELD = dictionaries[locale]['form.field_required'];
+  const INVALID_EMAIL = dictionaries[locale]['form.invalid_email'];
 
   return yup.object().shape({
     name: yup.string().required(REQUIRED_FIELD),
-    email: yup.string().required(REQUIRED_FIELD).email(),
+    email: yup.string().required(REQUIRED_FIELD).email(INVALID_EMAIL),
     message: yup.string().required(REQUIRED_FIELD),
   });
 };

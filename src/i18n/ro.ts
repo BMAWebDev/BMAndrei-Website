@@ -68,9 +68,12 @@ const ro: Record<TranslationKey, string> = {
   'contact.fields.message.placeholder':
     'Spune-mi câteva cuvinte despre cerințele proiectului...',
   'contact.submit': 'TRIMITE MESAJ',
+  'contact.submit_success_message':
+    'Mesajul tău a fost trimis. Mulțumesc pentru curiozitate!',
 
   // General Form Texts
-  'form.field_required': 'Câmpul este obligatoriu.',
+  'form.field_required': 'Câmpul este obligatoriu',
+  'form.invalid_email': 'Introdu o adresă de email validă',
 
   // Footer
   'footer.copyright': '\u00A9 {{ currentYear }} BMA WebDev',
