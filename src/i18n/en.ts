@@ -38,15 +38,13 @@ const en = {
   'projects.label': 'Portfolio',
   'projects.title': 'Latest Projects',
   'projects.viewAll': 'View Full Portfolio',
-  'projects.fintech.title': 'Fintech Dashboard',
-  'projects.fintech.tags': 'Web Development \u2022 UI Design',
-  'projects.fashion.title': 'Fashion Store',
-  'projects.fashion.tags': 'E-Commerce \u2022 SEO',
-  'projects.saas.title': 'SaaS Landing Page',
-  'projects.saas.tags': 'Web App \u2022 UI/UX',
+  'projects.checkout.title': 'Checkout',
+  'projects.checkout.tags': 'Bitdefender \u2022 Front-end',
+  'projects.ads.title': 'Uploaders',
+  'projects.ads.tags': 'Adstream \u2022 Full-stack',
 
   // CTA
-  'cta.title.line1': 'Ready to build something',
+  'cta.title.line1': 'Ready for something',
   'cta.title.line2': 'extraordinary?',
   'cta.description':
     'Let\u2019s collaborate to turn your vision into a high-performance digital reality.',

@@ -40,15 +40,13 @@ const ro: Record<TranslationKey, string> = {
   'projects.label': 'Portofoliu',
   'projects.title': 'Proiecte Recente',
   'projects.viewAll': 'Vezi Tot Portofoliul',
-  'projects.fintech.title': 'Panou Fintech',
-  'projects.fintech.tags': 'Dezvoltare Web • Design UI',
-  'projects.fashion.title': 'Magazin Fashion',
-  'projects.fashion.tags': 'E-Commerce • SEO',
-  'projects.saas.title': 'Landing Page SaaS',
-  'projects.saas.tags': 'Aplicație Web • UI/UX',
+  'projects.checkout.title': 'Checkout',
+  'projects.checkout.tags': 'Bitdefender • Front-end',
+  'projects.ads.title': 'Uploaders',
+  'projects.ads.tags': 'Adstream • Full-stack',
 
   // CTA
-  'cta.title.line1': 'Pregătit să construiești ceva',
+  'cta.title.line1': 'Pregătit pentru ceva',
   'cta.title.line2': 'extraordinar?',
   'cta.description':
     'Hai să colaborăm pentru a-ți transforma viziunea într-o realitate digitală performantă.',
