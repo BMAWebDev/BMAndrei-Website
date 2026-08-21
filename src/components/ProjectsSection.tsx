@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </button> */}
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           {projects.map((project) => (
             <div key={project.titleKey} className="group w-full">
               <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-800 border border-slate-700/50">
