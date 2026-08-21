@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'BMA WebDev – Crafting Digital Excellence',
+  title: 'BMA WebDev - Crafting Digital Experience',
   description:
-    'I build high-performance websites and bespoke digital experiences that drive growth, innovation, and user engagement.',
+    'I build high-performance websites and digital experiences that drive growth, innovation, and user engagement.',
 };
 
 export async function generateStaticParams() {
