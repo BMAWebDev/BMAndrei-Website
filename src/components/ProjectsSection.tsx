@@ -1,39 +1,31 @@
 'use client';
 
-import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
+import Image from 'next/image';
+import { Fragment, useState } from 'react';
+// models
+import { OpenedModal, ProjectProps } from '@models/layout';
 // hooks
-import { useTranslation, type TranslationKey } from '@i18n/index';
+import { useTranslation } from '@i18n/index';
 // components
 import CheckoutImage from '@assets/CheckoutAPP.jpeg';
 import UploadersImage from '@assets/UploadersAPP.jpeg';
-import { CheckoutDetails, UploadersDetails } from './ModalContent';
+import { ProjectDetails } from './ModalContent';
 import Modal from './Modal';
 
-type OpenedModal = 'uploaders' | 'checkout' | null;
-
-interface Project {
-  titleKey: TranslationKey;
-  tagsKey: TranslationKey;
-  image: string | StaticImageData;
-  alt: string;
-  modalDetails: OpenedModal;
-}
-
-const projects: Project[] = [
+const projects: ProjectProps[] = [
   {
     titleKey: 'projects.ads.title',
     tagsKey: 'projects.ads.tags',
-    image: UploadersImage,
-    alt: 'E-commerce mobile app design with clean white space and high-end fashion photos',
-    modalDetails: 'uploaders',
+    thumbnail: UploadersImage,
+    name: 'uploaders',
+    description: 'projects.ads.description',
   },
   {
     titleKey: 'projects.checkout.title',
     tagsKey: 'projects.checkout.tags',
-    image: CheckoutImage,
-    alt: 'Modern minimalist website interface for a financial technology company',
-    modalDetails: 'checkout',
+    thumbnail: CheckoutImage,
+    name: 'checkout',
+    description: 'projects.checkout.description',
   },
 ];
 
@@ -64,50 +56,45 @@ export default function ProjectsSection() {
 
         <div className="flex flex-col md:flex-row gap-8">
           {projects.map((project) => (
-            <div key={project.titleKey} className="group w-full">
-              <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-800 border border-slate-700/50">
-                <Image
-                  alt={project.alt}
-                  className="w-full h-full object-fill group-hover:scale-105 transition-transform duration-500"
-                  src={project.image}
-                />
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <div className="flex items-center gap-1">
-                <h5 className="text-slate-100 text-xl font-bold mb-1">
-                  {t(project.titleKey)}
-                </h5>
+            <Fragment key={project.titleKey}>
+              <div className="group w-full">
+                <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-800 border border-slate-700/50">
+                  <Image
+                    alt={project.name || ''}
+                    className="w-full h-full object-fill group-hover:scale-105 transition-transform duration-500"
+                    src={project.thumbnail}
+                  />
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="flex items-center gap-1">
+                  <h5 className="text-slate-100 text-xl font-bold mb-1">
+                    {t(project.titleKey)}
+                  </h5>
 
-                {/* {project.modalDetails && (
-                  <span
-                    className="cursor-pointer material-symbols-outlined text-slate-400"
-                    onClick={() => setOpenedModal(project.modalDetails)}
-                  >
-                    info
-                  </span>
-                )} */}
+                  {/* {project.name && (
+                    <span
+                      className="cursor-pointer material-symbols-outlined text-slate-400"
+                      onClick={() => setOpenedModal(project.name)}
+                    >
+                      info
+                    </span>
+                  )} */}
+                </div>
+                <p className="text-slate-400">{t(project.tagsKey)}</p>
               </div>
-              <p className="text-slate-400">{t(project.tagsKey)}</p>
-            </div>
+
+              <Modal
+                isOpen={openedModal === project.name}
+                closeModal={closeModal}
+                isCentered
+                size="5xl"
+              >
+                <ProjectDetails project={project} />
+              </Modal>
+            </Fragment>
           ))}
         </div>
       </div>
-
-      <Modal
-        isOpen={openedModal === 'uploaders'}
-        closeModal={closeModal}
-        isCentered
-      >
-        <UploadersDetails />
-      </Modal>
-
-      <Modal
-        isOpen={openedModal === 'checkout'}
-        closeModal={closeModal}
-        isCentered
-      >
-        <CheckoutDetails />
-      </Modal>
     </section>
   );
 }

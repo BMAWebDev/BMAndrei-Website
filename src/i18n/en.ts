@@ -40,10 +40,13 @@ const en = {
   'projects.label': 'Portfolio',
   'projects.title': 'Latest Projects',
   'projects.viewAll': 'View Full Portfolio',
-  'projects.checkout.title': 'Checkout',
-  'projects.checkout.tags': 'Bitdefender \u2022 Front-end',
   'projects.ads.title': 'Uploaders',
   'projects.ads.tags': 'Adstream \u2022 Full-stack',
+  'projects.ads.description': 'Description uploaders',
+  'projects.checkout.title': 'Checkout',
+  'projects.checkout.tags': 'Bitdefender \u2022 Front-end',
+  'projects.checkout.description':
+    'Description checkout.<br/><br/>Salutare! am venit si eu aici.',
 
   // CTA
   'cta.title.line1': 'Ready for something',
