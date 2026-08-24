@@ -1,4 +1,4 @@
-import { Html, Text } from 'react-email';
+import { Html, Text, Heading } from 'react-email';
 // models
 import { IContactTemplate } from '@models/mail';
 
@@ -9,13 +9,19 @@ const ContactTemplate: React.FC<Readonly<IContactTemplate>> = ({
 }) => {
   return (
     <Html>
-      <Text>Mesaj nou de la {name}.</Text>
+      <Heading>Mesaj nou de la {name}.</Heading>
 
       <Text>
         {name} ({email}) a trimis un mesaj de contact:
       </Text>
 
-      <Text>{message}</Text>
+      <Text
+        style={{
+          fontStyle: 'italic',
+        }}
+      >
+        {message}
+      </Text>
     </Html>
   );
 };

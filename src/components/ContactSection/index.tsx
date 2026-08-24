@@ -82,7 +82,7 @@ const ContactSection = () => {
                   disabled={isSubmitting}
                   type={isSubmitting ? 'button' : 'submit'}
                   className={getClassNames(
-                    'cursor-pointer w-full min-w-30 items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all shadow-lg shadow-primary/20',
+                    'cursor-pointer w-full min-w-30 items-center justify-center justify-items-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all shadow-lg shadow-primary/20',
                     isSubmitting
                       ? 'opacity-30 cursor-not-allowed pointer-events-none'
                       : 'opacity-100',

@@ -8,8 +8,8 @@ import Logo from './Logo';
 
 const navLinks: { labelKey: TranslationKey; href: string; icon?: string }[] = [
   { labelKey: 'nav.home', href: '#hero', icon: 'home' },
-  // { labelKey: 'nav.services', href: '#services', icon: 'work' },
-  // { labelKey: 'nav.projects', href: '#projects' },
+  // { labelKey: 'nav.services', href: '#services' },
+  { labelKey: 'nav.projects', href: '#projects', icon: 'work' },
   // { labelKey: 'nav.about', href: '#about' },
   { labelKey: 'nav.contact', href: '#contact', icon: 'mail' },
 ];
