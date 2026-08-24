@@ -1,34 +1,48 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
+import { useState } from 'react';
 // hooks
 import { useTranslation, type TranslationKey } from '@i18n/index';
 // components
 import CheckoutImage from '@assets/CheckoutAPP.jpeg';
 import UploadersImage from '@assets/UploadersAPP.jpeg';
+import { CheckoutDetails, UploadersDetails } from './ModalContent';
+import Modal from './Modal';
 
-const projects: {
+type OpenedModal = 'uploaders' | 'checkout' | null;
+
+interface Project {
   titleKey: TranslationKey;
   tagsKey: TranslationKey;
   image: string | StaticImageData;
   alt: string;
-}[] = [
+  modalDetails: OpenedModal;
+}
+
+const projects: Project[] = [
   {
     titleKey: 'projects.ads.title',
     tagsKey: 'projects.ads.tags',
     image: UploadersImage,
     alt: 'E-commerce mobile app design with clean white space and high-end fashion photos',
+    modalDetails: 'uploaders',
   },
   {
     titleKey: 'projects.checkout.title',
     tagsKey: 'projects.checkout.tags',
     image: CheckoutImage,
     alt: 'Modern minimalist website interface for a financial technology company',
+    modalDetails: 'checkout',
   },
 ];
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
+
+  const [openedModal, setOpenedModal] = useState<OpenedModal>(null);
+
+  const closeModal = () => setOpenedModal(null);
 
   return (
     <section id="projects" className="py-24 px-6">
@@ -59,14 +73,41 @@ export default function ProjectsSection() {
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h5 className="text-slate-100 text-xl font-bold mb-1">
-                {t(project.titleKey)}
-              </h5>
+              <div className="flex items-center gap-1">
+                <h5 className="text-slate-100 text-xl font-bold mb-1">
+                  {t(project.titleKey)}
+                </h5>
+
+                {/* {project.modalDetails && (
+                  <span
+                    className="cursor-pointer material-symbols-outlined text-slate-400"
+                    onClick={() => setOpenedModal(project.modalDetails)}
+                  >
+                    info
+                  </span>
+                )} */}
+              </div>
               <p className="text-slate-400">{t(project.tagsKey)}</p>
             </div>
           ))}
         </div>
       </div>
+
+      <Modal
+        isOpen={openedModal === 'uploaders'}
+        closeModal={closeModal}
+        isCentered
+      >
+        <UploadersDetails />
+      </Modal>
+
+      <Modal
+        isOpen={openedModal === 'checkout'}
+        closeModal={closeModal}
+        isCentered
+      >
+        <CheckoutDetails />
+      </Modal>
     </section>
   );
 }

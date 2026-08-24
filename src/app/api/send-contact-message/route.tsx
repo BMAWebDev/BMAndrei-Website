@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       from: 'BMAWebDev Website Form <no-reply@bmawebdev.ro>',
       to: [config.contactEmail],
       subject: 'Contact message',
-      react: await pretty(html),
+      html: await pretty(html),
       text: toPlainText(html),
     });
 

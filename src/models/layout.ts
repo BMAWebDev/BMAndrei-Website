@@ -16,3 +16,17 @@ export interface FlexProps {
   hideOnMobile?: boolean;
   hideOnDesktop?: boolean;
 }
+
+export interface ModalProps {
+  closeModal: () => Promise<void> | void;
+}
+
+export interface ConfirmModalContentProps extends ModalProps {
+  title: string;
+  submitModal: (
+    setIsLoading: React.Dispatch<React.SetStateAction<boolean>>,
+  ) => Promise<void>;
+  doubleConfirmationText?: string;
+  cancelText?: string;
+  submitText: string;
+}
