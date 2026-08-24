@@ -4,12 +4,16 @@ import { pretty, render, toPlainText } from 'react-email';
 // constants
 import config from '@constants/config';
 // models
-import { IContactTemplate } from '@models/mail';
+import { IContactTemplate, MessageSuccessfullySentProps } from '@models/mail';
 // components
-import { ContactTemplate } from '@components/Email';
+import { ContactTemplate, MessageSuccessfullySent } from '@components/Email';
 
-const getHTML = async (data: IContactTemplate) =>
+const getContactTemplateHTML = async (data: IContactTemplate) =>
   await render(<ContactTemplate {...data} />);
+
+const getMessageSuccessfullySentHTML = async (
+  data: MessageSuccessfullySentProps,
+) => await render(<MessageSuccessfullySent {...data} />);
 
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -17,33 +21,34 @@ export async function POST(req: NextRequest) {
   try {
     const mailData: IContactTemplate = await req.json();
 
-    const html = await getHTML(mailData);
+    const contactTemplateHTML = await getContactTemplateHTML(mailData);
 
     const { data, error } = await resend.emails.send({
-      from: 'BMAWebDev Website Form <no-reply@bmawebdev.ro>',
+      from: 'BMAWebDev Website Form <contact@bmawebdev.ro>',
       to: [config.contactEmail],
       subject: 'Contact message',
-      html: await pretty(html),
-      text: toPlainText(html),
+      html: await pretty(contactTemplateHTML),
+      text: toPlainText(contactTemplateHTML),
     });
 
     if (error) {
       return NextResponse.json({ error }, { status: 500 });
     }
 
-    // const receivedEmail = await resend.emails.send({
-    //   from: 'BMAWebDev Website Form <no-reply@bmawebdev.ro>',
-    //   to: [mailData.email],
-    //   subject: 'Contact message',
-    //   react: ContactTemplate(mailData),
-    //   text: ContactTemplateText(mailData),
-    // });
+    const messageSuccessfullySentHTML =
+      await getMessageSuccessfullySentHTML(mailData);
 
-    // if (receivedEmail.error) {
-    //   return NextResponse.json({ error }, { status: 500 });
-    // }
+    const receivedEmail = await resend.emails.send({
+      from: 'BMAWebDev Website Form <contact@bmawebdev.ro>',
+      to: [mailData.email],
+      subject: 'Contact message',
+      html: await pretty(messageSuccessfullySentHTML),
+      text: toPlainText(messageSuccessfullySentHTML),
+    });
 
-    // return NextResponse.json(receivedEmail.data);
+    if (receivedEmail.error) {
+      return NextResponse.json({ error }, { status: 500 });
+    }
 
     return NextResponse.json(data);
   } catch (error) {

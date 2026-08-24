@@ -42,12 +42,14 @@ const ContactSection = () => {
             try {
               await axios.post('/api/send-contact-message', values);
 
-              resetForm();
-
               new Notification(t('contact.submit_success_message'));
             } catch (error) {
               console.log(error);
+
+              new Notification(t('contact.generic_error'));
             } finally {
+              resetForm();
+
               setSubmitting(false);
             }
           }}
