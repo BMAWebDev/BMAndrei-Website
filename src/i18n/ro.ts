@@ -1,3 +1,4 @@
+import { config } from '@constants/index';
 import type { TranslationKey } from './en';
 
 const ro: Record<TranslationKey, string> = {
@@ -58,8 +59,8 @@ const ro: Record<TranslationKey, string> = {
   'contact.title.line2': 'împreună.',
   'contact.description':
     'Ai o idee? Eu am instrumentele pentru a-ți transforma viziunea în realitate.',
-  'contact.fields.name.label': 'Numele tău',
-  'contact.fields.name.placeholder': 'John Doe',
+  'contact.fields.name.label': 'Prenumele tău',
+  'contact.fields.name.placeholder': 'John',
   'contact.fields.email.label': 'Email-ul tău',
   'contact.fields.email.placeholder': 'john@example.com',
   'contact.fields.message.label': 'Detaliile proiectului',
@@ -68,6 +69,7 @@ const ro: Record<TranslationKey, string> = {
   'contact.submit': 'TRIMITE MESAJ',
   'contact.submit_success_message':
     'Mesajul tău a fost trimis. Mulțumesc pentru curiozitate!',
+  'contact.generic_error': `A apărut o eroare la trimiterea mesajului. Te rog revino mai târziu sau scrie la adresa de e-mail ${config.contactEmail}`,
 
   // General Form Texts
   'form.field_required': 'Câmpul este obligatoriu',

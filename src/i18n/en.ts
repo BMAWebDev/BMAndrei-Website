@@ -1,3 +1,5 @@
+import { config } from '@constants/index';
+
 const en = {
   // Header
   'nav.home': 'Home',
@@ -55,8 +57,8 @@ const en = {
   'contact.title.line1': 'Let\u2019s build',
   'contact.title.line2': 'together.',
   'contact.description': 'Have a vision? I have the tools to make it reality.',
-  'contact.fields.name.label': 'Your name',
-  'contact.fields.name.placeholder': 'John Doe',
+  'contact.fields.name.label': 'First name',
+  'contact.fields.name.placeholder': 'John',
   'contact.fields.email.label': 'Your email',
   'contact.fields.email.placeholder': 'john@example.com',
   'contact.fields.message.label': 'Project details',
@@ -64,6 +66,7 @@ const en = {
   'contact.submit': 'SEND INQUIRY',
   'contact.submit_success_message':
     'Your message was sent. Thank you for reaching out!',
+  'contact.generic_error': `There was an error while sending the message. Please come back later or send an email to ${config.contactEmail}`,
 
   // General Form Texts
   'form.field_required': 'Field is required',
