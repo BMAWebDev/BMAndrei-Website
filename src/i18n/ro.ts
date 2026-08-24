@@ -41,10 +41,12 @@ const ro: Record<TranslationKey, string> = {
   'projects.label': 'Portofoliu',
   'projects.title': 'Proiecte Recente',
   'projects.viewAll': 'Vezi Tot Portofoliul',
-  'projects.checkout.title': 'Checkout',
-  'projects.checkout.tags': 'Bitdefender • Front-end',
   'projects.ads.title': 'Uploaders',
   'projects.ads.tags': 'Adstream • Full-stack',
+  'projects.ads.description': 'Description uploaders',
+  'projects.checkout.title': 'Checkout',
+  'projects.checkout.tags': 'Bitdefender • Front-end',
+  'projects.checkout.description': 'Description checkout',
 
   // CTA
   'cta.title.line1': 'Pregătit pentru ceva',

@@ -1,3 +1,6 @@
+import { TranslationKey } from '@i18n/index';
+import { StaticImageData } from 'next/image';
+
 export interface SectionProps {
   index: number;
   id?: string;
@@ -29,4 +32,14 @@ export interface ConfirmModalContentProps extends ModalProps {
   doubleConfirmationText?: string;
   cancelText?: string;
   submitText: string;
+}
+
+export type OpenedModal = 'uploaders' | 'checkout' | null;
+
+export interface ProjectProps {
+  titleKey: TranslationKey;
+  tagsKey: TranslationKey;
+  thumbnail: string | StaticImageData;
+  name: OpenedModal;
+  description: TranslationKey;
 }

@@ -67,8 +67,8 @@ const ModalComponent: React.FC<PropsWithChildren<ModalProps>> = ({
   const panelClasses = useMemo(() => {
     const baseClasses = [
       'relative w-full transform rounded-lg flex flex-col',
-      'border border-border shadow shadow-white/10',
-      'bg-panel',
+      'border shadow shadow-white/10',
+      'bg-background-dark',
       'text-primary',
     ];
 

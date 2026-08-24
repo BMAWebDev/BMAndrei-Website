@@ -2,8 +2,6 @@ import { useTranslation } from '@i18n/index';
 import Image from 'next/image';
 // utils
 import { redirectToSection } from '@utils/client';
-// components
-import HeroImage from '@assets/HeroImage.jpg';
 
 const dateOfExperienceStart = new Date('25 Aug 2020');
 
@@ -66,7 +64,8 @@ const HeroSection = () => {
                 <Image
                   alt="Hero image"
                   className="w-full h-full object-cover opacity-60 hover:opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:scale-105 transition-all duration-1000"
-                  src={HeroImage}
+                  src="/HeroImage.jpg"
+                  fill
                 />
 
                 {/* Stats overlay */}
