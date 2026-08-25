@@ -67,7 +67,7 @@ const ModalComponent: React.FC<PropsWithChildren<ModalProps>> = ({
   const panelClasses = useMemo(() => {
     const baseClasses = [
       'relative w-full transform rounded-lg flex flex-col',
-      'border shadow shadow-white/10',
+      'shadow shadow-white/10',
       'bg-background-dark',
       'text-primary',
     ];
@@ -93,7 +93,7 @@ const ModalComponent: React.FC<PropsWithChildren<ModalProps>> = ({
 
   // Content wrapper classes for scrolling
   const contentClasses = useMemo(() => {
-    const baseClasses = ['p-4', modalContentClassname]
+    const baseClasses = ['py-10 px-12', modalContentClassname]
       .filter(Boolean)
       .join(' ');
 
@@ -142,7 +142,7 @@ const ModalComponent: React.FC<PropsWithChildren<ModalProps>> = ({
               {closeModal && (
                 <div className="absolute top-4 right-4 z-9999">
                   <span
-                    className="cursor-pointer material-symbols-outlined"
+                    className="cursor-pointer material-symbols-outlined bg-primary text-white rounded-xl p-1"
                     onClick={() => closeModal()}
                     aria-label="Close modal"
                   >

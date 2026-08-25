@@ -45,8 +45,50 @@ const en = {
   'projects.ads.description': 'Description uploaders',
   'projects.checkout.title': 'Checkout',
   'projects.checkout.tags': 'Bitdefender \u2022 Front-end',
-  'projects.checkout.description':
-    'Description checkout.<br/><br/>Salutare! am venit si eu aici.',
+  'projects.checkout.description': `<p>
+Checkout is a payment management project within the Bitdefender platform. It is built using a microservices architecture and includes:
+</p>
+
+<ul>
+  <li>authentication from Central using an existing account</li>
+  <li>new account creation upon payment completion</li>
+  <li>multi-provider support (Zuora/Adyen, Verifone/2PayJS, Stripe)</li>
+  <li>cross-country capabilities</li>
+  <li>different payment methods depending on the country</li>
+  <li>multi-language support and translations</li>
+  <li>multi-session support (multiple browser tabs open for separate payments)</li>
+  <li>company account compatibility and calculating taxes (or excluding them) accordingly</li>
+  <li>generating a new session or updating the current one based on URL parameters</li>
+  <li>campaigns</li>
+</ul>
+
+<p>
+I worked on this project to fix issues and rewrite the entire Front-End application in order to improve running speed and user experience. In the past, Bitdefender used an integrated platform through Verifone and decided to transition to a custom, in-house payment management solution.
+</p>
+
+<p>
+In the initial phase, this custom method was written in Vanilla JavaScript. Later, when I was hired, I made the transition to React. Eventually, I added Redux Toolkit for state management, but step by step the application became very difficult to maintain and develop because the initial transition from Vanilla JS had been done in a rush and the architecture was not properly planned. We didn't have TypeScript, functions made no sense, logic was repeated multiple times, documentation was missing, changing something in one place broke things elsewhere and so on. To sum it up, the code rewrite was highly demanding, ending up with a final delivery deadline 7 months out from the start of the refactor, even though I worked alongside another colleague to bring the project to completion.
+</p>
+
+<p>
+I enjoyed this project because I worked with new tools and managed to improve the application, leaving my mark in terms of performance and quality. I worked here for 2 years, implementing different features (apart from the refactor).
+</p>
+
+<p>
+Tech stack used:
+</p>
+
+<ul>
+  <li>React</li>
+  <li>Redux Toolkit</li>
+  <li>Typescript</li>
+  <li>Vite</li>
+  <li>Docker</li>
+  <li>Styled Components</li>
+  <li>Adyen Web, 2PayJS, Stripe</li>
+</ul>`,
+  'projects.find_more': 'Find out more about the project here.',
+  'projects.test_it': 'Test the project here.',
 
   // CTA
   'cta.title.line1': 'Ready for something',
