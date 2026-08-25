@@ -40,6 +40,8 @@ export interface ProjectProps {
   titleKey: TranslationKey;
   tagsKey: TranslationKey;
   thumbnail: string | StaticImageData;
-  name: OpenedModal;
+  name?: OpenedModal;
   description: TranslationKey;
+  url: string;
+  ctaTextKey: TranslationKey;
 }

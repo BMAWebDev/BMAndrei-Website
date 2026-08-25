@@ -9,9 +9,18 @@
   --font-display: 'Inter', sans-serif;
 }
 
+* {
+  scrollbar-color: #6f4aff transparent;
+  scrollbar-width: thin;
+}
+
 body {
   font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+ul {
+  @apply list-disc ml-4;
 }

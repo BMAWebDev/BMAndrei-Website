@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 // models
 import { ProjectProps } from '@models/layout';
 // hooks
@@ -7,6 +8,7 @@ import { useTranslation } from '@i18n/I18nProvider';
 interface ProjectDetailsProps {
   project: ProjectProps;
 }
+
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   const { t } = useTranslation();
 
@@ -21,14 +23,30 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
 
-      <h5 className="text-slate-100 text-xl font-bold mb-1">
-        {t(project.titleKey)}
-      </h5>
+      <div className="w-full p-4 pt-0 md:p-10 md:pt-0">
+        <h5 className="text-slate-100 text-xl font-bold mb-1">
+          {t(project.titleKey)}
+        </h5>
 
-      <p
-        className="text-slate-400"
-        dangerouslySetInnerHTML={{ __html: t(project.description) }}
-      ></p>
+        <p
+          className="flex flex-col gap-2 text-slate-400"
+          dangerouslySetInnerHTML={{ __html: t(project.description) }}
+        ></p>
+
+        <div className="flex gap-2 items-center mt-4">
+          <Link
+            href={project.url}
+            target="_blank"
+            className="text-slate-400 underline"
+          >
+            {t(project.ctaTextKey)}
+          </Link>
+
+          <span className="text-slate-400 text-base! material-symbols-outlined">
+            open_in_new
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

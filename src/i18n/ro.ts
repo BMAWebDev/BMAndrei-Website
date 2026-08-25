@@ -46,7 +46,50 @@ const ro: Record<TranslationKey, string> = {
   'projects.ads.description': 'Description uploaders',
   'projects.checkout.title': 'Checkout',
   'projects.checkout.tags': 'Bitdefender • Front-end',
-  'projects.checkout.description': 'Description checkout',
+  'projects.checkout.description': `<p>
+Checkout este un proiect de gestionare a plăților din platforma Bitdefender. Este construit cu o arhitectură de tip micro-servicii, conținând:
+</p>
+
+<ul>
+  <li>autentificare din Central cu cont existent</li>
+  <li>creare cont nou la finalizare plată</li>
+  <li>multi-provider support (Zuora/Adyen, Verifone/2PayJS, Stripe)</li>
+  <li>cross-country</li>
+  <li>metode de plată diferite în funcție de țară</li>
+  <li>multi-language support și traduceri</li>
+  <li>multi-session support (mai multe taburi de browser deschise pentru plăți separate)</li>
+  <li>compatibilitate conturi de tip companie și calcularea taxelor (sau excluderea lor) în funcție de acestea</li>
+  <li>generarea de sesiune nouă sau actualizarea celei curente pe baza parametrilor din URL</li>
+  <li>campanii</li>
+</ul>
+
+<p>
+Am lucrat la acest proiect pentru rezolvarea problemelor și rescrierea întregii aplicații de Front-End în vederea îmbunătățirii vitezei de rulare și a experienței de utilizare. Bitdefender folosea în trecut o platformă integrată prin Verifone și au decis să treacă la o metodă custom, in-house de gestionare a plăților. 
+</p>
+
+<p>
+În faza inițială, această metodă custom a fost scrisă în Javascript Vanilla. Ulterior, atunci când am fost angajat, am făcut trecerea la React. Eventual am adăugat Redux Toolkit pentru state management și ușor ușor aplicația începea sa fie foarte greu de întreținut și dezvoltat deoarece trecerea la Vanilla JS a fost scrisă în grabă și arhitectura nu a fost gândită corect. Nu aveam Typescript, funcții care nu aveau sens, logică care se repeta de mai multe ori, documentație lipsă, modificam într-o parte și stricam în alte locuri etc. Pe scurt, munca de rescriere a codului a fost una foarte solicitantă, ajungând ca termenul final de livrare să fie la 7 luni distanță față de începerea refactor-ului, deși mai aveam încă un coleg cu care am lucrat pentru a duce proiectul la bun sfârșit.
+</p>
+
+<p>
+Mi-a plăcut acest proiect fiindcă am lucrat cu tool-uri noi și am reușit să îmbunătățesc aplicația, lăsându-mi amprenta de performanță și calitate. Am lucrat aici timp de 2 săptămâni pentru a implementa diferite funcționalități (diferite de refactor).
+</p>
+
+<p>
+Tech stack folosit:
+</p>
+
+<ul>
+  <li>React</li>
+  <li>Redux Toolkit</li>
+  <li>Typescript</li>
+  <li>Vite</li>
+  <li>Docker</li>
+  <li>Styled Components</li>
+  <li>Adyen Web, 2PayJS, Stripe</li>
+</ul>`,
+  'projects.find_more': 'Află mai multe despre proiect aici.',
+  'projects.test_it': 'Testează proiectul aici.',
 
   // CTA
   'cta.title.line1': 'Pregătit pentru ceva',

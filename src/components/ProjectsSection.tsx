@@ -17,8 +17,10 @@ const projects: ProjectProps[] = [
     titleKey: 'projects.ads.title',
     tagsKey: 'projects.ads.tags',
     thumbnail: UploadersImage,
-    name: 'uploaders',
+    // name: 'uploaders',
     description: 'projects.ads.description',
+    url: 'https://adstream.com.ro/',
+    ctaTextKey: 'projects.find_more',
   },
   {
     titleKey: 'projects.checkout.title',
@@ -26,6 +28,8 @@ const projects: ProjectProps[] = [
     thumbnail: CheckoutImage,
     name: 'checkout',
     description: 'projects.checkout.description',
+    url: 'https://www.bitdefender.com/nl-nl/consumer/individual',
+    ctaTextKey: 'projects.test_it',
   },
 ];
 
@@ -71,14 +75,14 @@ export default function ProjectsSection() {
                     {t(project.titleKey)}
                   </h5>
 
-                  {/* {project.name && (
+                  {project.name && (
                     <span
                       className="cursor-pointer material-symbols-outlined text-slate-400"
-                      onClick={() => setOpenedModal(project.name)}
+                      onClick={() => setOpenedModal(project.name!)}
                     >
                       info
                     </span>
-                  )} */}
+                  )}
                 </div>
                 <p className="text-slate-400">{t(project.tagsKey)}</p>
               </div>
@@ -86,6 +90,7 @@ export default function ProjectsSection() {
               <Modal
                 isOpen={openedModal === project.name}
                 closeModal={closeModal}
+                modalContentClassname="p-0!"
                 isCentered
                 size="5xl"
               >
