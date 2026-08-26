@@ -42,7 +42,55 @@ const en = {
   'projects.viewAll': 'View Full Portfolio',
   'projects.ads.title': 'Uploaders',
   'projects.ads.tags': 'Adstream \u2022 Full-stack',
-  'projects.ads.description': 'Description uploaders',
+  'projects.ads.description': `<p>
+Uploaders is a multi-layer platform developed by Adstream for managing advertisements, both global and local to Romania. The architecture is divided into 4 modules, each with their own specific users, containing:
+</p>
+
+<ul>
+  <li>Order creation and management depending on specific criteria such as user or collaborator roles</li>
+  <li>Real-time updates</li>
+  <li>Authentication system</li>
+  <li>Session expiration</li>
+  <li>Uploading and downloading large files (500MB+)</li>
+  <li>Real-time data analytics</li>
+  <li>Email notifications for various actions</li>
+  <li>Preview and thumbnail generation based on the uploaded video</li>
+  <li>Uploading source files such as zip, xml, xlsx, png, etc.</li>
+  <li>Custom shared UI components</li>
+  <li>Light & Dark mode</li>
+</ul>
+
+<p>
+This project was a restructuring effort. Adstream previously had a single application for all 4 modules, featuring an outdated design and poor performance in terms of speed. I built the modules from scratch, one by one, implementing various features such as order generation, source uploading, or estimated cost calculation.
+</p>
+
+<p>
+I worked on Uploaders as a Full-Stack Developer and Team Lead within a team made up of several Front-end and Back-end Developers, QA Testers, Product Owners, and Managers. I was responsible for managing development, creating proper workflows, ensuring clean code architecture, and facilitating clear communication between team members. We used Jira for ticket management and worked in two-week sprints, concluding with a retrospective and talked about upcoming requirements. I worked on this project for over 2 years.
+</p>
+
+<p>
+On the Front-end, I handled UI components, integration with the Back-end via REST API, and authored a shared component library (common components used across all 4 applications) using React and Tailwind.
+</p>
+
+<p>
+On the Back-end, I focused on code optimization, refactoring, and new features such as order filtering and file management. I used Python with Flask for the codebase, an Ubuntu server for running the projects, created build scripts, and resolved database errors.
+</p>
+
+<p>
+Tech stack used:
+</p>
+
+<ul>
+  <li>React</li>
+  <li>Redux Toolkit</li>
+  <li>TypeScript</li>
+  <li>Vite</li>
+  <li>Python</li>
+  <li>Flask</li>
+  <li>Tailwind CSS</li>
+  <li>Ubuntu Server</li>
+  <li>MySQL Databases</li>
+</ul>`,
   'projects.checkout.title': 'Checkout',
   'projects.checkout.tags': 'Bitdefender \u2022 Front-end',
   'projects.checkout.description': `<p>

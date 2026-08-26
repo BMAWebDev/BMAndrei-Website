@@ -17,7 +17,7 @@ const projects: ProjectProps[] = [
     titleKey: 'projects.ads.title',
     tagsKey: 'projects.ads.tags',
     thumbnail: UploadersImage,
-    // name: 'uploaders',
+    name: 'uploaders',
     description: 'projects.ads.description',
     url: 'https://adstream.com.ro/',
     ctaTextKey: 'projects.find_more',
