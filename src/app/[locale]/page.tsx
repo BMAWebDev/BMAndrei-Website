@@ -15,7 +15,7 @@ import {
 import {
   Header,
   HeroSection,
-  // ServicesSection,
+  ServicesSection,
   ProjectsSection,
   CTASection,
   ContactSection,
@@ -99,7 +99,7 @@ const Home = () => {
       <main className="flex-1">
         <HeroSection />
         {/* <ServicesSection /> */}
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <CTASection />
         <ContactSection />
       </main>
