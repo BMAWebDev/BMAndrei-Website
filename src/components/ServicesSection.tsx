@@ -1,7 +1,6 @@
 'use client';
 
-import { useTranslation } from '@i18n/index';
-import type { TranslationKey } from '@i18n/index';
+import { useTranslation, type TranslationKey } from '@i18n/index';
 
 const services: {
   icon: string;
@@ -41,7 +40,7 @@ export default function ServicesSection() {
           <p className="text-slate-400 text-lg">{t('services.description')}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           {services.map((service) => (
             <div
               key={service.titleKey}
