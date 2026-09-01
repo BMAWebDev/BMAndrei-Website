@@ -40,14 +40,14 @@ const en = {
   'projects.label': 'Portfolio',
   'projects.title': 'Latest Projects',
   'projects.viewAll': 'View Full Portfolio',
-  'projects.ads.title': 'Uploaders',
-  'projects.ads.tags': 'Adstream \u2022 Full-stack',
-  'projects.ads.description': `<p>
-Uploaders is a multi-layer platform developed by Adstream for managing advertisements, both global and local to Romania. The architecture is divided into 4 modules, each with their own specific users, containing:
+  'projects.manager.title': 'Manager App',
+  'projects.manager.tags': 'Custom \u2022 Full-stack',
+  'projects.manager.description': `<p>
+Manager is a multi-layer platform developed for managing requests. The architecture is divided into 4 modules, each with their own specific users, containing:
 </p>
 
 <ul>
-  <li>Order creation and management depending on specific criteria such as user or collaborator roles</li>
+  <li>Request creation and management depending on specific criteria such as user or collaborator roles</li>
   <li>Real-time updates</li>
   <li>Authentication system</li>
   <li>Session expiration</li>
@@ -61,11 +61,11 @@ Uploaders is a multi-layer platform developed by Adstream for managing advertise
 </ul>
 
 <p>
-This project was a restructuring effort. Adstream previously had a single application for all 4 modules, featuring an outdated design and poor performance in terms of speed. I built the modules from scratch, one by one, implementing various features such as order generation, source uploading, or estimated cost calculation.
+This project was a restructuring effort. It previously had a single application for all 4 modules, featuring an outdated design and poor performance in terms of speed. I built the modules from scratch, one by one, implementing various features such as order generation, source uploading, or estimated cost calculation.
 </p>
 
 <p>
-I worked on Uploaders as a Full-Stack Developer and Team Lead within a team made up of several Front-end and Back-end Developers, QA Testers, Product Owners, and Managers. I was responsible for managing development, creating proper workflows, ensuring clean code architecture, and facilitating clear communication between team members. We used Jira for ticket management and worked in two-week sprints, concluding with a retrospective and talked about upcoming requirements. I worked on this project for over 2 years.
+I worked on Manager as a Full-Stack Developer and Team Lead within a team made up of several Front-end and Back-end Developers, QA Testers, Product Owners, and Managers. I was responsible for managing development, creating proper workflows, ensuring clean code architecture, and facilitating clear communication between team members. We used Jira for ticket management and worked in two-week sprints, concluding with a retrospective and talked about upcoming requirements. I worked on this project for over 2 years.
 </p>
 
 <p>
