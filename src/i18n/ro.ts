@@ -42,7 +42,7 @@ const ro: Record<TranslationKey, string> = {
   'projects.title': 'Proiecte Recente',
   'projects.viewAll': 'Vezi Tot Portofoliul',
   'projects.manager.title': 'Manager App',
-  'projects.manager.tags': 'Full-stack',
+  'projects.manager.tags': 'Custom • Full-stack',
   'projects.manager.description': `<p>
 Manager este o platformă multi-layer dezvoltată pentru gestionarea request-urilor. Arhitectura este împărțită în 4 module, fiecare cu utilizatorii lor specifici, conținând:
 </p>
