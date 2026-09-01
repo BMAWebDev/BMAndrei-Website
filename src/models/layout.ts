@@ -34,7 +34,7 @@ export interface ConfirmModalContentProps extends ModalProps {
   submitText: string;
 }
 
-export type OpenedModal = 'uploaders' | 'checkout' | null;
+export type OpenedModal = 'manager' | 'checkout' | null;
 
 export interface ProjectProps {
   titleKey: TranslationKey;
@@ -42,6 +42,6 @@ export interface ProjectProps {
   thumbnail: string | StaticImageData;
   name?: OpenedModal;
   description: TranslationKey;
-  url: string;
-  ctaTextKey: TranslationKey;
+  url?: string;
+  ctaTextKey?: TranslationKey;
 }

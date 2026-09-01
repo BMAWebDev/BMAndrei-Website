@@ -8,19 +8,17 @@ import { OpenedModal, ProjectProps } from '@models/layout';
 import { useTranslation } from '@i18n/index';
 // components
 import CheckoutImage from '@assets/CheckoutAPP.jpeg';
-import UploadersImage from '@assets/UploadersAPP.jpeg';
+import ManagerImage from '@assets/ManagerAPP.png';
 import { ProjectDetails } from './ModalContent';
 import Modal from './Modal';
 
 const projects: ProjectProps[] = [
   {
-    titleKey: 'projects.ads.title',
-    tagsKey: 'projects.ads.tags',
-    thumbnail: UploadersImage,
-    name: 'uploaders',
-    description: 'projects.ads.description',
-    url: 'https://adstream.com.ro/',
-    ctaTextKey: 'projects.find_more',
+    titleKey: 'projects.manager.title',
+    tagsKey: 'projects.manager.tags',
+    thumbnail: ManagerImage,
+    name: 'manager',
+    description: 'projects.manager.description',
   },
   {
     titleKey: 'projects.checkout.title',

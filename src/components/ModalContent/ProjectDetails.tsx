@@ -33,19 +33,21 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
           dangerouslySetInnerHTML={{ __html: t(project.description) }}
         ></p>
 
-        <div className="flex gap-2 items-center mt-4">
-          <Link
-            href={project.url}
-            target="_blank"
-            className="text-slate-400 underline"
-          >
-            {t(project.ctaTextKey)}
-          </Link>
+        {project.url && project.ctaTextKey && (
+          <div className="flex gap-2 items-center mt-4">
+            <Link
+              href={project.url}
+              target="_blank"
+              className="text-slate-400 underline"
+            >
+              {t(project.ctaTextKey)}
+            </Link>
 
-          <span className="text-slate-400 text-base! material-symbols-outlined">
-            open_in_new
-          </span>
-        </div>
+            <span className="text-slate-400 text-base! material-symbols-outlined">
+              open_in_new
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -41,10 +41,10 @@ const ro: Record<TranslationKey, string> = {
   'projects.label': 'Portofoliu',
   'projects.title': 'Proiecte Recente',
   'projects.viewAll': 'Vezi Tot Portofoliul',
-  'projects.ads.title': 'Uploaders',
-  'projects.ads.tags': 'Adstream • Full-stack',
-  'projects.ads.description': `<p>
-Uploaders este o platformă multi-layer a celor de la Adstream pentru gestionarea reclamelor, atât globale, cât și din România. Arhitectura este împărțită în 4 module, fiecare cu utilizatorii lor specifici, conținând:
+  'projects.manager.title': 'Manager App',
+  'projects.manager.tags': 'Full-stack',
+  'projects.manager.description': `<p>
+Manager este o platformă multi-layer dezvoltată pentru gestionarea request-urilor. Arhitectura este împărțită în 4 module, fiecare cu utilizatorii lor specifici, conținând:
 </p>
 
 <ul>
@@ -62,11 +62,11 @@ Uploaders este o platformă multi-layer a celor de la Adstream pentru gestionare
 </ul>
 
 <p>
-Proiectul acesta a fost unul de restructurare. Adstream avea o singură aplicație pentru toate cele 4 module, cu un design învechit și cu o performanță slab calitativă din punct de vedere al vitezei. Am creat de la 0 modulele, pe rând, implementând diferite funcționalități precum generarea comenzilor, încărcarea surselor sau crearea de cost estimat.
+Proiectul acesta a fost unul de restructurare. Platforma avea o singură aplicație pentru toate cele 4 module, cu un design învechit și cu o performanță slab calitativă din punct de vedere al vitezei. Am creat de la 0 modulele, pe rând, implementând diferite funcționalități precum generarea comenzilor, încărcarea surselor sau crearea de cost estimat.
 </p>
 
 <p>
-Am lucrat la Uploaders ca și Developer Full-Stack și Team Lead într-o echipă formată din mai mulți Developeri Front-end și Back-end, Testeri QA, Product Owners și Manageri. Am fost responsabil de gestionarea dezvoltării, de crearea de flow-uri corecte, arhitectură curată în cod și de comunicarea clară dintre persoane. Am folosit Jira pentru gestionarea ticketelor și am lucrat în sprint-uri de câte două săptămâni, la finalul cărora făceam o retrospectivă și discutam despre cerințele următoare. Am lucrat la acest proiect pentru mai mult de 2 ani.
+Am lucrat la Manager ca și Developer Full-Stack și Team Lead într-o echipă formată din mai mulți Developeri Front-end și Back-end, Testeri QA, Product Owners și Manageri. Am fost responsabil de gestionarea dezvoltării, de crearea de flow-uri corecte, arhitectură curată în cod și de comunicarea clară dintre persoane. Am folosit Jira pentru gestionarea ticketelor și am lucrat în sprint-uri de câte două săptămâni, la finalul cărora făceam o retrospectivă și discutam despre cerințele următoare. Am lucrat la acest proiect pentru mai mult de 2 ani.
 </p>
 
 <p>
